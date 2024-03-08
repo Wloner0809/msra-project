@@ -1,8 +1,6 @@
 # msra-project
 This is a project using In-Context Learning to optimize the prompt.
 
-[TOC]
-
 ## Paper List
 
 ### In-Context Learning
@@ -32,3 +30,5 @@ This is a project using In-Context Learning to optimize the prompt.
 ### LLM as Optimizer
 1. [Large Language Models as Optimizers](https://arxiv.org/abs/2309.03409)
    * Submitted on 7 Sep 2023, last revised 7 Dec 2023
+2. [Are Large Language Models Good Prompt Optimizers?](https://arxiv.org/abs/2402.02101)
+   * Submitted on 3 Feb 2024
