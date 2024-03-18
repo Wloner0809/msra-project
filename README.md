@@ -24,7 +24,10 @@ This is a project using In-Context Learning to optimize the prompt.
    * Submitted on 22 Feb 2023
 2. [Efficient Prompting via Dynamic In-Context Learning](https://arxiv.org/abs/2305.11170)
    * Submitted on 18 May 2023
-3. [PhaseEvo: Towards Unified In-Context Prompt Optimization for Large Language Models](https://arxiv.org/abs/2402.11347)
+3. [Better Zero-Shot Reasoning with Self-Adaptive Prompting](https://arxiv.org/abs/2305.14106)
+
+   * Submitted on 23 May 2023
+4. [PhaseEvo: Towards Unified In-Context Prompt Optimization for Large Language Models](https://arxiv.org/abs/2402.11347)
    * Submitted on 17 Feb 2024 
 
 ### LLM as Optimizer
@@ -34,5 +37,9 @@ This is a project using In-Context Learning to optimize the prompt.
    * Submitted on 4 May 2023, last revised 19 Oct 2023
 3. [Large Language Models as Optimizers](https://arxiv.org/abs/2309.03409)
    * Submitted on 7 Sep 2023, last revised 7 Dec 2023
-4. [Are Large Language Models Good Prompt Optimizers?](https://arxiv.org/abs/2402.02101)
+4. [PromptAgent: Strategic Planning with Language Models Enables Expert-level Prompt Optimization](https://arxiv.org/abs/2310.16427)
+   * Submitted on 25 Oct 2023, last revised 7 Dec 2023
+5. [Prompt Engineering a Prompt Engineer](https://arxiv.org/abs/2311.05661)
+   * Submitted on 9 Nov 2023, last revised 19 Feb 2024
+6. [Are Large Language Models Good Prompt Optimizers?](https://arxiv.org/abs/2402.02101)
    * Submitted on 3 Feb 2024
