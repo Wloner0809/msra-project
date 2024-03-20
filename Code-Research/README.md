@@ -35,3 +35,30 @@
    * 生成初始prompt用于评估
    * 第二次prompt用于更好extract answer
    * 提取预测与ground truth对比得到准确率
+
+## APO
+
+`task.py`
+
+1. 主要是实现了三个二分类任务的类: `EthosBinaryTask`、`JailbreakBinaryTask`、`DefaultHFBinaryTask`，每个类包含以下四个方法
+   * get_train_examples()
+   * get_test_examples()
+   * evaluate()
+   * stringify_prediction()
+
+`optimizers.py`
+
+1. `ProTeGi`: 最核心的一个类，包括以下核心方法
+   * `_sample_error_str()`: 选取可能产生的errors
+   * `get_gradients()`: 得到text gradients
+   * `apply_gradients()`: 利用text gradients产生新的prompts
+   * `generate_synonyms()`: 产生语义类似的prompts
+   * `expand_candidates()`: 扩展prompts
+
+`predictors.py`
+
+1. 实现了二分类预测类: `BinaryPredictor()`，其中包含方法`inference()`，调用gpt api输出预测结果
+
+`scorers.py`
+
+1. 主要实现了`Cached01Scorer`、`CachedLogLikelihoodScorer`两个类，用于计算每个prompt的分数
