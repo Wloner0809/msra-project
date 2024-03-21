@@ -1,0 +1,27 @@
+python main.py \
+    --task ethos \
+    --data_dir data/ethos \
+    --prompts prompts/ethos.md \
+    --out results/ethos_results_70B.txt \
+    --max_threads 1 \
+    --temperature 0.0 \
+    --optimizer nl-gradient \
+    --rounds 3 \
+    --beam_size 4 \
+    --n_test_exs 100 \
+    --minibatch_size 16 \
+    --n_gradients 4 \
+    --errors_per_gradient 4 \
+    --gradients_per_error 1 \
+    --steps_per_gradient 1 \
+    --mc_samples_per_step 2 \
+    --max_expansion_factor 8 \
+    --engine chatgpt \
+    --evaluator bf \
+    --scorer 01 \
+    --eval_rounds 4 \
+    --eval_prompts_per_round 4 \
+    --samples_per_eval 32 \
+    --c 1.0 \
+    --knn_k 2 \
+    --knn_t 0.993
