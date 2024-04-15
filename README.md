@@ -10,7 +10,7 @@ Use LLM to automatically optimize the prompts.
 |    Before 4.15    | Research some papers related to **automatic-prompt-optimization** and **ICL** |
 | :city_sunset:4.15 |  Official opening of this project organized by **Nan Yang**  |
 
-## Paper List
+##  :book: Paper List
 
 ### In-Context Learning
 1. [Active Example Selection for In-Context Learning](https://arxiv.org/abs/2211.04486)
@@ -34,7 +34,6 @@ Use LLM to automatically optimize the prompts.
 2. [Efficient Prompting via Dynamic In-Context Learning](https://arxiv.org/abs/2305.11170)
    * Submitted on 18 May 2023
 3. [Better Zero-Shot Reasoning with Self-Adaptive Prompting](https://arxiv.org/abs/2305.14106)
-
    * Submitted on 23 May 2023
 4. [PhaseEvo: Towards Unified In-Context Prompt Optimization for Large Language Models](https://arxiv.org/abs/2402.11347)
    * Submitted on 17 Feb 2024 
