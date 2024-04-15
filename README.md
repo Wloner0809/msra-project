@@ -1,5 +1,14 @@
 # msra-project
-This is a project using In-Context Learning to optimize the prompt.
+~~This is a project using In-Context Learning to optimize the prompt.~~
+
+Use LLM to automatically optimize the prompts.
+
+##  :calendar: Timeline
+
+|       Data        |                           Summary                            |
+| :---------------: | :----------------------------------------------------------: |
+|    Before 4.15    | Research some papers related to **automatic-prompt-optimization** and **ICL** |
+| :city_sunset:4.15 |  Official opening of this project organized by **Nan Yang**  |
 
 ## Paper List
 
