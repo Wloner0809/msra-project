@@ -1,14 +1,15 @@
 # msra-project
 ~~This is a project using In-Context Learning to optimize the prompt.~~
 
-Use LLM to automatically optimize the prompts.
+**Topic**: Use LLM to automatically optimize the prompts.
 
 ##  :calendar: Timeline
 
-|       Data        |                           Summary                            |
-| :---------------: | :----------------------------------------------------------: |
-|    Before 4.15    | Research some papers related to **automatic-prompt-optimization** and **ICL** |
-| :city_sunset:4.15 |  Official opening of this project organized by **Nan Yang**  |
+|          Data          |                           Summary                            |
+| :--------------------: | :----------------------------------------------------------: |
+|      Before 4.15       | Research some papers related to **automatic-prompt-optimization** and **ICL** |
+|   :city_sunset:4.15    |  Official opening of this project organized by **Nan Yang**  |
+| :night_with_stars:4.16 | Two directions are proposed:one:(**High Priority**)Utilize the idea of **curriculum learning** to arrange the examplars from easy to difficult. This process can be automated by LLM(serve as **Difficulty Measurer + Training Scheduler**):two:Design a new metric to select best examplars(**Influence Function/Perplexity/Mutual Information/Semantic Distance/Entropy**).Now the task is using llama2-70b to test this idea at a random dataset. |
 
 ##  :book: Paper List
 
