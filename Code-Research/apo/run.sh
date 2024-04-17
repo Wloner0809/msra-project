@@ -2,7 +2,7 @@ python main.py \
     --task ethos \
     --data_dir data/ethos \
     --prompts prompts/ethos.md \
-    --out results/ethos_results_70B.txt \
+    --out results/ethos_results_70B.json \
     --max_threads 1 \
     --temperature 0.0 \
     --optimizer nl-gradient \

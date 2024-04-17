@@ -1,14 +1,15 @@
-import os
-from tqdm import tqdm
-import time
-import json
 import argparse
+import json
+import os
+import time
+
+from tqdm import tqdm
 
 import evaluators
+import optimizers
+import predictors
 import scorers
 import tasks
-import predictors
-import optimizers
 
 
 def get_task_class(task_name):
@@ -52,16 +53,16 @@ def get_args():
     parser.add_argument('--task', default='ethos')
     parser.add_argument('--data_dir', default='data/ethos')
     parser.add_argument('--prompts', default='prompts/ethos.md')
-    parser.add_argument('--out', default='test_out.txt')
+    parser.add_argument('--out', default='ethos_results_70B.json')
     parser.add_argument('--max_threads', default=1, type=int)
     parser.add_argument('--temperature', default=0.0, type=float)
 
     parser.add_argument('--optimizer', default='nl-gradient')
-    parser.add_argument('--rounds', default=6, type=int)
+    parser.add_argument('--rounds', default=3, type=int)
     parser.add_argument('--beam_size', default=4, type=int)
     parser.add_argument('--n_test_exs', default=400, type=int)
 
-    parser.add_argument('--minibatch_size', default=64, type=int)
+    parser.add_argument('--minibatch_size', default=16, type=int)
     parser.add_argument('--n_gradients', default=4, type=int)
     parser.add_argument('--errors_per_gradient', default=4, type=int)
     parser.add_argument('--gradients_per_error', default=1, type=int)
@@ -73,8 +74,8 @@ def get_args():
 
     parser.add_argument('--evaluator', default="bf", type=str)
     parser.add_argument('--scorer', default="01", type=str)
-    parser.add_argument('--eval_rounds', default=8, type=int)
-    parser.add_argument('--eval_prompts_per_round', default=8, type=int)
+    parser.add_argument('--eval_rounds', default=4, type=int)
+    parser.add_argument('--eval_prompts_per_round', default=4, type=int)
     # calculated by s-sr and sr
     parser.add_argument('--samples_per_eval', default=32, type=int)
     parser.add_argument('--c', default=1.0, type=float, help='exploration param for UCB. higher = more exploration')
@@ -116,6 +117,13 @@ if __name__ == '__main__':
 
     candidates = [open(fp.strip()).read() for fp in args.prompts.split(',')]
 
+    json_dict = {}
+    json_dict['round'] = []
+    json_dict['time'] = []
+    json_dict['candidates'] = []
+    json_dict['estimated_scores'] = []
+    json_dict['metrics'] = []
+
     for round in tqdm(range(config['rounds'] + 1)):
         print("STARTING ROUND ", round)
         start = time.time()
@@ -132,17 +140,19 @@ if __name__ == '__main__':
         candidates = candidates[:config['beam_size']]
         scores = scores[:config['beam_size']]
 
-        # record candidates, estimated scores, and true scores
-        with open(args.out, 'a') as outf:
-            outf.write(f"======== ROUND {round}\n")
-            outf.write(f'{time.time() - start}\n')
-            outf.write(f'{candidates}\n')
-            outf.write(f'{scores}\n')
+        # evaluate candidates
         metrics = []
         for candidate, score in zip(candidates, scores):
             f1, texts, labels, preds = task.evaluate(gpt4, candidate, test_exs, n=args.n_test_exs)
             metrics.append(f1)
-        with open(args.out, 'a') as outf:
-            outf.write(f'{metrics}\n')
+
+        # save results
+        json_dict['round'].append(round)
+        json_dict['time'].append(time.time() - start)
+        json_dict['candidates'].append(candidates)
+        json_dict['estimated_scores'].append(scores)
+        json_dict['metrics'].append(metrics)
+        with open(args.out, 'w', encoding='utf-8') as outf:
+            json.dump(json_dict, outf, ensure_ascii=False, indent=4)
 
     print("DONE!")
