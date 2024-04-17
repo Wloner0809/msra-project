@@ -1,9 +1,11 @@
-import utils
+import concurrent.futures
 from collections import defaultdict
+
 import numpy as np
 from liquid import Template
 from tqdm import tqdm
-import concurrent.futures
+
+import utils
 
 
 def predict_on_example(inputs):

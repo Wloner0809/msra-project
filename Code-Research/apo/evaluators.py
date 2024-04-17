@@ -1,10 +1,11 @@
-import urllib3
-import math
-import numpy as np
-import random
-from tqdm import tqdm
 import concurrent.futures
+import math
+import random
+
+import numpy as np
 import requests
+import urllib3
+from tqdm import tqdm
 
 
 class SuccessiveHalvingEvaluator:

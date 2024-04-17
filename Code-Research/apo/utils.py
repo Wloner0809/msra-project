@@ -5,8 +5,10 @@ clausa gpt4
 
 import string
 import time
+
 import requests
 from openai import OpenAI
+
 import config
 
 
@@ -31,15 +33,15 @@ def parse_sectioned_prompt(s):
 
 
 def chatgpt(
-    prompt,
-    temperature=0.7,
-    n=1,
-    top_p=1,
-    stop=None,
-    max_tokens=1024,
-    presence_penalty=0,
-    frequency_penalty=0,
-    logit_bias={},
+        prompt,
+        temperature=0.7,
+        n=1,
+        top_p=1,
+        stop=None,
+        max_tokens=1024,
+        presence_penalty=0,
+        frequency_penalty=0,
+        logit_bias={},
 ):
     messages = [{"role": "user", "content": prompt}]
     client = OpenAI(

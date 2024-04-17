@@ -1,10 +1,11 @@
-import requests
-import json
 import concurrent.futures
+import json
 from abc import ABC, abstractmethod
-from tqdm import tqdm
+
 import pandas as pd
+import requests
 from sklearn.metrics import accuracy_score, f1_score
+from tqdm import tqdm
 
 
 class DataProcessor(ABC):

@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+
 from liquid import Template
 
 import utils
