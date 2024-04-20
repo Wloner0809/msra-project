@@ -1,14 +1,14 @@
 python main.py \
-    --task ethos \
-    --data_dir data/ethos \
-    --prompts prompts/ethos.md \
-    --out results/ethos_results_70B.json \
+    --task liar \
+    --data_dir data/liar \
+    --prompts prompts/liar.md \
+    --out results/liar_results_70B.json \
     --max_threads 1 \
     --temperature 0.0 \
     --optimizer nl-gradient \
     --rounds 3 \
     --beam_size 4 \
-    --n_test_exs 100 \
+    --n_test_exs 50 \
     --minibatch_size 16 \
     --n_gradients 4 \
     --errors_per_gradient 4 \
@@ -16,7 +16,7 @@ python main.py \
     --steps_per_gradient 1 \
     --mc_samples_per_step 2 \
     --max_expansion_factor 8 \
-    --engine chatgpt \
+    --engine llama \
     --evaluator bf \
     --scorer 01 \
     --eval_rounds 4 \

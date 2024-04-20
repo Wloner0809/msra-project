@@ -22,7 +22,7 @@ class BinaryPredictor(GPT4Predictor):
         prompt = Template(prompt).render(
             text=ex["text"]
         )  # 用ex['text']替换prompt中的{{text}}
-        response = utils.chatgpt(
+        response = utils.model(
             prompt, max_tokens=4, n=1, temperature=self.opt["temperature"]
         )[0]
         pred = 1 if response.strip().upper().startswith("YES") else 0

@@ -1,15 +1,10 @@
-"""
-https://oai.azure.com/portal/be5567c3dd4d49eb93f58914cccf3f02/deployment
-clausa gpt4
-"""
-
 import string
-import time
-
-import requests
 from openai import OpenAI
-
 import config
+import evaluators
+import scorers
+import tasks
+import argparse
 
 
 def parse_sectioned_prompt(s):
@@ -32,16 +27,16 @@ def parse_sectioned_prompt(s):
     return result
 
 
-def chatgpt(
-        prompt,
-        temperature=0.7,
-        n=1,
-        top_p=1,
-        stop=None,
-        max_tokens=1024,
-        presence_penalty=0,
-        frequency_penalty=0,
-        logit_bias={},
+def model(
+    prompt,
+    temperature=0.7,
+    n=1,
+    top_p=1,
+    stop=None,
+    max_tokens=1024,
+    presence_penalty=0,
+    frequency_penalty=0,
+    logit_bias={},
 ):
     messages = [{"role": "user", "content": prompt}]
     client = OpenAI(
@@ -64,34 +59,80 @@ def chatgpt(
     return [choice.message.content for choice in chat_completion.choices]
 
 
-def instructGPT_logprobs(prompt, temperature=0.7):
-    payload = {
-        "prompt": prompt,
-        "model": "mistralai/Mixtral-8x7B-Instruct-v0.1",
-        "temperature": temperature,
-        "max_tokens": 1,
-        "logprobs": 1,
-        "echo": True,
-    }
-    retries = 0
-    while True:
-        try:
-            r = requests.post(
-                "https://api.together.xyz/",
-                headers={
-                    "Authorization": f"Bearer {config.OPENAI_KEY}",
-                    "Content-Type": "application/json",
-                },
-                json=payload,
-                timeout=10,
-            )
-            if r.status_code != 200:
-                time.sleep(60)
-                retries += 1
-            else:
-                break
-        except requests.exceptions.ReadTimeout:
-            time.sleep(60)
-            retries += 1
-    r = r.json()
-    return r["choices"]
+def get_task_class(task_name):
+    if task_name == "ethos":
+        return tasks.EthosBinaryTask
+    elif task_name == "jailbreak":
+        return tasks.JailbreakBinaryTask
+    elif task_name == "liar":
+        return tasks.DefaultHFBinaryTask
+    elif task_name == "ar_sarcasm":
+        return tasks.DefaultHFBinaryTask
+    else:
+        raise Exception(f"Unsupported task: {task_name}")
+
+
+def get_evaluator(evaluator: str):
+    # 论文中的Select()函数
+    if evaluator == "bf":
+        return evaluators.BruteForceEvaluator
+    elif evaluator in {"ucb", "ucb-e"}:
+        return evaluators.UCBBanditEvaluator
+    elif evaluator in {"sr", "s-sr"}:
+        return evaluators.SuccessiveRejectsEvaluator
+    elif evaluator == "sh":
+        return evaluators.SuccessiveHalvingEvaluator
+    else:
+        raise Exception(f"Unsupported evaluator: {evaluator}")
+
+
+def get_scorer(scorer):
+    if scorer == "01":
+        return scorers.Cached01Scorer
+    else:
+        raise Exception(f"Unsupported scorer: {scorer}")
+
+
+def get_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--task", default="ethos")
+    parser.add_argument("--data_dir", default="data/ethos")
+    parser.add_argument("--prompts", default="prompts/ethos.md")
+    parser.add_argument("--out", default="ethos_results_70B.json")
+    parser.add_argument("--max_threads", default=1, type=int)
+    parser.add_argument("--temperature", default=0.0, type=float)
+
+    parser.add_argument("--optimizer", default="nl-gradient")
+    parser.add_argument("--rounds", default=3, type=int)
+    parser.add_argument("--beam_size", default=4, type=int)
+    parser.add_argument("--n_test_exs", default=400, type=int)
+
+    parser.add_argument("--minibatch_size", default=16, type=int)
+    parser.add_argument("--n_gradients", default=4, type=int)
+    parser.add_argument("--errors_per_gradient", default=4, type=int)
+    parser.add_argument("--gradients_per_error", default=1, type=int)
+    parser.add_argument("--steps_per_gradient", default=1, type=int)
+    parser.add_argument("--mc_samples_per_step", default=2, type=int)
+    parser.add_argument("--max_expansion_factor", default=8, type=int)
+
+    parser.add_argument("--engine", default="llama", type=str)
+
+    parser.add_argument("--evaluator", default="bf", type=str)
+    parser.add_argument("--scorer", default="01", type=str)
+    parser.add_argument("--eval_rounds", default=4, type=int)
+    parser.add_argument("--eval_prompts_per_round", default=4, type=int)
+    # calculated by s-sr and sr
+    parser.add_argument("--samples_per_eval", default=32, type=int)
+    parser.add_argument(
+        "--c",
+        default=1.0,
+        type=float,
+        help="exploration param for UCB. higher = more exploration",
+    )
+    parser.add_argument("--knn_k", default=2, type=int)
+    parser.add_argument("--knn_t", default=0.993, type=float)
+    parser.add_argument("--reject_on_errors", action="store_true")
+
+    args = parser.parse_args()
+
+    return args
