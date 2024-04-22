@@ -6,7 +6,7 @@ import pandas as pd
 import requests
 from sklearn.metrics import f1_score
 
-# from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score
 from tqdm import tqdm
 
 
@@ -59,14 +59,14 @@ class ClassificationTask(DataProcessor):
                 labels.append(ex["label"])
                 preds.append(pred)
 
-        # accuracy = accuracy_score(labels, preds)
+        accuracy = accuracy_score(labels, preds)
         f1 = f1_score(labels, preds, average="micro")
-        return f1, texts, labels, preds
+        return accuracy, f1, texts, labels, preds
 
     def evaluate(self, predictor, prompt, test_exs, n=100):
         while True:
             try:
-                f1, texts, labels, preds = self.run_evaluate(
+                accuracy_score, f1, texts, labels, preds = self.run_evaluate(
                     predictor, prompt, test_exs, n=n
                 )
                 break
@@ -75,7 +75,7 @@ class ClassificationTask(DataProcessor):
                 requests.exceptions.SSLError,
             ):
                 pass
-        return f1, texts, labels, preds
+        return accuracy_score, f1, texts, labels, preds
 
 
 class BinaryClassificationTask(ClassificationTask):

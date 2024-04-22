@@ -42,7 +42,7 @@ class SuccessiveHalvingEvaluator:
             t_r = math.floor(
                 budget / (len(S) * math.ceil(math.log2(n)))
             )  # 详见论文Page4的公式
-
+            random.seed(42)
             sample = random.sample(exs, min(len(exs), t_r))
 
             while True:
@@ -134,6 +134,7 @@ class SuccessiveRejectsEvaluator:
                     break
 
                 if self.config["evaluator"] == "s-sr":
+                    random.seed(42)
                     selected_data = random.sample(exs, samples_per_round)
                     selected_idxs, selected_prompts = list(
                         zip(
@@ -151,6 +152,7 @@ class SuccessiveRejectsEvaluator:
                     )
                     samples_per_round = int(n_k - n_prev_k)
                     samples_per_round = max(4, samples_per_round)
+                    random.seed(42)
                     selected_data = random.sample(exs, min(len(exs), samples_per_round))
                     n_prev_k = n_k
                     if len(selected_data) == 0:
@@ -227,6 +229,7 @@ class UCBBandits:
     def choose(self, n, t):
         if np.sum(self.counts) == 0:
             # If all counts are 0, choose randomly.
+            random.seed(42)
             return random.sample(range(self.num_prompts), n)
         scores = self.get_scores()
         counts = self.counts + 1e-3
@@ -273,6 +276,7 @@ class UCBBanditEvaluator:
         )
 
         def data_sampler(l):  # noqa: E741
+            random.seed(42)
             return random.sample(l, samples_per_eval)
 
         num_prompts_per_round = min(num_prompts_per_round, len(prompts))
@@ -323,6 +327,7 @@ class BruteForceEvaluator:
         verbose=True,
     ):
         sample_size = min(len(exs), int(self.config["eval_budget"] / len(prompts)))
+        random.seed(42)
         eval_exs = random.sample(exs, sample_size)
 
         while True:

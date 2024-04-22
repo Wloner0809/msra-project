@@ -16,22 +16,52 @@ class PromptOptimizer(ABC):
         self.bf_eval = bf_eval
 
     @abstractmethod
-    def expand_candidates(self, prompts, task, gpt4, train_exs):
+    def expand_candidates(self, prompts, task, gpt4, train_exs, seed):
         pass
 
 
 class ProTeGi(PromptOptimizer):
     """ProTeGi: Prompt Optimization with Textual Gradients"""
 
+    def _set_seed(self, seed):
+        random.seed(seed)
+        np.random.seed(seed)
+
+    def _curriculum_learning(self, minibatch_size, minibatch, n):
+        minibatch_str = ""
+        for i in range(minibatch_size):
+            minibatch_str += f"{minibatch[i]['text']} \n"
+
+        curriculum_prompt = f"""
+        I'm trying to find out the difficulty level of the following {minibatch_size} problems.
+
+        Determine whether the following statement is a lie or not:
+        "{minibatch_str}"
+
+        You must output all numbers between 1 and {minibatch_size} exactly once according to difficulty level, where 1 means easiest and {minibatch_size} means most difficult.
+        
+        Wrap your response with <START> and <END>, you should separate the ranks with commas.
+        """
+
+        curriculum_prompt = "\n".join(
+            [line.lstrip() for line in curriculum_prompt.split("\n")]
+        )
+        responses = utils.model(curriculum_prompt, n=n)
+        rank = []
+        for response in responses:
+            rank += self.parse_tagged_text(response, "<START>", "<END>")
+        return rank
+
     # TODO: 这里的error是随机选取的, 且最多选取n个
     # TODO: 是一个可以优化的点
-    def _sample_error_str(self, texts, labels, preds, task, n=4):
+    def _sample_error_str(self, texts, labels, preds, task, seed, n=4):
         """Sample n error strings from the given texts, labels, and preds"""
         error_idxs = []
         for i, (label, pred) in enumerate(zip(labels, preds)):
             if label != pred:
                 error_idxs.append(i)
 
+        self._set_seed(seed)
         sample_idxs = random.sample(error_idxs, min(len(error_idxs), n))
 
         sample_texts = [texts[i] for i in sample_idxs]
@@ -121,7 +151,9 @@ class ProTeGi(PromptOptimizer):
         new_instructions = [x for x in new_instructions if x]
         return new_instructions
 
-    def get_gradients(self, prompt, task_section, task, gpt4, texts, labels, preds):
+    def get_gradients(
+        self, prompt, task_section, task, gpt4, texts, labels, preds, seed
+    ):
         """Get "gradients" for a prompt based on sampled error strings."""
         prompt_feedbacks = []
         for _ in tqdm(
@@ -130,7 +162,7 @@ class ProTeGi(PromptOptimizer):
             desc="gradients..",
         ):
             error_string = self._sample_error_str(
-                texts, labels, preds, task, n=self.opt["errors_per_gradient"]
+                texts, labels, preds, task, seed, n=self.opt["errors_per_gradient"]
             )
             gradients = self._get_gradients(
                 task_section, error_string, self.opt["gradients_per_error"], n=1
@@ -138,12 +170,18 @@ class ProTeGi(PromptOptimizer):
             prompt_feedbacks += [(gradient, error_string) for gradient in gradients]
         return prompt_feedbacks
 
-    def expand_candidates(self, prompts, task, gpt4, train_exs):
+    def expand_candidates(self, prompts, task, gpt4, train_exs, seed, curriculum=False):
         """Expand a list of prompts by generating gradient-based successors and
         synonyms for each section.
         """
-        # TODO: 这里就是可以优化的地方, 运用Curriculum的思想选择minibatch, 而不是random
+        # NOTE: Curriculum learning is used here
+        self._set_seed(seed)
         minibatch = random.sample(train_exs, k=self.opt["minibatch_size"])
+        
+        if curriculum:
+            rank = self._curriculum_learning(self.opt["minibatch_size"], minibatch, n=1)
+            index = np.argsort(rank[0].split(","))
+            minibatch = [minibatch[i] for i in index]
 
         new_prompts = []
         for prompt in tqdm(prompts, desc=f"expanding {len(prompts)} prompts"):
@@ -151,7 +189,7 @@ class ProTeGi(PromptOptimizer):
             task_section = sections["task"].strip()
 
             # evaluate prompt on minibatch
-            _, texts, labels, preds = task.evaluate(gpt4, prompt, minibatch)
+            _, _, texts, labels, preds = task.evaluate(gpt4, prompt, minibatch)
 
             """
             new_task_sections是通过gradients得到的新的task_sections
@@ -162,7 +200,7 @@ class ProTeGi(PromptOptimizer):
             new_task_sections = []
             if self.opt["n_gradients"] > 0:
                 gradients = self.get_gradients(
-                    prompt, task_section, task, gpt4, texts, labels, preds
+                    prompt, task_section, task, gpt4, texts, labels, preds, seed
                 )
                 new_task_sections = []
                 for feedback, error_string in tqdm(
@@ -200,9 +238,11 @@ class ProTeGi(PromptOptimizer):
                     for i, (t, label, p) in enumerate(zip(texts, labels, preds)):
                         if label != p:
                             error_exs.append({"text": t, "label": label})
+                    self._set_seed(seed)
                     error_exs = random.sample(error_exs, min(len(error_exs), 16))
 
                     # speed up a little
+                    self._set_seed(seed)
                     tmp_new_prompts = random.sample(
                         tmp_new_prompts,
                         min(len(tmp_new_prompts), self.opt["max_expansion_factor"] * 2),
@@ -223,6 +263,7 @@ class ProTeGi(PromptOptimizer):
                         ]
                     ]
                 else:
+                    self._set_seed(seed)
                     tmp_new_prompts = random.sample(
                         tmp_new_prompts, k=self.opt["max_expansion_factor"]
                     )
