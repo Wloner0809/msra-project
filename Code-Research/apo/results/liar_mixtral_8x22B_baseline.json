@@ -1,0 +1,106 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        130.13662576675415,
+        955.5598430633545,
+        1663.3445580005646,
+        1449.555935382843
+    ],
+    "candidates": [
+        [
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\n Given the Statement, Job title, State, Party, and Context, evaluate whether the Statement is deceptive (Yes) or truthful (No), bearing in mind the origin of the statement, the circumstances surrounding it, and the possible intentions of the speaker.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n Evaluating the provided Statement, Job title, State, Party, and Context, ascertain if the Statement is deceptive (Yes) or truthful (No), factoring in the origin of the statement, the circumstances surrounding it, and the possible intentions of the speaker.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nConsidering the given Statement, Job title, State, Party, and Context, determine whether the Statement is a lie (Yes) or not (No), taking into account the source of the statement, the context in which it was made, and the potential motivations of the speaker.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n\"Evaluate the Statement, Job title, State, Party, and Context to decide if the Statement is a probable political exaggeration or false claim (Yes) or not (No), considering the context of political campaigns and speeches.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\n Ignoring the Position title, Location, and Affiliation, assess the Statement and its Context to determine whether the Statement constitutes a likely political hyperbole or untrue assertion (Yes) or not (No), taking into account the nature of political campaigns and addresses.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n \"Evaluate the given Statement, alongside the respective Job title, State, Party, and Context, to determine whether it likely constitutes a political exaggeration or falsehood (Yes) or not (No). Remember to consider the unique context of political campaigns and speeches during your assessment. Exercise caution with statements that are ambiguous or incomplete, contemplating the potential for their interpretation as exaggerations or false claims based on the provided Context.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nConsidering the given Statement, Job title, State, Party, and Context, determine whether the Statement is a lie, exaggeration, imprecise, or not (No), taking into account the source of the statement, the context in which it was made, and the potential motivations of the speaker.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nConsidering the given Statement, Job title, State, Party, and Context, determine whether the Statement is a lie (Yes) or not (No), taking into account the source of the statement, the context in which it was made, and the potential motivations of the speaker.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nConsidering the given Statement, Job title, State, Party, and Context, determine whether the Statement is a lie, distortion, or deception (Yes) or not (No), taking into account the source of the statement, the context in which it was made, and the potential motivations of the speaker.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n Ignoring the Position title, Location, and Affiliation, assess the Statement and its Context to determine whether the Statement constitutes a likely political hyperbole or untrue assertion (Yes) or not (No), taking into account the nature of political campaigns and addresses.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n \"Evaluate the given Statement, alongside the respective Job title, State, Party, and Context, to determine whether it likely constitutes a political exaggeration or falsehood (Yes) or not (No). Remember to consider the unique context of political campaigns and speeches during your assessment. Exercise caution with statements that are ambiguous or incomplete, contemplating the potential for their interpretation as exaggerations or false claims based on the provided Context.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n \"Evaluate the given Statement, alongside the respective Job title, State, Party, and Context, to determine whether it likely constitutes a political exaggeration or falsehood (Yes) or not (No). Consider the source of the statement and the credibility of the claim. Exercise caution with statements that are ambiguous or incomplete, and contemplate the potential for their interpretation as exaggerations or false claims based on the provided Context. If additional information or fact-checking is required to determine the veracity of the statement, specify this in your assessment.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.7307692307692307,
+            0.7307692307692307,
+            0.6538461538461539,
+            0.6538461538461539
+        ],
+        [
+            0.8333333333333334,
+            0.8333333333333334,
+            0.6666666666666666,
+            0.6666666666666666
+        ],
+        [
+            1.0,
+            0.8333333333333334,
+            0.8333333333333334,
+            0.8333333333333334
+        ]
+    ],
+    "f1": [
+        [
+            0.52
+        ],
+        [
+            0.56,
+            0.59,
+            0.54,
+            0.52
+        ],
+        [
+            0.61,
+            0.5,
+            0.41,
+            0.54
+        ],
+        [
+            0.55,
+            0.61,
+            0.5,
+            0.51
+        ]
+    ],
+    "acc": [
+        [
+            0.52
+        ],
+        [
+            0.56,
+            0.59,
+            0.54,
+            0.52
+        ],
+        [
+            0.61,
+            0.5,
+            0.41,
+            0.54
+        ],
+        [
+            0.55,
+            0.61,
+            0.5,
+            0.51
+        ]
+    ]
+}

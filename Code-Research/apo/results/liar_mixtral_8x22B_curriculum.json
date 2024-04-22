@@ -1,0 +1,106 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        132.06042528152466,
+        939.839188337326,
+        1330.4722082614899,
+        1454.2229452133179
+    ],
+    "candidates": [
+        [
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\n Leveraging the Context, Job Role, State, and Party details provided, assess the reliability and truthfulness of the Statement. If the statement aligns with the provided information, categorize it as not a lie (No). However, if it contradicts or lacks support from the given data, classify it as a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n Given the Context, Job title, State, and Party details, assess the reliability and truthfulness of the Statement. If the statement lacks credibility or is proven inaccurate based on the supplied data, classify it as a falsehood (Yes). Conversely, if the statement is deemed credible and factually correct based on the given information, classify it as not a falsehood (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n Given the context, the speaker's professional role, political association, and the content of the statement, ascertain whether the Statement is deceptive (Yes) or truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\n Leveraging the Context, Job Role, State, and Party details provided, assess the reliability and truthfulness of the Statement. If the statement aligns with the provided information, categorize it as not a lie (No). However, if it contradicts or lacks support from the given data, classify it as a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n Based on the Context, Job Role, State, and Party details, examine the reliability and truthfulness of the Statement. If the statement is from the individual in question, corresponds with the provided information, and is corroborated by the given data, categorize it as not a lie (No). If it opposes or lacks support from the given data, or if it is a claim attributed to another person without verifiable proof, classify it as a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n Assess if the Statement aligns with the Truth (No) or if it's Deceptive (Yes) given the Context and any additional details.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n \"Considering the Context, Job Role, State, Party, and any relevant external factors or timeline, evaluate the veracity of the Statement. If the statement is accurate and supported by the provided information and any necessary external context, categorize it as not a lie (No). However, if it is false, contradicts the given data, lacks support, or is misleading, classify it as a lie (Yes).\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\n Leveraging the Context, Job Role, State, and Party details provided, assess the reliability and truthfulness of the Statement. If the statement aligns with the provided information, categorize it as not a lie (No). However, if it contradicts or lacks support from the given data, classify it as a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n Examining the Statement, its source, Context, Job Role, State, and Party details, assess the reliability and truthfulness of the Statement. If the statement is in line with or has support from the provided information, categorize it as not a lie (No). If the statement is in conflict with or lacks support from the given data or context, classify it as a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n Based on the Context, Job Role, State, and Party details, examine the reliability and truthfulness of the Statement. If the statement is from the individual in question, corresponds with the provided information, and is corroborated by the given data, categorize it as not a lie (No). If it opposes or lacks support from the given data, or if it is a claim attributed to another person without verifiable proof, classify it as a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n Assess if the Statement aligns with the Truth (No) or if it's Deceptive (Yes) given the Context and any additional details.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.7307692307692307,
+            0.7307692307692307,
+            0.6153846153846154,
+            0.5769230769230769
+        ],
+        [
+            0.8333333333333334,
+            0.8333333333333334,
+            0.8333333333333334,
+            0.8333333333333334
+        ],
+        [
+            0.8333333333333334,
+            0.8333333333333334,
+            0.8333333333333334,
+            0.8333333333333334
+        ]
+    ],
+    "f1": [
+        [
+            0.52
+        ],
+        [
+            0.61,
+            0.56,
+            0.52,
+            0.53
+        ],
+        [
+            0.61,
+            0.6,
+            0.51,
+            0.57
+        ],
+        [
+            0.61,
+            0.53,
+            0.6,
+            0.51
+        ]
+    ],
+    "acc": [
+        [
+            0.52
+        ],
+        [
+            0.61,
+            0.56,
+            0.52,
+            0.53
+        ],
+        [
+            0.61,
+            0.6,
+            0.51,
+            0.57
+        ],
+        [
+            0.61,
+            0.53,
+            0.6,
+            0.51
+        ]
+    ]
+}
