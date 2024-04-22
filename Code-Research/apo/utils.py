@@ -46,7 +46,9 @@ def model(
 
     chat_completion = client.chat.completions.create(
         messages=messages,
-        model="meta-llama/Llama-2-70b-chat-hf",
+        model="meta-llama/Llama-3-70b-chat-hf",
+        # model="mistralai/Mixtral-8x22B-Instruct-v0.1",
+        # model="Qwen/Qwen1.5-72B-Chat",
         temperature=temperature,
         max_tokens=max_tokens,
         logit_bias=logit_bias,
@@ -95,17 +97,21 @@ def get_scorer(scorer):
 
 def get_args():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--train", default=False, type=bool)
+    parser.add_argument("--curriculum", default=False, type=bool)
     parser.add_argument("--task", default="ethos")
     parser.add_argument("--data_dir", default="data/ethos")
     parser.add_argument("--prompts", default="prompts/ethos.md")
-    parser.add_argument("--out", default="ethos_results_70B.json")
+    parser.add_argument("--args", default="args/liar_llama3_70B_baseline.json")
+    parser.add_argument("--out", default="results/liar_llama3_70B_baseline.json")
+    parser.add_argument("--tests", default="tests/liar.json")
     parser.add_argument("--max_threads", default=1, type=int)
     parser.add_argument("--temperature", default=0.0, type=float)
 
     parser.add_argument("--optimizer", default="nl-gradient")
     parser.add_argument("--rounds", default=3, type=int)
-    parser.add_argument("--beam_size", default=4, type=int)
-    parser.add_argument("--n_test_exs", default=400, type=int)
+    parser.add_argument("--beam_size", default=8, type=int)
+    parser.add_argument("--n_test_exs", default=100, type=int)
 
     parser.add_argument("--minibatch_size", default=16, type=int)
     parser.add_argument("--n_gradients", default=4, type=int)
@@ -119,10 +125,10 @@ def get_args():
 
     parser.add_argument("--evaluator", default="bf", type=str)
     parser.add_argument("--scorer", default="01", type=str)
-    parser.add_argument("--eval_rounds", default=4, type=int)
-    parser.add_argument("--eval_prompts_per_round", default=4, type=int)
+    parser.add_argument("--eval_rounds", default=2, type=int)
+    parser.add_argument("--eval_prompts_per_round", default=8, type=int)
     # calculated by s-sr and sr
-    parser.add_argument("--samples_per_eval", default=32, type=int)
+    parser.add_argument("--samples_per_eval", default=30, type=int)
     parser.add_argument(
         "--c",
         default=1.0,
