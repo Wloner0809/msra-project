@@ -12,6 +12,17 @@
 | :night_with_stars:4.16 | Two directions are proposed :one: (**High Priority**)Utilize the idea of **curriculum learning** to arrange the examplars from easy to difficult. This process can be automated by LLM(serve as **Difficulty Measurer + Training Scheduler**) :two: Design a new metric to select best examplars(**Influence Function/Perplexity/Mutual Information/Semantic Distance/Entropy**).Now the task is using llama2-70b to test this idea at a random dataset. |
 | :night_with_stars:4.20 | Two optimization areas in apo codes: :one:errors are selected randomly:two:use curriculum learning to select minibatch​ |
 |  :crescent_moon:4.22   | implement the idea and make some tests(maybe more result files will be pushed tomorrow) |
+|   :city_sunrise:4.24   | test llama/mixtral/qwen model on liar dataset, record the results |
+
+## :mag: Experiment Result
+
+### liar dataset
+
+|        model         |    baseline F1     | curriculum learning F1 |
+| :------------------: | :----------------: | :--------------------: |
+|      llama3-70B      | 0.665943600867679  |   0.6268980477223427   |
+| mixtral-8$\times$22B | 0.5488069414316703 |   0.5726681127982647   |
+|       qwen-72B       | 0.5314533622559653 |   0.6225596529284165   |
 
 ##  :book: Paper List
 
