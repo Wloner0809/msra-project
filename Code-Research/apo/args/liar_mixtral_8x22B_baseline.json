@@ -6,7 +6,7 @@
     "prompts": "prompts/liar.md",
     "args": "args/liar_mixtral_8x22B_baseline.json",
     "out": "results/liar_mixtral_8x22B_baseline.json",
-    "tests": "tests/liar.json",
+    "tests": "tests/liar_mixtral_8x22B.json",
     "max_threads": 1,
     "temperature": 0.0,
     "optimizer": "nl-gradient",
@@ -19,16 +19,16 @@
     "gradients_per_error": 1,
     "steps_per_gradient": 1,
     "mc_samples_per_step": 2,
-    "max_expansion_factor": 8,
+    "max_expansion_factor": 12,
     "engine": "llama",
     "evaluator": "bf",
     "scorer": "01",
     "eval_rounds": 2,
     "eval_prompts_per_round": 4,
-    "samples_per_eval": 30,
+    "samples_per_eval": 150,
     "c": 1.0,
     "knn_k": 2,
     "knn_t": 0.993,
     "reject_on_errors": false,
-    "eval_budget": 240
+    "eval_budget": 1200
 }
