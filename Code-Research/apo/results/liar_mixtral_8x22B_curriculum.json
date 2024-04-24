@@ -6,32 +6,32 @@
         3
     ],
     "time": [
-        132.06042528152466,
-        939.839188337326,
-        1330.4722082614899,
-        1454.2229452133179
+        140.38003611564636,
+        2551.1718151569366,
+        3121.593872308731,
+        5056.9161920547485
     ],
     "candidates": [
         [
             "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
         ],
         [
-            "# Task\n Leveraging the Context, Job Role, State, and Party details provided, assess the reliability and truthfulness of the Statement. If the statement aligns with the provided information, categorize it as not a lie (No). However, if it contradicts or lacks support from the given data, classify it as a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
-            "# Task\n Given the Context, Job title, State, and Party details, assess the reliability and truthfulness of the Statement. If the statement lacks credibility or is proven inaccurate based on the supplied data, classify it as a falsehood (Yes). Conversely, if the statement is deemed credible and factually correct based on the given information, classify it as not a falsehood (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
-            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
-            "# Task\n Given the context, the speaker's professional role, political association, and the content of the statement, ascertain whether the Statement is deceptive (Yes) or truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+            "# Task\n Taking into account the given context, the individual's position, and using only the information provided, assess the probability of the statement being untrue (Yes) or true (No). In your evaluation, take into consideration the reliability of the source, the feasibility of the statement, and any possible prejudices or incentives that could impact the veracity of the statement.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDetermine whether the Statement is a factual claim (No) or a lie (Yes) based on its alignment with the provided Context and other relevant information such as the Job title, State, and Party of the speaker. Consider if the claim is supported by evidence or if it contradicts known facts. If the claim is unverifiable or lacks context, it should be labeled as a factual claim.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n Determine the veracity of the Claim, considering the given Context, Occupation, State, and Political Affiliation. Respond with a Yes if it's false, and a No if it's true.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nBased on the provided context and other relevant information, determine whether the given statement is truthful (No) or a lie (Yes). Please consider the credibility and accuracy of the statement in relation to the context.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
         ],
         [
-            "# Task\n Leveraging the Context, Job Role, State, and Party details provided, assess the reliability and truthfulness of the Statement. If the statement aligns with the provided information, categorize it as not a lie (No). However, if it contradicts or lacks support from the given data, classify it as a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
-            "# Task\n Based on the Context, Job Role, State, and Party details, examine the reliability and truthfulness of the Statement. If the statement is from the individual in question, corresponds with the provided information, and is corroborated by the given data, categorize it as not a lie (No). If it opposes or lacks support from the given data, or if it is a claim attributed to another person without verifiable proof, classify it as a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
-            "# Task\n Assess if the Statement aligns with the Truth (No) or if it's Deceptive (Yes) given the Context and any additional details.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
-            "# Task\n \"Considering the Context, Job Role, State, Party, and any relevant external factors or timeline, evaluate the veracity of the Statement. If the statement is accurate and supported by the provided information and any necessary external context, categorize it as not a lie (No). However, if it is false, contradicts the given data, lacks support, or is misleading, classify it as a lie (Yes).\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+            "# Task\n Given the Statement, Context, Occupation, State, and Political Affiliation, assess the truthfulness of the Statement. If the provided information suggests that the Statement is factually incorrect, logically inconsistent, or contradictory to known events, respond with Yes. If the Statement appears to be factually correct, logically consistent, or aligned with known events, respond with No.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n Evaluate the given Statement to ascertain if it is a verifiable fact (No) or a falsehood (Yes) by comparing it with the supplied Context. In your assessment, consider the speaker's authority, credibility, or possible biases. Factors such as the speaker's Job title, State, and Party affiliation should be considered, along with any potential vested interests. Examine whether the claim is backed by evidence or if it opposes established facts. In cases where the claim is unverifiable or lacks context, it should be categorized as a factual claim.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n \"Assess the truthfulness of the Claim, taking into account the provided Context, Occupation, State, and Political Affiliation. Consider logical consistency, factual accuracy, contextual relevance, and reliable sources to make your determination. Respond with 'Yes' if the claim is false and 'No' if the claim is true.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n  Assess the Validity of the Claim considering the Given Background, Profession, Location, and Political Leaning. If the Claim appears to be untrue, irrational, or conflicting with established knowledge or occurrences, answer with Yes. If the Claim appears to be accurate, rational, and consistent with established knowledge or occurrences, answer with No.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
         ],
         [
-            "# Task\n Leveraging the Context, Job Role, State, and Party details provided, assess the reliability and truthfulness of the Statement. If the statement aligns with the provided information, categorize it as not a lie (No). However, if it contradicts or lacks support from the given data, classify it as a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
-            "# Task\n Examining the Statement, its source, Context, Job Role, State, and Party details, assess the reliability and truthfulness of the Statement. If the statement is in line with or has support from the provided information, categorize it as not a lie (No). If the statement is in conflict with or lacks support from the given data or context, classify it as a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
-            "# Task\n Based on the Context, Job Role, State, and Party details, examine the reliability and truthfulness of the Statement. If the statement is from the individual in question, corresponds with the provided information, and is corroborated by the given data, categorize it as not a lie (No). If it opposes or lacks support from the given data, or if it is a claim attributed to another person without verifiable proof, classify it as a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
-            "# Task\n Assess if the Statement aligns with the Truth (No) or if it's Deceptive (Yes) given the Context and any additional details.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+            "# Task\n \"Given the Statement, Context, Occupation, State, and Political Affiliation, assess the truthfulness of the Statement, factoring in potential biases that may stem from the speaker's political affiliation. If the provided information suggests that the Statement is factually incorrect, logically inconsistent, or contradictory to known events, respond with Yes. If the Statement appears to be factually correct, logically consistent, or aligned with known events, respond with No.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n \"Assess the truthfulness of the Claim, taking into account the provided Context, Occupation, State, Political Affiliation, and the potential bias of the Context. Consider logical consistency, factual accuracy, contextual relevance, and reliable sources to make your determination. Respond with 'Yes' if the claim is false and 'No' if the claim is true.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n \"Assess the truthfulness of the Claim, taking into account the provided Context, Occupation, State, Political Affiliation, and the potential bias of the Context, as well as any relevant political dynamics. Consider logical consistency, factual accuracy, contextual relevance, and reliable sources to make your determination. Respond with 'Yes' if the claim is false and 'No' if the claim is true.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\n  Evaluate the presented Assertion within the supplied context to ascertain whether it constitutes a verifiable fact (No) or a falsehood (Yes). In your assessment, consider the speaker's credibility, authority, or possible biases, taking into account their Occupation, Geographical location, and Political affiliation, as well as any potential conflicts of interest. Investigate if the claim is supported by evidence or if it contradicts established facts. If the statement is a subjective viewpoint, analysis, or opinion, or if it lacks adequate context to be verified, classify it as a non-factual claim.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
         ]
     ],
     "estimated_scores": [
@@ -39,22 +39,22 @@
             1.0
         ],
         [
-            0.7307692307692307,
-            0.7307692307692307,
-            0.6153846153846154,
-            0.5769230769230769
+            0.6086956521739131,
+            0.5978260869565217,
+            0.5869565217391305,
+            0.5760869565217391
         ],
         [
-            0.8333333333333334,
-            0.8333333333333334,
-            0.8333333333333334,
-            0.8333333333333334
+            0.782608695652174,
+            0.782608695652174,
+            0.782608695652174,
+            0.782608695652174
         ],
         [
-            0.8333333333333334,
-            0.8333333333333334,
-            0.8333333333333334,
-            0.8333333333333334
+            0.8260869565217391,
+            0.8260869565217391,
+            0.8260869565217391,
+            0.8260869565217391
         ]
     ],
     "f1": [
@@ -62,22 +62,22 @@
             0.52
         ],
         [
-            0.61,
-            0.56,
-            0.52,
-            0.53
-        ],
-        [
-            0.61,
-            0.6,
-            0.51,
-            0.57
-        ],
-        [
-            0.61,
             0.53,
-            0.6,
-            0.51
+            0.52,
+            0.63,
+            0.61
+        ],
+        [
+            0.54,
+            0.61,
+            0.58,
+            0.63
+        ],
+        [
+            0.54,
+            0.58,
+            0.56,
+            0.55
         ]
     ],
     "acc": [
@@ -85,22 +85,22 @@
             0.52
         ],
         [
-            0.61,
-            0.56,
-            0.52,
-            0.53
-        ],
-        [
-            0.61,
-            0.6,
-            0.51,
-            0.57
-        ],
-        [
-            0.61,
             0.53,
-            0.6,
-            0.51
+            0.52,
+            0.63,
+            0.61
+        ],
+        [
+            0.54,
+            0.61,
+            0.58,
+            0.63
+        ],
+        [
+            0.54,
+            0.58,
+            0.56,
+            0.55
         ]
     ]
 }

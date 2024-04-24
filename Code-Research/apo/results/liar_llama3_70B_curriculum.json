@@ -1,0 +1,106 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        134.94220066070557,
+        2203.4689886569977,
+        2268.363238096237,
+        2254.498565673828
+    ],
+    "candidates": [
+        [
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) by carefully analyzing the Context, Job title, State, and Party affiliation, and considering the medium of communication (e.g. email, TV ad, campaign speech, robocall) to identify any inconsistencies or misleading information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere are a few variations of the instruction while keeping the semantic meaning:\n\n**Variation 1**\nIdentify if the Statement is a knowing misrepresentation, a purposeful manipulation of truth, or a calculated lie (Yes) or not (No) considering the Context and additional information.\n\n**Variation 2**\nDecide whether the Statement constitutes a deliberate attempt to deceive, a conscious alteration of facts, or a intentional falsehood (Yes) or not (No) based on the Context and supporting evidence.\n\n**Variation 3**\nAssess if the Statement is a fraudulent claim, a dishonest representation, or a premeditated deception (Yes) or not (No) by examining the Context and relevant information.\n\n**Variation 4**\nDetermine if the Statement is a malicious fabrication, a willful misinterpretation, or a deliberate deceit (Yes) or not (No) based on the Context and available data.\n\nLet me know if you need more variations!\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nOutput: Examine the given Statement in relation to its Context, Job title, State, and Party affiliation, and scrutinize the communication medium used (such as email, TV ad, campaign speech, or robocall) to detect any discrepancies or deceptive content, and classify it as either a Lie (Yes) or Truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nOutput: Evaluate the Statement's accuracy by examining the Context, Job title, State, and Party affiliation, as well as the communication medium used (such as email, TV ad, campaign speech, or robocall), and indicate whether it is a truthful claim (No) or a deceptive statement (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) by carefully analyzing the Context, Job title, State, and Party affiliation, and considering the medium of communication (e.g. email, TV ad, campaign speech, robocall). When evaluating the Statement, consider not only factual inaccuracies but also misleading implications, exaggerations, or omissions that could alter the interpretation of the information. If the Statement contains both accurate and inaccurate information, classify it as a lie (Yes) if the inaccurate or misleading part has a significant impact on the overall meaning or implication of the Statement.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) by carefully analyzing the Context, Job title, State, and Party affiliation, and considering the medium of communication (e.g. email, TV ad, campaign speech, robocall) to identify any inconsistencies or misleading information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nInput: Carefully examine the language, tone, and assertions made in the Statement to identify any misleading or inaccurate information. While assessing the Statement's content, also take into account the surrounding Context, the individual's Job title, their State of origin, and their Party affiliation as supplementary factors. Then, categorize the Statement as either Deceptive (Yes) or Accurate (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nAnalyze the given statement in light of its surrounding Context, the Job title of the individual making the claim, their State of residence, and their political Party affiliation. Evaluate the communication channel used to convey the message (e.g., email, TV commercial, campaign speech, or automated phone call). Look for any inconsistencies or misleading information, and then categorize the statement as either Deceptive (Yes) or Accurate (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) by carefully analyzing the Context, Job title, State, and Party affiliation, and considering the medium of communication (e.g. email, TV ad, campaign speech, robocall). When evaluating the Statement, consider not only factual inaccuracies but also the potential for misleading implications, exaggerations, or omissions that could alter the interpretation of the information. Pay particular attention to how the Statement might be perceived by the intended audience, and whether it presents a distorted or incomplete picture of reality. If the Statement contains both accurate and inaccurate information, classify it as a lie (Yes) if the inaccurate or misleading part has a significant impact on the overall meaning or implication of the Statement.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) by carefully analyzing the Context, Job title, State, and Party affiliation, and considering the medium of communication (e.g. email, TV ad, campaign speech, robocall). When evaluating the Statement, consider not only factual inaccuracies but also misleading implications, exaggerations, or omissions that could alter the interpretation of the information. If the Statement contains both accurate and inaccurate information, classify it as a lie (Yes) if the inaccurate or misleading part has a significant impact on the overall meaning or implication of the Statement.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nInput: Carefully examine the language, tone, and assertions made in the Statement to identify any misleading or inaccurate information. While assessing the Statement's content, also take into account the surrounding Context, the individual's Job title, their State of origin, and their Party affiliation as supplementary factors. Then, categorize the Statement as either Deceptive (Yes) or Accurate (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nInput: Carefully examine the language, tone, and assertions made in the Statement to identify any information that is false, exaggerated, or omits critical context, as well as any implications or insinuations that are not supported by evidence. Consider the Statement's content in conjunction with the surrounding Context, the individual's Job title, their State of origin, and their Party affiliation as supplementary factors. Then, categorize the Statement as either Deceptive (Yes) or Accurate (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.68,
+            0.66,
+            0.64,
+            0.64
+        ],
+        [
+            0.782608695652174,
+            0.782608695652174,
+            0.7391304347826086,
+            0.7391304347826086
+        ],
+        [
+            0.8,
+            0.8,
+            0.76,
+            0.76
+        ]
+    ],
+    "f1": [
+        [
+            0.48
+        ],
+        [
+            0.55,
+            0.45,
+            0.58,
+            0.56
+        ],
+        [
+            0.64,
+            0.55,
+            0.63,
+            0.6
+        ],
+        [
+            0.64,
+            0.64,
+            0.63,
+            0.61
+        ]
+    ],
+    "acc": [
+        [
+            0.48
+        ],
+        [
+            0.55,
+            0.45,
+            0.58,
+            0.56
+        ],
+        [
+            0.64,
+            0.55,
+            0.63,
+            0.6
+        ],
+        [
+            0.64,
+            0.64,
+            0.63,
+            0.61
+        ]
+    ]
+}

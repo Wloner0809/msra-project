@@ -1,0 +1,106 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        128.30853581428528,
+        2101.521751642227,
+        2164.820156097412,
+        2132.0497686862946
+    ],
+    "candidates": [
+        [
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nAnalyze the accuracy of the assertion considering the given context, and assess the trustworthiness of the information source. Take into consideration the medium in which the statement was presented and any pertinent factual details. Determine whether the statement is probably dishonest (Yes) or honest (No) by examining the speaker's position, the communication platform's norms, and accessible evidence.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nAssess if the given Statement is false (Yes) or truthful (No) considering the Context and any relevant data.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nAssess if the Statement is false (Yes) or truthful (No) considering the Context and any relevant data.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nEvaluate the truthfulness of the Statement considering the Context and the speaker's role, taking into account that political statements, especially in campaign speeches or social media, might contain exaggerations or rhetorical devices, while official interviews or reports are expected to be more factual. Classify as a lie (Yes) or not (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nEvaluate the veracity of the statement in light of the provided context, and evaluate the credibility of the information source. Consider the mode of communication in which the assertion was made and any relevant factual data. Decide if the statement is likely misleading (Yes) or truthful (No) by scrutinizing the author's intent, the platform's usual standards, and available evidence.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nEvaluate the factual accuracy of the Statement in the context provided, taking into account the reliability of the source, any available data, and the relevance of the information to the job title, state, and party mentioned. Determine if the Statement is false (Yes) or truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDetermine the veracity of the assertion in light of the situational context and the speaker's position, bearing in mind that political discourse, particularly in election rallies or digital platforms, might involve hyperbole or persuasive techniques. Conversely, formal statements or official documents are typically more rooted in fact. Categorize it as untruthful (Yes) or truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nAssess the veracity of the Statement based on the given context, considering the credibility of the source, pertinent data available, and the connection of the information to the specified job role, location, and political affiliation. Conclude whether the Statement is incorrect (Yes) or accurate (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nEvaluate the truthfulness of the provided Statement, considering the information in the context, the reliability of the source, and any available data. If the statement can be conclusively proven or disproven based on the content alone, regardless of the job title, state, or party mentioned, mark it as either false (Yes) or truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nWhen analyzing the statement, consider the individual's job title, location, and political affiliation, as these factors can affect their reliability and the backdrop of the statement. Determine the credibility of the claim by examining the context in which it was made, the communication medium, and relevant factual information. Decide if the statement is probably misleading (Yes) or honest (No) by evaluating the speaker's intention, the platform's usual standards, and the available evidence. Be aware that the person's position and partisan leanings might influence their motives and the veracity of the data presented.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nEvaluate the veracity of the statement in light of the provided context, and evaluate the credibility of the information source. Consider the mode of communication in which the assertion was made and any relevant factual data. Decide if the statement is likely misleading (Yes) or truthful (No) by scrutinizing the author's intent, the platform's usual standards, and available evidence.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nEvaluate the statement's factual accuracy by dissecting the content itself, disregarding the speaker's position or the context in which it was made. Consider the presence of supporting evidence, statistical data, or reliable sources that can validate the claim. Classify as untruthful (Yes) if there is a lack of evidence or the statement is directly contradicted by available information, and as truthful (No) if the statement appears to be based on verifiable facts.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.5760869565217391,
+            0.5543478260869565,
+            0.5543478260869565,
+            0.532608695652174
+        ],
+        [
+            0.64,
+            0.64,
+            0.64,
+            0.64
+        ],
+        [
+            0.6956521739130435,
+            0.6086956521739131,
+            0.6086956521739131,
+            0.6086956521739131
+        ]
+    ],
+    "f1": [
+        [
+            0.6
+        ],
+        [
+            0.56,
+            0.57,
+            0.55,
+            0.59
+        ],
+        [
+            0.49,
+            0.43,
+            0.54,
+            0.63
+        ],
+        [
+            0.53,
+            0.53,
+            0.49,
+            0.54
+        ]
+    ],
+    "acc": [
+        [
+            0.6
+        ],
+        [
+            0.56,
+            0.57,
+            0.55,
+            0.59
+        ],
+        [
+            0.49,
+            0.43,
+            0.54,
+            0.63
+        ],
+        [
+            0.53,
+            0.53,
+            0.49,
+            0.54
+        ]
+    ]
+}

@@ -1,0 +1,106 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        127.68687748908997,
+        2106.0132734775543,
+        2133.0600678920746,
+        2137.1187767982483
+    ],
+    "candidates": [
+        [
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nEvaluate the veracity of the Statement considering the Context and the authority of the source (Job title, State, Party), determining if the statement is likely to be true (No) or a potential misrepresentation or untruth (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDetermine the accuracy of the claim by examining its context and assessing the credibility of the source (Job role,地域, Affiliation), deciding whether it is probable to be factual (No) or possibly a distortion or falsehood (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nAssess the accuracy of the claim by examining the Context and the credibility of the source (Job role, Region, Affiliation), and decide whether it is probably factual (No) or possibly a distortion or falsehood (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context, the credibility of the source, and any potential biases related to their job title or political affiliation.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nAssess the truthfulness of the assertion by examining the Context and all relevant evidence, paying no heed to the source's occupation, geographical location, or political affiliation. Decide whether the statement is probably accurate (No) or possibly a distortion or falsehood (Yes). Concentrate on the factual basis and its consistency with established knowledge.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nAssess the credibility of the statement by examining its context and the reliability of the source's authority (such as job position, geographic location, or political affiliation), and decide whether it is most probable to be accurate (No) or possibly a distortion or falsehood (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nEvaluate the veracity of the statement by analyzing the context and the reliability of the source (considering factors such as job responsibility, geographical location, and affiliations), and determine whether it is likely to be factual (No) or potentially a misrepresentation or untruth (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nEvaluate the truthfulness of the Statement in light of the provided Context and the relevance of the source's expertise, without considering political affiliations. Determine if the statement is factually accurate (No) or likely contains distortion or inaccuracy (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nAssess the truthfulness of the claim by examining the contextual circumstances and the credibility of the source, taking into account elements like professional role, geographical setting, and any associated affiliations. Decide if it is most probable to be accurate (No) or could be a distortion or falsehood (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nAssess the truthfulness of the claim by examining the Context, supporting data, and the credibility of the source's knowledge or authority, while remaining impartial to their profession, geographic origin, or ideological alignment. Weigh the significance of factual coherence alongside the understanding that some sources may possess specialized insights or stances that affect their reliability. Conclude whether the statement is likely to be authentic (No) or possibly a misrepresentation or untruth (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nEvaluate the veracity of the Statement in the provided Context, regardless of the source's political affiliations, expertise, or job title. Determine if the statement is factually accurate (No) or likely contains distortion or inaccuracy (Yes) solely based on the information presented.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nAssess the veracity of the Claim by examining the given Context and the pertinence of the source's专业知识, ignoring any political biases. Decide whether the statement is factually correct (No) or seemingly contains misrepresentation or inexactitude (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.6330275229357798,
+            0.5963302752293578,
+            0.5688073394495413,
+            0.5412844036697247
+        ],
+        [
+            0.7391304347826086,
+            0.7391304347826086,
+            0.6956521739130435,
+            0.6956521739130435
+        ],
+        [
+            0.7916666666666666,
+            0.7916666666666666,
+            0.75,
+            0.75
+        ]
+    ],
+    "f1": [
+        [
+            0.6
+        ],
+        [
+            0.55,
+            0.52,
+            0.54,
+            0.64
+        ],
+        [
+            0.59,
+            0.66,
+            0.6,
+            0.59
+        ],
+        [
+            0.57,
+            0.58,
+            0.61,
+            0.63
+        ]
+    ],
+    "acc": [
+        [
+            0.6
+        ],
+        [
+            0.55,
+            0.52,
+            0.54,
+            0.64
+        ],
+        [
+            0.59,
+            0.66,
+            0.6,
+            0.59
+        ],
+        [
+            0.57,
+            0.58,
+            0.61,
+            0.63
+        ]
+    ]
+}

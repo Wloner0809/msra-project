@@ -1,0 +1,106 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        130.86717987060547,
+        2274.826539993286,
+        2309.064105987549,
+        2237.4688200950623
+    ],
+    "candidates": [
+        [
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nCarefully evaluate the Statement in the context of the provided Context, Job title, State, and Party affiliation, and determine whether the Statement is a factual claim or a misleading/false statement. If the Statement is a factual claim, label it as \"No\". If the Statement is a misleading/false statement, label it as \"Yes\".\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere is a variation of the instruction:\n\nOutput: Analyze the given Statement in conjunction with the Context, Job title, State, Party, and other relevant details to classify it as either a lie (Yes) or truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere are a few variations of the instruction:\n\n**Variation 1**\nInput: Evaluate the Statement's truthfulness based on the Context and additional information. Identify if it's a fabrication (Yes) or factual (No).\n\n**Variation 2**\nInput: Assess the Statement's accuracy in the given Context and with other available information. Is it a deception (Yes) or truthful (No)?\n\n**Variation 3**\nInput: Analyze the Statement in the Context and with supporting information. Classify it as dishonest (Yes) or honest (No).\n\n**Variation 4**\nInput: Examine the Statement's validity using the Context and other relevant details. Is it a mistruth (Yes) or a true statement (No)?\n\n**Variation 5**\nInput: Investigate the Statement's credibility in the provided Context and with additional facts. Is it a falsehood (Yes) or a genuine statement (No)?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) by carefully considering the Context, Job title, State, Party, and other provided information, in addition to the Statement itself.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nHere is a variation of the instruction:\n\nInput: Analyze the Statement within the framework of the given Context, Job title, State, and Party affiliation. Assess the Statement's validity, reliability, and underlying motivation. If the Statement presents a verifiably true claim without any deceptive or misleading elements, categorize it as \"No\". Conversely, if the Statement contains inaccuracies, misleading information, or falsehoods, or if its purpose is to mislead or manipulate, categorize it as \"Yes\".\n\nLet me know if you'd like me to generate more variations!\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nCarefully evaluate the Statement in the context of the provided Context, Job title, State, and Party affiliation. Consider the accuracy, truthfulness, and intent behind the Statement. If the Statement is a factual claim supported by verifiable evidence and does not contain any misleading or deceptive information, label it as \"No\". If the Statement is inaccurate, misleading, or contains false information, or if it is intended to deceive or manipulate, label it as \"Yes\".\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere is a variation of the instruction:\n\nInput: Analyze the Statement in the context of the provided Context, Job title, State, and Party affiliation, paying close attention to linguistic subtleties, underlying implications, and the speaker's intended meaning. Classify the Statement as either a verifiable fact or a statement that distorts or misrepresents the truth, taking into account the complexities of language and the circumstances in which the statement was made. If the Statement accurately reflects reality, categorize it as \"No\". If the Statement is inaccurate, misleading, or false, categorize it as \"Yes\".\n\nOutput:\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nCarefully evaluate the Statement in the context of the provided Context, Job title, State, and Party affiliation. Determine whether the Statement presents a accurate and unbiased representation of facts, or if it distorts, exaggerates, or misrepresents information to deceive or mislead. If the Statement is a factual claim that accurately represents the truth without any misleading implications, label it as \"No\". If the Statement is a misleading/false statement that presents inaccurate, exaggerated, or distorted information, or if it implies a false narrative, label it as \"Yes\".\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nHere is a variation of the instruction:\n\nInput: Analyze the Statement in the context of the provided Context, Job title, State, and Party affiliation, taking into account both the statement's factual correctness and its potential impact, attitude, and delivery. Assess whether the Statement provides a neutral, accurate, and reliable representation of the facts, or if it manipulates, misrepresents, or distorts information to deceive, mislead, or create a misleading narrative. If the Statement makes a factual claim that is verifiably true, unbiased, and free of misleading implications, categorize it as \"No\". If the Statement makes a misleading or false claim that presents inaccurate, exaggerated, or distorted information, implies a false narrative, omits critical context, or uses emotional manipulation, categorize it as \"Yes\".\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nCarefully evaluate the Statement in the context of the provided Context, Job title, State, and Party affiliation. Consider the accuracy, truthfulness, and intent behind the Statement. If the Statement is a factual claim supported by verifiable evidence and does not contain any misleading or deceptive information, label it as \"No\". If the Statement is inaccurate, misleading, or contains false information, or if it is intended to deceive or manipulate, label it as \"Yes\".\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere is a variation of the instruction:\n\nInput: Analyze the Statement within the framework of the given Context, Job title, State, and Party affiliation. Assess the Statement's validity, reliability, and underlying motivation. If the Statement presents a verifiably true claim without any deceptive or misleading elements, categorize it as \"No\". Conversely, if the Statement contains inaccuracies, misleading information, or falsehoods, or if its purpose is to mislead or manipulate, categorize it as \"Yes\".\n\nLet me know if you'd like me to generate more variations!\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere is a variation of the instruction:\n\nInput: Analyze the Statement in the context of the provided Context, Job title, State, and Party affiliation, paying close attention to linguistic subtleties, underlying implications, and the speaker's intended meaning. When interpreting the Statement, consider multiple possible readings and evaluate the degree of ambiguity or uncertainty. Classify the Statement as either a verifiable fact or a statement that distorts or misrepresents the truth, taking into account the complexities of language and the circumstances in which the statement was made. If the Statement accurately reflects reality, categorize it as \"No\". If the Statement is inaccurate, misleading, or false, or if its meaning is ambiguous or open to multiple interpretations, categorize it as \"Yes\".\n\nOutput:\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.6847826086956522,
+            0.6304347826086957,
+            0.6086956521739131,
+            0.6086956521739131
+        ],
+        [
+            0.7916666666666666,
+            0.7916666666666666,
+            0.75,
+            0.75
+        ],
+        [
+            0.84,
+            0.8,
+            0.76,
+            0.76
+        ]
+    ],
+    "f1": [
+        [
+            0.48
+        ],
+        [
+            0.61,
+            0.54,
+            0.46,
+            0.51
+        ],
+        [
+            0.59,
+            0.6,
+            0.67,
+            0.64
+        ],
+        [
+            0.66,
+            0.6,
+            0.59,
+            0.64
+        ]
+    ],
+    "acc": [
+        [
+            0.48
+        ],
+        [
+            0.61,
+            0.54,
+            0.46,
+            0.51
+        ],
+        [
+            0.59,
+            0.6,
+            0.67,
+            0.64
+        ],
+        [
+            0.66,
+            0.6,
+            0.59,
+            0.64
+        ]
+    ]
+}
