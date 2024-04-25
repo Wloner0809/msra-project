@@ -1,0 +1,106 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        136.9307084083557,
+        2238.584503889084,
+        2315.6652688980103,
+        2292.202165365219
+    ],
+    "candidates": [
+        [
+            "# Task\nIs the following text hate speech?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nHere's a variation of the instruction:\n\nOutput: Does the language in the text contain discriminatory or harmful content that could be perceived as biased, hostile, or oppressive towards individuals or groups based on their racial, ethnic, religious, gender, sexual orientation, or other inherent identities?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere are a few variations:\n\n* Input: Does the given text contain hate speech?\nOutput:\n* Input: Identify if the text promotes hate speech.\nOutput:\n* Input: Is the provided text an example of hate speech?\nOutput:\n* Input: Determine if the text contains hateful or discriminatory language.\nOutput:\n* Input: Classify the text as hate speech or not.\nOutput:\n* Input: Does the text express hateful or intolerant views?\nOutput:\n\nLet me know if you'd like me to generate more variations!\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nOutput: Does the provided text include any language that is hateful, derogatory, or encourages harm or violence towards someone or a group because of their race, ethnicity, religious beliefs, gender identity, sexual orientation, or any other inherent characteristic?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nOutput: Does the provided text include any language that is biased, hateful, or encourages harm towards someone or a group due to their racial identity, gender, religious beliefs, sexual preference, or any other inherent characteristic?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nHere's a variation of the instruction:\n\nInput: Output: Does the given text promote or contain language that is offensive, biased, or hateful towards a person or group due to their race, ethnicity, national origin, gender identity, religion, sexual identity, age, disability, or any other inherent characteristic, either directly or indirectly?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nInput: Output: Does the given text exhibit any language or tone that promotes bias, prejudice, or hostility towards a person or group due to their intrinsic traits, such as race, ethnicity, gender, religious beliefs, sexual identity, or other personal characteristics, whether the language is overt or subtle?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction while keeping the semantic meaning:\n\nInput: Does the provided text express biased, intolerant, or aggressive sentiments towards people based on their racial, ethnic, religious, gender, sexual orientation, or other inherent identities?\n\nOutput:\n\nThis rephrased instruction conveys the same meaning as the original, but uses slightly different wording to express the idea.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere is a variation of the instruction:\n\nOutput: Determine whether the provided text includes any language that demeans, intimidates, or encourages hostility or aggression towards individuals or groups based on their protected characteristics, such as race, ethnicity, national origin, religion, gender, sexual orientation, gender identity, age, or any other inherent trait. This encompasses language that is demeaning, provocative, or perpetuates negative stereotypes, including implicit, sarcastic, or subtly offensive tone.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nHere's a variation of the instruction:\n\nInput: Output: Does the given text promote or contain language that is offensive, biased, or hateful towards a person or group due to their race, ethnicity, national origin, gender identity, religion, sexual identity, age, disability, or any other inherent characteristic, either directly or indirectly?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nInput: Output: Does the given text exhibit any language or tone that promotes bias, prejudice, or hostility towards a person or group due to their intrinsic traits, such as race, ethnicity, gender, religious beliefs, sexual identity, or other personal characteristics, whether the language is overt or subtle?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction while keeping the semantic meaning:\n\nInput: Does the provided text express biased, intolerant, or aggressive sentiments towards people based on their racial, ethnic, religious, gender, sexual orientation, or other inherent identities?\n\nOutput:\n\nThis rephrased instruction conveys the same meaning as the original, but uses slightly different wording to express the idea.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere is a variation of the instruction:\n\nOutput: Identify if the given text contains any language that is discriminatory, threatening, or promotes violence or hatred towards individuals or groups due to their race, ethnicity, national origin, religious beliefs, gender, sexual orientation, gender identity, age, or any other inherent characteristic. This includes language that is derogatory, inflammatory, or perpetuates harmful stereotypes, including subtle, implicit, or sarcastic undertones that may be offensive.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.8369565217391305,
+            0.8369565217391305,
+            0.7391304347826086,
+            0.717391304347826
+        ],
+        [
+            1.0,
+            1.0,
+            0.9565217391304348,
+            0.9565217391304348
+        ],
+        [
+            1.0,
+            1.0,
+            0.9583333333333334,
+            0.9583333333333334
+        ]
+    ],
+    "f1": [
+        [
+            0.59
+        ],
+        [
+            0.86,
+            0.84,
+            0.76,
+            0.77
+        ],
+        [
+            0.91,
+            0.92,
+            0.96,
+            0.93
+        ],
+        [
+            0.91,
+            0.93,
+            0.96,
+            0.91
+        ]
+    ],
+    "acc": [
+        [
+            0.59
+        ],
+        [
+            0.86,
+            0.84,
+            0.76,
+            0.77
+        ],
+        [
+            0.91,
+            0.92,
+            0.96,
+            0.93
+        ],
+        [
+            0.91,
+            0.93,
+            0.96,
+            0.91
+        ]
+    ]
+}

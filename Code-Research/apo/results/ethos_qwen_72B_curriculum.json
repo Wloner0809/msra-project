@@ -1,0 +1,106 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        136.46906185150146,
+        2057.4785220623016,
+        2131.960729122162,
+        2084.3914585113525
+    ],
+    "candidates": [
+        [
+            "# Task\nIs the following text hate speech?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nIs the following text hate speech?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nIs there any presence of directed hate speech in the text that targets a particular individual, group, or a protected attribute like race, religion, or gender?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nIs there any language in the text that exhibits directed hatred or prejudice against a particular individual, group, or characteristic like race, religion, or gender?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDoes the following text contain targeted hate speech towards a specific individual, group, or protected characteristic (such as race, religion, gender)?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nIs there any presence of directed hate speech in the text that targets a particular individual, group, or a protected attribute like race, religion, or gender?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nIs there any language in the text that exhibits directed hatred or prejudice against a particular individual, group, or characteristic like race, religion, or gender?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nIs there any authentic manifestation of directed hate speech within the text that targets a particular person, community, or safeguarded attribute (like race, religion, or gender), considering the surrounding context and the manner in which it is conveyed? Kindly account for possible sarcasm or irony and distinguish it from constructive criticism or parody.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nIs the following text hate speech?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nIs there any language in the text that exhibits directed hatred or prejudice against a particular individual, group, or characteristic like race, religion, or gender?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nIs there any authentic manifestation of directed hate speech within the text that targets a particular person, community, or safeguarded attribute (like race, religion, or gender), considering the surrounding context and the manner in which it is conveyed? Kindly account for possible sarcasm or irony and distinguish it from constructive criticism or parody.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nIs the following text hate speech?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nEvaluate the text for the presence of language that expresses disdain, prejudice, or hostility towards an individual, community, or a safeguarded attribute such as race, religion, or gender, while taking into account the context and the intent behind the message. Distinguish between genuine expressions of hate speech and forms of irony, sarcasm, parody, or critical commentary, especially when discussing organizations or movements. Avoid misinterpreting constructive criticism or opinion-based statements as hate speech.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.9533333333333334,
+            0.9333333333333333,
+            0.9333333333333333,
+            0.9266666666666666
+        ],
+        [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ],
+        [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ]
+    ],
+    "f1": [
+        [
+            0.93
+        ],
+        [
+            0.93,
+            0.91,
+            0.91,
+            0.94
+        ],
+        [
+            0.91,
+            0.91,
+            0.92,
+            0.93
+        ],
+        [
+            0.91,
+            0.92,
+            0.93,
+            0.93
+        ]
+    ],
+    "acc": [
+        [
+            0.93
+        ],
+        [
+            0.93,
+            0.91,
+            0.91,
+            0.94
+        ],
+        [
+            0.91,
+            0.91,
+            0.92,
+            0.93
+        ],
+        [
+            0.91,
+            0.92,
+            0.93,
+            0.93
+        ]
+    ]
+}

@@ -1,0 +1,106 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        129.5915811061859,
+        2051.6774690151215,
+        2029.4745690822601,
+        2124.6851904392242
+    ],
+    "candidates": [
+        [
+            "# Task\nIs the following text hate speech?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nIs the following text hate speech?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nIs there any language in the text that is explicitly abusive, malicious, or harmful towards an individual or group due to their race, religion, gender, or any other characteristic protected by law?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDoes the text contain any form of hate speech?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDoes the text contain any form of hateful content?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nIs there any language in the text that deliberately targets or insults an individual or group on the basis of their race, ethnicity, nationality, religion, sex, gender identity, sexual orientation, or any other safeguarded attribute, by employing pejorative language or advocating for violence or harm?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDoes the text include any language that explicitly or purposefully targets an individual or group due to their race, ethnicity, nationality, religion, sex, gender identity, sexual orientation, or any other safeguarded attribute, through the use of offensive language or advocacy of violence or harm?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nDoes the text contain explicit or intentional language that attacks a person or group based on their race, ethnicity, nationality, religion, sex, gender identity, sexual orientation, or any other protected characteristic, using derogatory terms or promoting violence or harm?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nIs there any language in the text that is explicitly abusive, malicious, or harmful towards an individual or group due to their race, religion, gender, or any other characteristic protected by law?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nIs there any language in the text that is explicitly abusive, malicious, or harmful towards an individual or group due to their race, religion, gender, or any other characteristic protected by law?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nIs there any language in the text that deliberately targets or insults an individual or group on the basis of their race, ethnicity, nationality, religion, sex, gender identity, sexual orientation, or any other safeguarded attribute, by employing pejorative language or advocating for violence or harm?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nIdentify if the text contains language that explicitly promotes hatred, discrimination, or advocates for violence against an individual or group due to their race, ethnicity, nationality, religion, sex, gender identity, sexual orientation, or any other protected characteristic. Analyze the context to ensure the criticism is not aimed at a specific ideology, organization, or action rather than the attributes of the protected group itself.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nIdentify if the text contains language that directly targets or incites harm against an individual or group based on their race, ethnicity, nationality, religion, sex, gender identity, sexual orientation, or other protected characteristics, using explicitly derogatory terms or advocating for violence. Consider the context and whether the criticism is specifically aimed at a harmful ideology or behavior within a group, rather than the group as a whole.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.955,
+            0.945,
+            0.93,
+            0.92
+        ],
+        [
+            1.0,
+            1.0,
+            1.0,
+            0.9722222222222222
+        ],
+        [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ]
+    ],
+    "f1": [
+        [
+            0.93
+        ],
+        [
+            0.93,
+            0.93,
+            0.88,
+            0.89
+        ],
+        [
+            0.91,
+            0.9,
+            0.92,
+            0.93
+        ],
+        [
+            0.93,
+            0.91,
+            0.95,
+            0.93
+        ]
+    ],
+    "acc": [
+        [
+            0.93
+        ],
+        [
+            0.93,
+            0.93,
+            0.88,
+            0.89
+        ],
+        [
+            0.91,
+            0.9,
+            0.92,
+            0.93
+        ],
+        [
+            0.93,
+            0.91,
+            0.95,
+            0.93
+        ]
+    ]
+}

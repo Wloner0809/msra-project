@@ -1,0 +1,106 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        136.1229259967804,
+        2234.905949831009,
+        2332.0958967208862,
+        2331.0629959106445
+    ],
+    "candidates": [
+        [
+            "# Task\nIs the following text hate speech?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nHere is a variation of the instruction:\n\nInput: Identify the text as hate speech if it promotes discrimination, hostility, or intimidation against a person or group due to their race, ethnic background, national origin, religious beliefs, gender identity, sexual preference, disability status, or any other characteristic that is protected by law.\n\nOr\n\nInput: Label the text as hate speech if it contains derogatory, demeaning, or violent language targeting an individual or group based on their race, ethnicity, national identity, religious affiliation, gender, sexual orientation, disability, or other characteristics that are safeguarded against discrimination.\n\nOr\n\nInput: Categorize the text as hate speech if it expresses prejudice, bigotry, or aggression towards a person or group because of their race, ethnicity, nationality, religion, gender, sexual orientation, disability, or other protected attributes.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere are a few variations of the instruction:\n\n**Variation 1**\nIdentify the text as hate speech if it includes discriminatory, offensive, or menacing language targeting a person or group based on their race, ethnicity, national origin, religion, gender identity, sexual orientation, disability, or other characteristics protected by law.\n\n**Variation 2**\nDetermine if the text constitutes hate speech by checking for language that promotes discrimination, offensiveness, or threats against individuals or groups due to their race, ethnicity, nationality, religious beliefs, gender, sexual orientation, disability, or other protected attributes.\n\n**Variation 3**\nCategorize the text as hate speech if it contains language that is derogatory, offensive, or threatening towards a person or group based on their race, ethnicity, national identity, religious affiliation, gender, sexual orientation, disability, or other characteristics that are legally protected from discrimination.\n\n**Variation 4**\nLabel the text as hate speech if it exhibits discriminatory, offensive, or intimidating language aimed at individuals or groups based on their race, ethnicity, nationality, faith, gender identity, sexual orientation, disability, or other protected characteristics.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere is a variation of the instruction:\n\nInput: Does the provided text express hateful or violent sentiments, or discriminate against someone based on their identity, including their racial or ethnic background, religious beliefs, gender, sexual orientation, or physical/mental abilities?\n\nOutput:\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere are a few variations:\n\n**Variation 1**\nInput: Does the provided text contain hate speech?\n\nOutput: \n\n**Variation 2**\nInput: Classify the following text as hate speech or not.\n\nOutput: \n\n**Variation 3**\nInput: Does this text promote hate speech or discrimination?\n\nOutput: \n\n**Variation 4**\nInput: Identify if the given text is an example of hate speech.\n\nOutput: \n\n**Variation 5**\nInput: Determine whether the following text contains hateful or discriminatory language.\n\nOutput:\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nHere's a variation of the instruction:\n\nOutput: Determine if the text constitutes hate speech by looking out for language that promotes harm, bias, or hostility towards a person or group based on their inherent traits, affiliations, or beliefs. Take into account the tone, surrounding context, and potential consequences of the language on the affected community, regardless of whether it directly references their race, ethnicity, national origin, religion, gender identity, sexual orientation, disability, or other personal characteristics.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nOutput: Classify the text as hate speech if it encourages prejudice, violence, or harassment towards an individual or group due to their race, ethnicity, nationality, gender, sexual orientation, religion, disability, or any other inherent or perceived feature that defines them.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nOutput: Classify the text as hate speech if it contains language that encourages prejudice, antagonism, or threats towards an individual or group due to their race, ethnicity, nationality, religion, gender, sexual orientation, age, ability, or any other inherent or perceived attribute that defines them.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nOutput: Classify the text as hate speech if it contains language that aims to degrade, demean, or incite violence against an individual or group based on their race, ethnicity, nationality, religion, gender identity, sexual orientation, disability, or any other legally protected characteristic, unless it is being used to expose or criticize discriminatory attitudes.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ],
+        [
+            "# Task\nOutput: Classify the text as hate speech if it expresses discriminatory or violent intentions towards an individual or group based on their race, ethnicity, nationality, religion, gender identity, sexual orientation, disability, or any other legally protected characteristic. Consider the context and intent behind the language, rather than just the presence of certain keywords. Look for language that promotes stereotypes, stigma, or harm towards a protected group, and avoid misclassifying texts that use protected characteristics to criticize discriminatory attitudes or promote inclusivity.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nWhen assessing the text for hate speech, carefully examine the following crucial elements: (1) whether it perpetuates harmful stereotypes or biases, (2) the tone and language employed, including the use of offensive slurs or derogatory terms, (3) the potential consequences for the targeted group, and (4) the circumstances in which the statement was made. Exercise caution when encountering ambiguous cases where the author's intention is unclear, and attempt to clarify the meaning by analyzing the surrounding context and language. Additionally, consider the power imbalance and potential harm that may result, even if the language does not explicitly mention a protected characteristic.\n\nOr, here's another variation:\n\nTo determine if a text constitutes hate speech, evaluate it against the following key criteria: (1) the presence of stereotyping or biased language, (2) the tone and terminology used, including any pejorative language or slurs, (3) the potential effects on the group being targeted, and (4) the context in which the statement was made. Be mindful of instances where the author's intent is ambiguous, and attempt to resolve the ambiguity by examining the surrounding context and language. Furthermore, take into account the unequal power dynamics and potential harm that may occur, even if the language does not directly reference a protected group or characteristic.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nOutput: Determine if the text constitutes hate speech by looking out for language that promotes harm, bias, or hostility towards a person or group based on their inherent traits, affiliations, or beliefs. Take into account the tone, surrounding context, and potential consequences of the language on the affected community, regardless of whether it directly references their race, ethnicity, national origin, religion, gender identity, sexual orientation, disability, or other personal characteristics.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+            "# Task\nHere's a variation of the instruction:\n\nOutput: Classify the text as hate speech if it encourages prejudice, violence, or harassment towards an individual or group due to their race, ethnicity, nationality, gender, sexual orientation, religion, disability, or any other inherent or perceived feature that defines them.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:"
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.967391304347826,
+            0.9456521739130435,
+            0.8913043478260869,
+            0.8152173913043478
+        ],
+        [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ],
+        [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ]
+    ],
+    "f1": [
+        [
+            0.59
+        ],
+        [
+            0.97,
+            0.95,
+            0.9,
+            0.83
+        ],
+        [
+            0.95,
+            0.96,
+            0.96,
+            0.94
+        ],
+        [
+            0.96,
+            0.91,
+            0.95,
+            0.96
+        ]
+    ],
+    "acc": [
+        [
+            0.59
+        ],
+        [
+            0.97,
+            0.95,
+            0.9,
+            0.83
+        ],
+        [
+            0.95,
+            0.96,
+            0.96,
+            0.94
+        ],
+        [
+            0.96,
+            0.91,
+            0.95,
+            0.96
+        ]
+    ]
+}
