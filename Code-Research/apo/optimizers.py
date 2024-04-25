@@ -46,7 +46,7 @@ class ProTeGi(PromptOptimizer):
         curriculum_prompt = "\n".join(
             [line.lstrip() for line in curriculum_prompt.split("\n")]
         )
-        responses = utils.model(curriculum_prompt, n=n)
+        responses = utils.teacher(curriculum_prompt, n=n)
         rank = []
         for response in responses:
             rank += self.parse_tagged_text(response, "<START>", "<END>")
@@ -177,7 +177,7 @@ class ProTeGi(PromptOptimizer):
         # NOTE: Curriculum learning is used here
         self._set_seed(seed)
         minibatch = random.sample(train_exs, k=self.opt["minibatch_size"])
-        
+
         if curriculum:
             rank = self._curriculum_learning(self.opt["minibatch_size"], minibatch, n=1)
             index = np.argsort(rank[0].split(","))

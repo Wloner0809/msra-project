@@ -27,6 +27,40 @@ def parse_sectioned_prompt(s):
     return result
 
 
+def teacher(
+    prompt,
+    temperature=0.7,
+    n=1,
+    top_p=1,
+    stop=None,
+    max_tokens=1024,
+    presence_penalty=0,
+    frequency_penalty=0,
+    logit_bias={},
+):
+    messages = [{"role": "user", "content": prompt}]
+    client = OpenAI(
+        api_key=config.OPENAI_KEY1,
+        base_url="https://api.together.xyz/",
+    )
+
+    chat_completion = client.chat.completions.create(
+        messages=messages,
+        model="meta-llama/Llama-3-70b-chat-hf",
+        # model="mistralai/Mixtral-8x22B-Instruct-v0.1",
+        # model="Qwen/Qwen1.5-72B-Chat",
+        temperature=temperature,
+        max_tokens=max_tokens,
+        logit_bias=logit_bias,
+        frequency_penalty=frequency_penalty,
+        presence_penalty=presence_penalty,
+        top_p=top_p,
+        stop=stop,
+        n=n,
+    )
+    return [choice.message.content for choice in chat_completion.choices]
+
+
 def model(
     prompt,
     temperature=0.7,
@@ -40,15 +74,15 @@ def model(
 ):
     messages = [{"role": "user", "content": prompt}]
     client = OpenAI(
-        api_key=config.OPENAI_KEY,
+        api_key=config.OPENAI_KEY2,
         base_url="https://api.together.xyz/",
     )
 
     chat_completion = client.chat.completions.create(
         messages=messages,
-        # model="meta-llama/Llama-3-70b-chat-hf",
+        model="meta-llama/Llama-3-70b-chat-hf",
         # model="mistralai/Mixtral-8x22B-Instruct-v0.1",
-        model="Qwen/Qwen1.5-72B-Chat",
+        # model="Qwen/Qwen1.5-72B-Chat",
         temperature=temperature,
         max_tokens=max_tokens,
         logit_bias=logit_bias,
