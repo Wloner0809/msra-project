@@ -5,15 +5,16 @@
 
 ##  :calendar: Timeline
 
-|          Data          |                           Summary                            |
-| :--------------------: | :----------------------------------------------------------: |
-|      Before 4.15       | Research some papers related to **automatic-prompt-optimization** and **ICL** |
-|   :city_sunset:4.15    |  Official opening of this project organized by **Nan Yang**  |
-| :night_with_stars:4.16 | Two directions are proposed :one: (**High Priority**)Utilize the idea of **curriculum learning** to arrange the examplars from easy to difficult. This process can be automated by LLM(serve as **Difficulty Measurer + Training Scheduler**) :two: Design a new metric to select best examplars(**Influence Function/Perplexity/Mutual Information/Semantic Distance/Entropy**).Now the task is using llama2-70b to test this idea at a random dataset. |
-| :night_with_stars:4.20 | Two optimization areas in apo codes: :one:errors are selected randomly:two:use curriculum learning to select minibatch​ |
-|  :crescent_moon:4.22   | implement the idea and make some tests(maybe more result files will be pushed tomorrow) |
-|   :city_sunrise:4.24   | test llama/mixtral/qwen model on liar dataset, record the results |
-| :night_with_stars:4.25 | test llama/qwen model on ethos dataset, record the results. Next: **Design a new metric to select prompts(instead of using acc)、Deal with error strings in a more reasonable way** |
+|          Data           |                           Summary                            |
+| :---------------------: | :----------------------------------------------------------: |
+|       Before 4.15       | Research some papers related to **automatic-prompt-optimization** and **ICL** |
+|    :city_sunset:4.15    |  Official opening of this project organized by **Nan Yang**  |
+| :night_with_stars:4.16  | Two directions are proposed :one: (**High Priority**)Utilize the idea of **curriculum learning** to arrange the examplars from easy to difficult. This process can be automated by LLM(serve as **Difficulty Measurer + Training Scheduler**) :two: Design a new metric to select best examplars(**Influence Function/Perplexity/Mutual Information/Semantic Distance/Entropy**).Now the task is using llama2-70b to test this idea at a random dataset. |
+| :night_with_stars:4.20  | Two optimization areas in apo codes: :one:errors are selected randomly:two:use curriculum learning to select minibatch​ |
+|   :crescent_moon:4.22   | implement the idea and make some tests(maybe more result files will be pushed tomorrow) |
+|   :city_sunrise:4.24    | test llama/mixtral/qwen model on liar dataset, record the results |
+| :night_with_stars:4.25  | test llama/qwen model on ethos dataset, record the results. Next: **Design a new metric to select prompts(instead of using acc)、Deal with error strings in a more reasonable way** |
+| :night_with_stars: 5.10 | Use perplexity to select prompts(add Influence Score later)  |
 
 ## :mag: Experiment Result
 
