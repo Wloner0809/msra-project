@@ -1,0 +1,266 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        3.123283386230469e-05,
+        3195.2544543743134,
+        5130.971771001816,
+        6897.9939041137695
+    ],
+    "candidates": [
+        [
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ]
+        ],
+        [
+            [
+                "# Task\nGiven the Statement and Context, judge the probability of the Statement being a lie (Yes) or not (No), keeping in mind the potential for false or unproven claims.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7547735893553907
+            ],
+            [
+                "# Task\nIn light of the speaker's Role, State, and Political Affiliation, and the Context, does the Statement include any exaggeration, distortion, or inaccuracy (Yes) or is it completely accurate (No)?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7607325625081873
+            ],
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\n\"Determine whether the given Statement is intentionally misleading or factually incorrect (Yes) or not (No) based on the provided Context, Job title, State, and Party information. Please consider if the statement is presented in a way that could be misinterpreted or if it is based on subjective opinions rather than objective facts.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7612683385505886
+            ],
+            [
+                "# Task\nAssess the veracity of the Statement in light of the provided Context and any additional facts. If the Statement is untrue, respond with 'Yes'. If it is true, respond with 'No'. In cases where the Statement's truthfulness is unclear due to inadequate information or ambiguity, answer with 'Cannot be determined'.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7160636218848542
+            ],
+            [
+                "# Task\nConsidering the Statement, Job title, State, Party, Context, and other information, determine whether the Statement is a lie (Yes) or not (No). Keep in mind the credibility and reliability of the Context.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6864448742043148
+            ],
+            [
+                "# Task\nPrompt: \"Given the Statement, Job title, State, Party, and Context, determine whether the Statement is a factual claim with verifiable evidence (No) or a lie that cannot be supported by facts (Yes). If the information provided is not sufficient to make a clear determination, respond with 'Uncertain'.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6254218708393336
+            ],
+            [
+                "# Task\nAssess if the provided Statement, in conjunction with the given Context, Job title, State, and Party information, is purposely deceptive or factually inaccurate (Yes) or not (No). Please take into account if the statement could potentially be misunderstood or if it is rooted in personal views instead of verifiable facts.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7671540425146318
+            ],
+            [
+                "# Task\nConsidering the Context, Job title, State, and Party of the speaker, determine whether the Statement is a lie (Yes) or not (No). If there is not enough information to make a determination, respond with 'Unknown'.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7682798405604461
+            ],
+            [
+                "# Task\n\"Based on the Context, determine whether the Statement involves any form of exaggeration, misrepresentation, or inaccuracy (Yes) or not (No). Consider the speaker's Job title, State, and Party, and the context in which the statement was made.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6476793281732713
+            ],
+            [
+                "# Task\nEvaluate the Statement's truthfulness (Yes for a lie, No for truth) using the Context and any additional details provided.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7673415442489577
+            ],
+            [
+                "# Task\n\"Considering the given Context and other provided information, determine whether the Statement is a lie (Yes) or not (No). If the statement is ambiguous or lacks necessary context to make a definitive judgment, respond with 'Cannot be determined'.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7633501921828701
+            ]
+        ],
+        [
+            [
+                "# Task\n\"Taking into account the surrounding circumstances, the speaker's professional role, location, and political affiliation, ascertain if the Statement includes any kind of overstatement, distortion, imprecision, or absence of subtlety (Yes) or not (No). Ponder over the complete consequences and intricacies of the statement, and assess whether it truthfully portrays the matter or scenario it is referring to.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7257359507711828
+            ],
+            [
+                "# Task\nAssess the veracity of the Statement in light of the provided Context and any additional facts. If the Statement is untrue, respond with 'Yes'. If it is true, respond with 'No'. In cases where the Statement's truthfulness is unclear due to inadequate information or ambiguity, answer with 'Cannot be determined'.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7160636218848542
+            ],
+            [
+                "# Task\n\"Assessing the Statement and any pertinent factual data, does it encompass any fabrications, exaggerations, or misrepresentations (Yes) or is it completely truthful and precise (No)?\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7537446364690653
+            ],
+            [
+                "# Task\nConsider the potential for subjectivity or bias in the supplied Context when evaluating the Statement's truthfulness (Yes for a lie, No for truth). Bear in mind that the Context's nature can affect the Statement's accuracy, as some contexts may involve exaggeration or misrepresentation, while others are more fact-based.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.702679854952986
+            ],
+            [
+                "# Task\nPrompt: \"Based on the given Assertion, Occupation, Location, Affiliation, and Background, ascertain if the Assertion is a factual statement with verifiable proof (No) or a falsehood that lacks factual support (Yes). In cases where the provided information is insufficient to draw a definitive conclusion, respond with 'Uncertain'.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.804167702924674
+            ],
+            [
+                "# Task\n\"Given the Assertion, the person who uttered the assertion, the circumstances surrounding the assertion, and any pertinent details, ascertain if the Assertion is a factual assertion backed by verifiable proof (No) or a falsehood devoid of factual support (Yes). In instances where the provided information is insufficient for a definitive determination, respond with 'Uncertain'. Always bear in mind the context of the assertion and any supplementary information given.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7908181451304671
+            ],
+            [
+                "# Task\n[\"Prompt: Given the Assertion, Position, Location, Affiliation, and Backdrop, assess if the Assertion is a factual claim that can be substantiated with evidence at the time it was issued (No) or a falsehood that lacks factual support, even when considering the context and conditions (Yes). If the provided details are insufficient to draw a definitive conclusion, or if there have been substantial shifts in context or conditions since the assertion was made, respond with 'Uncertain'.\"],\n0.8446156008755632\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7283374001867022
+            ],
+            [
+                "# Task\n\"Considering the speaker's Role, State, and Political Affiliation, as well as the Context, does the Statement contain any exaggeration, distortion, or inaccuracy (Yes) or is it completely accurate (No)? Please note that this question requires complete information for evaluation. If the information provided is incomplete, please indicate that the statement cannot be evaluated accurately.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7152423157281697
+            ],
+            [
+                "# Task\nConsidering the Context, Job title, State, and Party of the speaker, evaluate the Statement for truthfulness. If the statement contains misinformation, exaggeration, or is not supported by evidence, label it as 'Yes' for a lie. If the statement is factually accurate and free of misrepresentation, label it as 'No'. If there is not enough information to make a determination, respond with 'Unknown'. Remember to consider the context in which the statement was made, as heated or emotional situations may lead to exaggerations or misrepresentations.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.732651167966969
+            ],
+            [
+                "# Task\n\"Task: You are given a Statement, a Job title, a State, a Party, and Context. Your goal is to decide whether the Statement is a verifiable factual claim (No), a falsehood with no factual basis (Yes), or a distortion of truth through exaggeration or hyperbole (Yes). If the provided information is insufficient for a definitive determination, respond with 'Uncertain'.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7744544504847028
+            ],
+            [
+                "# Task\n\"Considering the Statement, Job title, State, Party, Context, and other relevant information, determine whether the Statement is a lie (Yes) or not (No). Prioritize the credibility and reliability of the Context and the Statement itself. If the Statement is a claim about someone's actions or words, consider the Job title, State, and Party of the person mentioned, as they may provide additional context or biases. However, do not make assumptions based solely on these factors. If the evidence provided in the Context is insufficient or contradictory, consider the Statement a lie.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7061615500808158
+            ],
+            [
+                "# Task\nGiven the Speaker's Role, Current Situation, and Political Allegiance, along with the provided Context, does the Statement hold any elements of exaggeration, distortion, or inaccuracy (Yes) or is it entirely accurate (No)? Please be aware that this assessment mandates comprehensive information. In case of incomplete data, kindly specify that the statement cannot be precisely evaluated.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7036907925743553
+            ]
+        ],
+        [
+            [
+                "# Task\nConsider the potential for subjectivity or bias in the supplied Context when evaluating the Statement's truthfulness (Yes for a lie, No for truth). Bear in mind that the Context's nature can affect the Statement's accuracy, as some contexts may involve exaggeration or misrepresentation, while others are more fact-based.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.702679854952986
+            ],
+            [
+                "# Task\n\"Taking into account the speaker's occupation, geographical context, political leanings, and possible biases or intentions, evaluate whether the Statement contains any distortion, misinterpretation, error, or oversimplification (Yes) or not (No). Thoroughly analyze the statement's implications and intricacies, and judge if it precisely portrays the circumstances or subject matter it aims to address.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6968399568052103
+            ],
+            [
+                "# Task\n\"Taking into account the surrounding circumstances, the speaker's professional role, location, and political affiliation, ascertain if the Statement includes any kind of overstatement, distortion, imprecision, or absence of subtlety (Yes) or not (No). Ponder over the complete consequences and intricacies of the statement, and assess whether it truthfully portrays the matter or scenario it is referring to.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7257359507711828
+            ],
+            [
+                "# Task\nAssess the veracity of the Statement in light of the provided Context and any additional facts. If the Statement is untrue, respond with 'Yes'. If it is true, respond with 'No'. In cases where the Statement's truthfulness is unclear due to inadequate information or ambiguity, answer with 'Cannot be determined'.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7160636218848542
+            ],
+            [
+                "# Task\nBased on the speaker's Position, Condition, and Political Allegiance, along with the Circumstances, does the Assertion involve any overstatement, misrepresentation, or untruthfulness (Yes) or is it entirely factual (No)? Please bear in mind that this task necessitates comprehensive data for assessment. In case the provided data is insufficient, kindly specify that the assertion cannot be precisely evaluated.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7770294387779734
+            ],
+            [
+                "# Task\n\"Assessing the Statement and any pertinent factual data, does it encompass any fabrications, exaggerations, or misrepresentations (Yes) or is it completely truthful and precise (No)?\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7537446364690653
+            ],
+            [
+                "# Task\nGiven the details about the speaker's Role, State, and Political Affiliation, along with the Context, and based on the information provided, does the Statement precisely mirror the speaker's viewpoint or a provable fact (No) or does it include embellishment, misrepresentation, or inaccuracy (Yes)? Please be aware that this analysis necessitates comprehensive data. If the supplied data is inadequate or does not connect directly to the speaker's viewpoint or a provable fact, please indicate that the statement cannot be accurately assessed.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7314441769804793
+            ],
+            [
+                "# Task\nYou are given a Claim, an Occupation, a Location, an Affiliation, and Background Information. Your task is to determine whether the Claim is a verifiable factual statement (No), a falsehood with no factual basis (Yes), or a distortion of truth through exaggeration or hyperbole (Yes). To make this judgment, take into account the context in which the claim was made and any relevant details provided. If the given information is not enough for a conclusive decision, respond with 'Uncertain'.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8154433034074963
+            ],
+            [
+                "# Task\nGiven the Speaker's Role, Current Situation, and Political Allegiance, along with the provided Context, does the Statement hold any elements of exaggeration, distortion, or inaccuracy (Yes) or is it entirely accurate (No)? Please be aware that this assessment mandates comprehensive information. In case of incomplete data, kindly specify that the statement cannot be precisely evaluated.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7036907925743553
+            ],
+            [
+                "# Task\nYour mission is to evaluate a Statement, along with a Job title, a State, a Party, and Context that are provided to you. You need to determine whether the Statement is a verifiable factual claim (No), a falsehood with no factual basis (Yes), or a distortion of truth through exaggeration or hyperbole (Yes). When making your judgment, consider the source and context of the statement. If the given information is not enough to make a clear determination, respond with 'Uncertain'.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.809480496706934
+            ],
+            [
+                "# Task\nWith the Assertion at hand, the individual who stated the assertion, the circumstances in which the assertion was made, and any pertinent details, discern whether the Assertion is a factual claim supported by verifiable evidence (No) or a falsehood lacking factual backing (Yes). In scenarios where the provided information is inadequate for a conclusive determination, and there is no means to access external sources or databases for verification, respond with 'Uncertain'. Always factor in the context of the assertion, the reliability of the speaker, and any additional information provided. If the assertion is a personal belief, political viewpoint, or an unverifiable claim, it should be classified as a falsehood lacking factual basis.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8090149820376059
+            ],
+            [
+                "# Task\n\"Considering the Statement, Job title, State, Party, Context, and other relevant information, determine whether the Statement is a lie (Yes) or not (No). Prioritize the credibility and reliability of the Context and the Statement itself. If the Statement is a claim about someone's actions or words, consider the Job title, State, and Party of the person mentioned, as they may provide additional context or biases. However, do not make assumptions based solely on these factors. If the evidence provided in the Context is insufficient or contradictory, consider the Statement a lie.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7061615500808158
+            ]
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.5507246376811594,
+            0.5217391304347826,
+            0.5217391304347826,
+            0.5072463768115942,
+            0.5,
+            0.5,
+            0.4927536231884058,
+            0.4927536231884058,
+            0.4927536231884058,
+            0.4855072463768116,
+            0.4855072463768116,
+            0.4492753623188406
+        ],
+        [
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273
+        ],
+        [
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273
+        ]
+    ],
+    "metric": [
+        [
+            1.0
+        ],
+        [
+            0.729655416469331,
+            0.6858377781471231,
+            0.5217391304347826,
+            0.6663174482960401,
+            0.698261976615818,
+            0.7283906090486431,
+            0.7878739874048802,
+            0.6423137934243599,
+            0.6413725795915081,
+            0.7496105329564039,
+            0.632713359540576,
+            0.5885573448722091
+        ],
+        [
+            1.1273822349745806,
+            1.1426105071895205,
+            1.085489406617353,
+            1.1643735228990735,
+            0.9043794281064911,
+            0.9196459789788255,
+            0.998538214687723,
+            1.0168200500445919,
+            0.9926589338427367,
+            0.9390774716544708,
+            1.029895676406476,
+            1.0335117852147826
+        ],
+        [
+            1.1643735228990735,
+            1.1741316068224932,
+            1.1273822349745806,
+            1.1426105071895205,
+            1.0529611586770313,
+            1.085489406617353,
+            1.1185840887535752,
+            0.8918740570112843,
+            1.0335117852147826,
+            0.898443792322807,
+            0.8989607651529512,
+            1.029895676406476
+        ]
+    ]
+}

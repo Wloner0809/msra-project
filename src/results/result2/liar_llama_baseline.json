@@ -1,0 +1,266 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        3.62396240234375e-05,
+        2678.438850879669,
+        3817.1434440612793,
+        3930.7925815582275
+    ],
+    "candidates": [
+        [
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ]
+        ],
+        [
+            [
+                "# Task\nBased on the given Context and additional information, evaluate the Statement to determine its validity, taking into account possible biases and limitations of the available data, and respond with 'Yes' if it's a lie or 'No' if it's true.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8304199326859837
+            ],
+            [
+                "# Task\nClassify the Statement as either a deliberate falsehood or a significant distortion of the truth (True) or a accurate representation of the truth (False) by considering the Context and other relevant information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8075003991188592
+            ],
+            [
+                "# Task\nDetermine whether the Statement is accurate (No) or misleading/false (Yes) based on the Context and other information, considering the possibility of exaggeration, omission, or bias.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7734800835617494
+            ],
+            [
+                "# Task\nDisregard the job title, party affiliation, and surrounding context. Evaluate the Statement's content and accuracy to determine if it is a falsehood (Yes) or truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8217022309601709
+            ],
+            [
+                "# Task\nBased on the Context and other information, excluding the Job title, State, or Party affiliation, classify the Statement as accurate (No) or inaccurate (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7683470797243009
+            ],
+            [
+                "# Task\nEvaluate the Statement's credibility by checking its accuracy against the Context and additional information, taking into account potential distortions, incomplete information, or prejudice. Indicate if it is truthful (No) or deceptive/misleading (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7248462975683725
+            ],
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) by carefully analyzing the Context, Job title, State, and Party affiliation to identify any inconsistencies, exaggerations, or misinformation.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6954536153372595
+            ],
+            [
+                "# Task\nDetermine whether the Statement is a deliberate deception or misrepresentation of facts (Yes) or not (No) based on the Context, the speaker's intention, and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.720354327962969
+            ],
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\nAssess whether the Statement is intentionally misleading or inaccurately represents facts (True) or provides a genuine and truthful account (False), considering the surrounding Context, the speaker's motive, and any additional relevant information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6890109043526965
+            ],
+            [
+                "# Task\nIgnore the job title, party affiliation, and context, and focus solely on the statement itself. Determine whether the Statement is a lie (Yes) or not (No) based on its content and accuracy.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.813733548890213
+            ],
+            [
+                "# Task\nClassify the Statement as either 'Misleading or Inaccurate' if it contains false or deceptive information, omits crucial context, or is otherwise untruthful, or as 'Accurate and Truthful' if it provides a genuine and comprehensive representation of the facts, considering the Context and additional information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8295337367673085
+            ]
+        ],
+        [
+            [
+                "# Task\nExamine the statement in its entirety, considering potential biases, inaccuracies, or misrepresentations. Decide whether the statement is truthful and accurate overall, or if it contains falsehoods. Respond with 'Yes' if the statement is a lie, and 'No' if it is genuine.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7279285173677021
+            ],
+            [
+                "# Task\nDetermine whether the Statement is attempting to deceive or distort the truth, taking into account the speaker's intentions, the circumstances surrounding the statement, and any supplementary relevant details, regardless of its technical accuracy. Classify the statement as either providing a sincere and factual representation (False) or being misleading or inaccurate (True).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8548339583917526
+            ],
+            [
+                "# Task\nIgnore the individual's occupation, political leanings, and any surrounding information. Instead, focus solely on the Statement's substance and veracity to decide whether it is inaccurate (Yes) or accurate (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7425747844055315
+            ],
+            [
+                "# Task\nEvaluate the Statement solely based on its content, disregarding any external Context and metadata. Classify it as a lie (Yes) if it contains falsehood or misleading information, or not a lie (No) if it appears to be truthful.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7328400732205704
+            ],
+            [
+                "# Task\nBased on the given Context and additional information, evaluate the Statement to determine its validity, taking into account possible biases and limitations of the available data, and respond with 'Yes' if it's a lie or 'No' if it's true.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8304199326859837
+            ],
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based solely on the content of the Statement itself, ignoring the Context and other metadata.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.702908757851094
+            ],
+            [
+                "# Task\nDisregard the job title, party affiliation, and surrounding context. Evaluate the Statement's content and accuracy to determine if it is a falsehood (Yes) or truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8217022309601709
+            ],
+            [
+                "# Task\nDisregard the job title, party affiliation, and surrounding context, and examine the statement's content alone. Classify the statement as truthful (No) or untruthful (Yes) based solely on its factual correctness, taking into account whether it includes any inaccurate or deceptive information, even if some parts of the statement are accurate.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7919983802854751
+            ],
+            [
+                "# Task\nIgnore the job title, party affiliation, and context, and focus solely on the statement itself. Determine whether the Statement is a lie (Yes) or not (No) based on its factual accuracy, considering whether it contains any false or misleading information, even if parts of the statement are true.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7928591427760704
+            ],
+            [
+                "# Task\nAssess the Statement's reliability by verifying its consistency with the Context and supplementary facts, considering possible biases, omissions, or inaccuracies. Classify the Statement as trustworthy (No) or untruthful/manipulative (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7944735378362099
+            ],
+            [
+                "# Task\nPrompt 1: \"Carefully examine the Statement, considering the Context and other information, excluding the Job title, State, or Party affiliation. Determine if the Statement is supported by evidence or contradicts known facts. Classify the Statement as accurate (No) or inaccurate (Yes).\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7290240386120251
+            ],
+            [
+                "# Task\nBased on the Context and other information, excluding the Job title, State, or Party affiliation, classify the Statement as accurate (No) or inaccurate (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7683470797243009
+            ]
+        ],
+        [
+            [
+                "# Task\nBased on the Context and other information, excluding the Job title, State, or Party affiliation, determine whether the Statement is supported by verifiable evidence or facts (No) or lacks credible evidence to back up its claim (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7882812442228243
+            ],
+            [
+                "# Task\nCarefully examine the Statement's content, ignoring the job title, party affiliation, and surrounding context. Verify the accuracy of the Statement by evaluating the evidence, data, or credible sources it references. If the Statement is inaccurate, misleading, or lacks sufficient evidence to support its claim, label it as a falsehood (Yes). Otherwise, label it as truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8480874529738429
+            ],
+            [
+                "# Task\nPrompt 2: \"Carefully examine the Statement, considering the Context and other information, excluding the Job title, State, or Party affiliation. Determine if the Statement is clear and accurately represents the facts, or if it is misleading, vague, or lacks context. Classify the Statement as accurate (No) or inaccurate (Yes).\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.9339580827884617
+            ],
+            [
+                "# Task\nExamine the statement in its entirety, considering potential biases, inaccuracies, or misrepresentations. Decide whether the statement is truthful and accurate overall, or if it contains falsehoods. Respond with 'Yes' if the statement is a lie, and 'No' if it is genuine.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7279285173677021
+            ],
+            [
+                "# Task\nDetermine whether the Statement is attempting to deceive or distort the truth, taking into account the speaker's intentions, the circumstances surrounding the statement, and any supplementary relevant details, regardless of its technical accuracy. Classify the statement as either providing a sincere and factual representation (False) or being misleading or inaccurate (True).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8548339583917526
+            ],
+            [
+                "# Task\nEvaluate the Statement solely based on its content, disregarding any external Context and metadata. Classify it as a lie (Yes) if it contains falsehood or misleading information, or not a lie (No) if it appears to be truthful.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7328400732205704
+            ],
+            [
+                "# Task\nIgnore the individual's occupation, political leanings, and any surrounding information. Instead, focus solely on the Statement's substance and veracity to decide whether it is inaccurate (Yes) or accurate (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7425747844055315
+            ],
+            [
+                "# Task\nPrompt 2: \"Carefully examine the Statement, considering the Context and other information, excluding the Job title, State, or Party affiliation. Determine if the Statement is supported by evidence or contradicts known facts. Additionally, assess if the Statement is a simplification or misrepresentation of the actual stance or facts. Classify the Statement as accurate (No) or inaccurate (Yes).\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.879567271639869
+            ],
+            [
+                "# Task\nPrompt 2: \"Carefully examine the Statement, considering the Context and other information, excluding the Job title, State, or Party affiliation. Determine if the Statement is supported by evidence or contradicts known facts, and also consider the tone and potential for exaggeration or hyperbole. Classify the Statement as accurate (No) or inaccurate (Yes), taking into account whether the statement is misleading or presents an unfair interpretation of the facts.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8803785952800981
+            ],
+            [
+                "# Task\nIgnore the individual's profession, political leanings, and any additional information provided. Focus solely on the Statement's substance and veracity to decide whether it is inaccurate (Yes) or accurate (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8197828574932639
+            ],
+            [
+                "# Task\nIgnore any external information about the speaker, such as their occupation or political affiliation. Instead, focus solely on the words and meaning of the statement. Is the statement trying to manipulate or mislead, or does it provide an honest and accurate representation of the facts? Label the statement as \"Misleading\" (True) if it distorts the truth, or \"Accurate\" (False) if it provides a genuine and factual account.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8196451571600794
+            ],
+            [
+                "# Task\nPrompt 2: \"Carefully examine the Statement, considering the Context and other information, excluding the Job title, State, or Party affiliation. Determine if the Statement is supported by evidence or contradicts known facts, taking into account any assumptions or hypothetical scenarios that may affect its accuracy. Classify the Statement as accurate (No) or inaccurate (Yes).\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.9507822178219107
+            ]
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.5507246376811594,
+            0.5289855072463768,
+            0.5217391304347826,
+            0.5,
+            0.5,
+            0.4927536231884058,
+            0.4782608695652174,
+            0.4782608695652174,
+            0.47101449275362317,
+            0.4420289855072464,
+            0.43478260869565216,
+            0.427536231884058
+        ],
+        [
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.5454545454545454,
+            0.5454545454545454,
+            0.5454545454545454,
+            0.5454545454545454,
+            0.5454545454545454,
+            0.5454545454545454
+        ],
+        [
+            0.7272727272727273,
+            0.7272727272727273,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364
+        ]
+    ],
+    "metric": [
+        [
+            1.0
+        ],
+        [
+            0.6631881244707686,
+            0.6550900876626233,
+            0.6745346667909782,
+            0.6084929323068076,
+            0.6507475764460646,
+            0.6798042907047144,
+            0.6876962877434828,
+            0.6639244757752093,
+            0.47101449275362317,
+            0.6415413496576202,
+            0.5343058661998363,
+            0.5153934227559761
+        ],
+        [
+            0.8742117133490277,
+            0.7444295235543323,
+            0.8569690888077724,
+            0.8683526728649614,
+            0.7663154644004335,
+            0.9053289338848234,
+            0.6638104716074263,
+            0.6887066426296691,
+            0.6879589526390816,
+            0.686560998545174,
+            0.7481982987735574,
+            0.7099064470320704
+        ],
+        [
+            0.9226056469093769,
+            0.8575444958211853,
+            0.6813620954633042,
+            0.8742117133490277,
+            0.7444295235543323,
+            0.8683526728649614,
+            0.8569690888077724,
+            0.7234962655865961,
+            0.7228295187721746,
+            0.7762587745607566,
+            0.7763891859844815,
+            0.6693053618750288
+        ]
+    ]
+}

@@ -1,0 +1,236 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        3.457069396972656e-05,
+        2862.949527978897,
+        2903.084571838379,
+        3129.549557209015
+    ],
+    "candidates": [
+        [
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ]
+        ],
+        [
+            [
+                "# Task\nDoes the statement align with the facts presented in the context? If it contradicts, answer with 'Yes' for false; if it agrees, respond with 'No' for true.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7773692033576292
+            ],
+            [
+                "# Task\nYour task is to analyze a statement in the context of the speaker's professional role, political leanings, and the circumstances surrounding the statement. Determine whether the statement appears to be deliberately deceptive (Yes) or sincere (No). In your evaluation, factor in the speaker's motivations, the prevailing political climate, and documented biases to reach your conclusion.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8386415594744816
+            ],
+            [
+                "# Task\nGiven a statement and context including the speaker's job title, political affiliation, and the situation in which the statement was made, assess if the statement is likely to be intentionally misleading (Yes) or not (No). Consider the speaker's incentives, the political environment, and any known biases when making your determination.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8028640252173569
+            ],
+            [
+                "# Task\nYour task is to analyze a statement provided with contextual details such as the speaker's professional role, political leanings, and the circumstances surrounding the statement. Determine if the speaker likely intended to deceive (Yes) or not (No). In your assessment, take into account the speaker's motivations, the prevailing political climate, and any documented biases.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7986468351649143
+            ],
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\n` and `\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.0
+            ],
+            [
+                "# Task\n` and `\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.0
+            ]
+        ],
+        [
+            [
+                "# Task\nDoes the statement align with the facts presented in the context? If it contradicts, answer with 'Yes' for false; if it agrees, respond with 'No' for true.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7773692033576292
+            ],
+            [
+                "# Task\nYour task is to evaluate the factual accuracy of a statement made by a public figure, considering the context provided. Determine if the statement is likely to be intentionally misleading (Yes) based on its discrepancy with verifiable facts, regardless of the speaker's motivations or biases. Verify the claims against known data and assess if they align with reality. In cases where the statement presents clear factual errors or contradicts widely accepted information, the answer should be Yes, indicating an intention to deceive or a significant disregard for the truth. Conversely, if the statement aligns with known facts or does not contain verifiable inaccuracies, answer No.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7132574650951039
+            ],
+            [
+                "# Task\nYour assignment involves examining a statement, enriched with contextual elements such as the speaker's background, ideological inclinations, and the specific situation in which it was made. Assess whether the speaker's intention was to mislead (Yes) or to convey truth (No). Consider the speaker's potential motives, the contemporary political environment, and any known prejudices in your evaluation.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.826167391760798
+            ],
+            [
+                "# Task\nYour task is to analyze a statement considering the speaker's professional role, political affiliations, the statement's context, and factual accuracy. Determine if the statement is deliberately deceptive (Yes) or sincere (No). To make this judgment, carefully assess the information's truthfulness alongside the speaker's potential motives, the political environment, and any known biases. In cases where a statement may be misleading due to inaccuracies, distinguish between intentional deception and失误, exaggeration, or misunderstanding. Fact-checking is crucial; consider if the speaker is purposefully misrepresenting facts or if the discrepancy arises from other reasons.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.665301841281345
+            ],
+            [
+                "# Task\nYour assignment involves assessing the veracity of assertions made by individuals in precise situations. You must judge whether the claim is probable or erroneous, taking into account the speaker's intentions, political leanings, the context, and by comparing it against established facts, data, and historical accounts. If the statement, when fact-checked, diverges considerably from the truth, indicate deception with a Yes; otherwise, affirm accuracy with a No.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8440623481892973
+            ],
+            [
+                "# Task\nYour task is to analyze a statement in the context of the speaker's professional role, political leanings, and the circumstances surrounding the statement. Determine whether the statement appears to be deliberately deceptive (Yes) or sincere (No). In your evaluation, factor in the speaker's motivations, the prevailing political climate, and documented biases to reach your conclusion.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8386415594744816
+            ],
+            [
+                "# Task\nYour mission is to assess the veracity of assertions made by individuals in given scenarios. Decide whether the statement is probable to be truthful or misleading. Take into account the individual's intentions, political leanings, the situation, and validate the claim against established facts, data, and historical archives. If the assertion, when fact-checked, diverges considerably from reality, mark it as deceptive with Yes; otherwise, affirm its accuracy with No.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7515436371493578
+            ],
+            [
+                "# Task\nExamine a declaration and its surrounding circumstances, comprising the speaker's professional role, ideological leaning, and the specific context in which the utterance was delivered. Determine whether the statement appears to be deliberately deceptive (Yes) or genuinely meant (No). In your evaluation, take into account the speaker's motivations, the prevailing political climate, and any documented prejudices.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7045399662858559
+            ],
+            [
+                "# Task\nYour assignment involves scrutinizing a given assertion by examining the speaker's occupational stance, political leanings, the surrounding circumstances, and the veracity of the claim. Decide whether the statement is intentionally misleading (Yes) or made in good faith (No). This evaluation necessitates a细致的 review of the facts, coupled with an analysis of the speaker's possible intentions, the prevailing political climate, and any recognized prejudices. When faced with statements that could be confusing due to errors, ensure to differentiate between deliberate deceit and innocent mistakes, exaggerations, or misconceptions. Fact-checking is paramount; assess whether the inaccuracy stems from a deliberate misrepresentation or other unrelated factors.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7491564875692687
+            ],
+            [
+                "# Task\nYour assignment involves examining a statement, accompanied by contextual cues including the speaker's vocational background, ideological tendencies, and the specific context in which it was made. Assess whether the intention behind the statement was to mislead (Yes) or to convey truth (No). In your evaluation, consider the speaker's possible motives, the contemporary political environment, and any known biases that might influence the statement's integrity.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7667962505139909
+            ],
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\n\"For each prompt, carefully analyze the statement's factual accuracy by cross-referencing with historical data and current facts. Consider the speaker's job title, political affiliation, the context in which the statement was made, along with any incentives to mislead or political pressures. Determine if the statement seems intentionally misleading ('Yes') or is likely factual ('No'). Pay close attention to statistical claims and whether they align with known records. Remember to factor in the political environment and the potential impact of the statement on the public discourse.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.5945283211758847
+            ]
+        ],
+        [
+            [
+                "# Task\nYour primary task is to fact-check the core content of each statement. Verify if the claims can be substantiated with existing records or data. Analyze statistical assertions for their accuracy against known datasets. Examine whether the individual's statement aligns with historical events, public records, or official data, regardless of their job title, political stance, or the context in which it was made. Focus on the veracity of the statement itself, though consider any potential misinformation motives only if they directly impact the factuality of the claim. Determine if the statement is factually correct ('No') or intentionally misleading or incorrect ('Yes').\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6414111005420838
+            ],
+            [
+                "# Task\nYour central mission is to rigorously authenticate the main assertions within every statement. Confirm the validity of claims by cross-referencing with established archives or empirical evidence. Scrutinize figures and statistics for congruence with recognized data repositories. Assess the congruity of the expressed claim with historical facts, documented public records, or authoritative statistics, without prejudice to the speaker's position, affiliation, or the situational context. Concentrate primarily on the accuracy of the assertion, but if pertinent, examine for signs of deliberate disinformation whose impact is intrinsic to the truthfulness of the claim. Conclude whether the statement is factually accurate ('No') or deliberately deceptive or erroneous ('Yes').\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6510430311203782
+            ],
+            [
+                "# Task\nYour chief responsibility lies in rigorously validating the central claims of every assertion. Scrutinize the validity of each statement by cross-referencing it with established archives, empirical data, and verified statistics. Assess the congruence of the statements with historical facts, documented public records, or authoritative sources, disregarding the speaker's position, ideology, or the situational backdrop. Concentrate primarily on the accuracy of the information, but also entertain the possibility of misinformation strategies, provided they materially affect the truthfulness of the assertion. Conclude by judging whether the statement stands as factually accurate ('No') or is deliberately deceptive or erroneous ('Yes').\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7651958601557632
+            ],
+            [
+                "# Task\n\"For each prompt, carefully analyze the statement's factual accuracy by cross-referencing with historical data and current facts. Consider the speaker's job title, political affiliation, the context in which the statement was made, along with any incentives to mislead or political pressures. Determine if the statement seems intentionally misleading ('Yes') or is likely factual ('No'). Pay close attention to statistical claims and whether they align with known records. Remember to factor in the political environment and the potential impact of the statement on the public discourse.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.5945283211758847
+            ],
+            [
+                "# Task\nFor each task, your objective is to discern if a public figure's statement is deliberately deceptive or not, considering their role, political stance, the context, and factual accuracy. Assess the statement with a fine-grained approach:\n\n1. **Fact-Check Rigorously**: Verify the core claims made in the statement against reliable sources. A statement is considered deliberately deceptive if it contains facts that are proven false with the clear intent to mislead, not just if it's factually incorrect due to oversight.\n\n2. **Examine Motives**: Analyze the speaker's possible motives. Deliberate deception often serves a specific agenda, such as gaining political advantage or diverting attention.\n\n3. **Contextual Analysis**: Evaluate the context in which the statement was made. Inaccuracies in a commentary or political speech may be spin rather than deception if the broader context shows they were not meant to mislead.\n\n4. **Differentiate Between Errors**: Distinguish between intentional deception and honest mistakes, exaggeration, or misinterpretation. Pay attention to the pattern of statements—repeated inaccuracies can signal deception.\n\n5. **Evaluate Political Environment**: Consider the political landscape. Statements that align with party lines but are factually wrong might be spin, but if they're intentionally misleading in the context, that's deception.\n\nExample 1 (Revised Prompt Application):\nText: \"Statement: Gains in Atlanta Public Schools scores on a national standardized test lend credence to dramatic score increases on state tests.\"\nAnalysis: Look for actual data on Atlanta Public Schools' scores, comparing national and state tests. If there's no factual basis for the correlation claimed and the speaker knows this, it's deception.\n\nExample 2 (Revised Prompt Application):\nText: \"Statement: Paul Workman wants to raise the sales tax.\"\nCheck the record for Paul Workman's position on sales tax. If he never expressed this intent and the claim is made to sway public opinion, it indicates deliberate deception.\n\nExample 3 (Revised Prompt Application):\nText: \"Statement: U.S. Senate Majority Leader Harry Reid on whether Senate Democrats would seat Roland Burris.\"\nAnalyze if Harry Reid's statement contradicts known actions or intentions, with the aim to misinform.\n\nExample 4 (Revised Prompt Application):\nText: \"Statement: 'I actually started criticizing the war in Iraq before (Obama) did.'\"\nVerify the timeline of the speaker's and Obama's public statements on Iraq to assess if this is a false claim made to enhance their political image.\n\nRemember, the goal is to identify intent behind the discrepancy, not just the discrepancy itself.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6155994474581061
+            ],
+            [
+                "# Task\n\"Ascertain the veracity of the Statement by cross-referencing it with the Context, Job title, State, Party, and any relevant public records or known data. Indicate if the Statement is a fabrication (Yes) or aligns with factual information (No). Verify if the individual in their stated position could have made such a claim, and check the consistency with the provided circumstances, including media mentions or official records.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.596709912855889
+            ],
+            [
+                "# Task\nYour task is to evaluate the factual accuracy and potential intention to mislead in a statement made by a public figure, incorporating the context provided. Examine the statement in light of the source, historical information about the figure's statements, and the specific circumstances detailed in the context. Determine if the statement is likely to be intentionally misleading (Yes) by checking for discrepancies with verifiable facts or if it goes against the commonly accepted understanding, even if accidentally. Consider if the context indicates a manipulation of information or if the statement distorts reality. If the statement is aligned with reality, factually correct, or does not contain intentional inaccuracies based on the context, answer No. Pay close attention to the role of the source and any potential political, social, or media contexts that might influence the truthfulness of the claim.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6532735319218202
+            ],
+            [
+                "# Task\n\"For each prompt, thoroughly investigate the statement's veracity by comparing it against documented evidence, historical records, and current facts. Examine the statement's specifics, including any statistical claims, and validate them against reliable sources. Take into account the individual's role, political stance, the precise context in which the statement was made, and any documented motivations for disinformation or contextual pressures. Include in your analysis any contradictions, omissions, or exaggerations that might indicate intentional misleading. Without the specific content of the statements or factual outcomes, provide an evaluation based on the general approach: if a statement aligns closely with verifiable data and does not present evident distortion, classify it as 'No' for intentional misleading; otherwise, if there's suggestion of factual discrepancy or intent to deceive given the known context, classify it as 'Yes'.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.591090997002259
+            ],
+            [
+                "# Task\nDoes the statement align with the facts presented in the context? If it contradicts, answer with 'Yes' for false; if it agrees, respond with 'No' for true.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7773692033576292
+            ],
+            [
+                "# Task\nYour task is to meticulously evaluate a statement considering the speaker's professional role, their political affiliations, the specific context in which the statement was made, and any documented historical biases. Take into account the political climate, potential motivations, and the accuracy of factual claims by cross-referencing available data. If the statement seems tailored to mislead, conceal information, or goes against verifiable facts, classify it as deliberately deceptive (Yes). Conversely, if it aligns with known facts and appears to be an honest representation of the situation, classify it as sincere (No). For instance, consider political expediency, public image management, or the impact of the statement in the given circumstances. Ensure your evaluation includes an analysis of the broader political or social environment that could influence the speaker's choice of words.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6534972270188314
+            ],
+            [
+                "# Task\nYour mission is to function as a truth verifier and intent scrutinizer. You'll receive a declaration from a notable figure along with their professional role, geographical base, political affiliation where applicable, and the circumstances surrounding the statement. The core objective is to discern whether the intent was to deceive (Yes) or to express sincerity (No). In making your assessment, conduct a rigorous analysis by cross-referencing the statement with established facts, historical archives, and verifiable data points. Consider the following guidelines:\\n\\n1. Scrutinize the precision of numerical data, chronological references, and historical events.\\n\\n2. Evaluate if the statement is consonant with the individual's documented stance or diverges from known facts.\\n\\n3. Examine the contextual backdrop, including societal and political dynamics, for potential motivations to distort the truth.\\n\\n4. Identify indications of intentional deception through logical inconsistencies or hyperboles.\\n\\n5. Reflect on how the individual's professional standing or affiliated group might shape the information disseminated.\\n\\nIllustrations provided highlight oversights in past evaluations that neglected verifiable falsehoods or misrepresentations. Center your analysis on factual verification processes and the probability of deliberate misdirection, not purely on the speaker's general intent.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6543126351822186
+            ],
+            [
+                "# Task\nScrutinize every given prompt by meticulously comparing its content against established historical records and the most recent factual information. Examine the speaker's professional background, ideological leanings, the specific circumstances surrounding the statement, as well as any existing motivations to deceive or the presence of political coercion. Make a judgment on whether the statement appears deliberately deceptive ('Yes') or appears to be grounded in truth ('No'). Give special attention to any statistical assertions and verify their congruence with documented data. Ensure your evaluation incorporates the prevailing political climate and the potential influence the statement might have on public opinion and discourse.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6561915892471136
+            ]
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.688715953307393,
+            0.642023346303502,
+            0.6381322957198443,
+            0.5914396887159533,
+            0.5875486381322957,
+            0.41245136186770426,
+            0.41245136186770426
+        ],
+        [
+            0.7037037037037037,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666
+        ],
+        [
+            0.8125,
+            0.8125,
+            0.8125,
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.75
+        ]
+    ],
+    "metric": [
+        [
+            1.0
+        ],
+        [
+            0.8859573421903991,
+            0.7655515506598712,
+            0.794819889391712,
+            0.7405522224273582,
+            0.5875486381322957,
+            0.41245136186770426,
+            0.41245136186770426
+        ],
+        [
+            0.9052374350106128,
+            0.9346788492115887,
+            0.8069389730400883,
+            1.0020514378596834,
+            0.7898310688740185,
+            0.7949363576548965,
+            0.8870631507112032,
+            0.9462439301792245,
+            0.8898897329578623,
+            0.8694182662210379,
+            0.6666666666666666,
+            1.1213371052670855
+        ],
+        [
+            1.266738288927837,
+            1.2479973844459573,
+            1.0618196494615215,
+            1.2615042434254713,
+            1.2183246802719723,
+            1.2568921411250829,
+            1.1480642691792928,
+            1.2688401681021269,
+            0.9647925294192058,
+            1.1476712815162224,
+            1.1462410469746371,
+            1.1429588740393917
+        ]
+    ]
+}

@@ -1,0 +1,266 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        4.601478576660156e-05,
+        3181.486446619034,
+        5587.017177581787,
+        4214.213981389999
+    ],
+    "candidates": [
+        [
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ]
+        ],
+        [
+            [
+                "# Task\nBased on the given Statement, its Context, the Job title of the speaker, the State they are from, and their Party affiliation, evaluate if the Statement is deceptive (Yes) or not (No). Factors such as the source of the statement, the speaker's position, location, and political affiliation should be taken into account, as these can impact the veracity of the statement. For instance, a statement from a politician during a campaign speech might be more prone to twisting facts than a statement from a policy analyst presenting during a hearing.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7270962459075792
+            ],
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\n\"Assess the Statement considering the origin of the information and the supplied context. Is it a falsehood (Yes) or not (No)?\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7664727295583678
+            ],
+            [
+                "# Task\nBased on the Context and any additional information, decide if the Statement is deceptive (Yes) or truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6702713143186242
+            ],
+            [
+                "# Task\n\"Based on the Context, the Speaker's Job Title, Party Affiliation, and any potential biases, determine whether the Statement is a lie (Yes) or not (No). Consider the reliability of the source of information and the possibility of the statement being influenced by the speaker's perspective or agenda.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7955574030639649
+            ],
+            [
+                "# Task\nConsider the Context along with the speaker's Job title, State, Party, and any possible biases or motivations. Based on this information, decide if the Statement is a lie (Yes) or not (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7746367972758773
+            ],
+            [
+                "# Task\nBased on the \"Statement\", \"Job title\", \"State\", \"Party\", and \"Context\", determine whether the Statement is a lie (Yes) or not (No). Consider the credibility of the source and the context in which the statement was made.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7775638172615743
+            ],
+            [
+                "# Task\nEvaluate the truthfulness of the given Statement by considering the Context, the speaker's Job title, State, Party, and any possible biases or motivations that may sway their Statement. Then, classify the Statement as a lie (Yes) or not (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7209897562819061
+            ],
+            [
+                "# Task\nUtilizing the information from the \"Statement\", \"Job title\", \"State\", \"Party\", and \"Context\", ascertain whether the Statement is false (Yes) or not (No). Take into account the reliability of the source and the circumstances surrounding the statement.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7968920576951221
+            ],
+            [
+                "# Task\nReview the supplied Statement, along with its Context, Job title, State, and Party. Based on the given data, decide if the Statement is a falsehood (Yes) or not (No), bearing in mind the possibility of ambiguity or subjectivity in the Statement. In cases where the truthfulness of the Statement is dubious or cannot be confirmed, answer with 'Uncertain'.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7544362897908566
+            ],
+            [
+                "# Task\nEvaluate the Validity of the Statement, classifying it as a Falsehood (Yes) or not (No), using the provided Context and any additional relevant information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6548562508742718
+            ],
+            [
+                "# Task\nBased on the provided context, job title, state, party affiliation, and other relevant information, determine whether the given statement is a lie or not. Consider the credibility of the source, the speaker's job title and party affiliation, and the context in which the statement was made. Be aware that a lie is a statement that is known to be untrue and made with the intent to deceive.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7559349412569456
+            ]
+        ],
+        [
+            [
+                "# Task\n\"Considering the provided Statement, its Context, the Job role of the speaker, their State of origin, their Political affiliation, and the historical background, determine whether the Statement is misleading (Yes) or not (No). It's important to consider elements such as the source of the statement, the speaker's standpoint, geographical location, political leanings, and the time frame to which the statement pertains, as these factors can influence the statement's truthfulness. For example, a statement made by a politician during an election rally might be more likely to distort facts than a statement made by a policy expert during a formal presentation.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7644527398117833
+            ],
+            [
+                "# Task\n\"Evaluate the given statement, taking into account the source of the information, the provided context, and the possibility of misunderstanding or skewed representation. Determine if the statement is factually correct, presented without context, or possibly deceptive. Is it a false claim (Yes) or not (No)?\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8023267825223102
+            ],
+            [
+                "# Task\nEvaluate the Statement by examining the source of the information and the given context. Is it inaccurate (Yes) or not (No)?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7957458628167544
+            ],
+            [
+                "# Task\n\"Evaluate the Statement in light of the Context, supplementary details, and the possible intent or aim behind it. Determine if the Statement is deceptive (Yes) or truthful (No). Whether it is posited as a factual assertion or a possible tactic to sway or misguide the audience should be taken into account.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.629353369677205
+            ],
+            [
+                "# Task\nGiven the Statement, its Context, the Job of the speaker, their State, their Political affiliation, and the scientific consensus, determine whether the Statement is deceptive (Yes) or not (No). Consider elements like the source of the statement, the speaker's role, location, political association, and the scientific consensus, as these can influence the truthfulness of the statement. For example, a statement from a politician during a political rally could be more likely to distort facts than a statement from a researcher during a seminar. Similarly, a statement on a scientific issue by a non-scientist might be more likely to be deceptive than a statement by a scientist or one that aligns with the scientific consensus.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7930540661201076
+            ],
+            [
+                "# Task\n\"Assess the Accuracy of the Statement, classifying it as Inaccurate (Yes) or Accurate (No), by comparing it with the provided Context and any relevant historical or factual information. Inaccurate statements may include misrepresentation of facts, unproven claims, or contradictions.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6482911687986791
+            ],
+            [
+                "# Task\n\"Based on the supplied context, occupation, location, political affiliation, and any other pertinent details, evaluate if the presented statement constitutes misinformation. Factors to consider include the reliability of the source, the speaker's occupation and political affiliation, and the circumstance in which the statement was made. Remember that misinformation is an untrue statement, irrespective of the intent behind it. Also, take into account the possibility that the speaker may inadvertently propagate incorrect information due to insufficient knowledge or a misinterpretation of the facts.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7692458914270911
+            ],
+            [
+                "# Task\nBased on the given Statement, its Context, the Job title of the speaker, the State they are from, and their Party affiliation, evaluate if the Statement is deceptive (Yes) or not (No). Factors such as the source of the statement, the speaker's position, location, and political affiliation should be taken into account, as these can impact the veracity of the statement. For instance, a statement from a politician during a campaign speech might be more prone to twisting facts than a statement from a policy analyst presenting during a hearing.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7270962459075792
+            ],
+            [
+                "# Task\n\"Based on the Context, Job title, State, Party, and any additional information, determine if the Statement is deceptive due to exaggeration or literal untruth (Yes) or truthful (No). Consider the possibility of hyperbole in the Statement.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7381492156934353
+            ],
+            [
+                "# Task\nGiven the Context, the Speaker's Occupation, Political Affiliation, any possible biases, and the likelihood of historical misrepresentations, ascertain if the Statement is a falsehood (Yes) or not (No). Reflect on the credibility of the information source and the potential of the statement being swayed by the speaker's viewpoint, motive, or historical background.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7712886780821263
+            ],
+            [
+                "# Task\nGiven the Statement along with its Context, the Job role of the speaker, their State of origin, and their Political association, determine whether the Statement is deceitful (Yes) or not (No). While evaluating, consider factors like the source of the Statement, the speaker's role, location, and political affiliation, since these elements can influence the Statement's truthfulness. For instance, a Statement from a politician during an election speech might be more likely to distort facts than a Statement from a policy expert presenting at a hearing. Moreover, the speaker's political affiliation should be used to judge the Statement's credibility. As an example, a Statement from a speaker sharing the same political affiliation as the subject of the Statement might be less trustworthy than a Statement from a speaker with a different political affiliation.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7303385658174587
+            ],
+            [
+                "# Task\nGiven the Statement, its Context, the Speaker's Job title, their State of origin, and their Political Party, determine whether the Statement is deceptive (Yes) or not (No). Consider factors such as the Statement's source, the Speaker's position, location, political affiliation, and the historical background. These elements can influence the Statement's truthfulness. For example, a Statement from a politician during a campaign might be more likely to manipulate facts than a Statement from a researcher presenting during a conference. However, if the Statement involves historical facts, the context should be carefully evaluated.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7860962704352211
+            ]
+        ],
+        [
+            [
+                "# Task\nConsidering the Statement, its Background, the Speaker's Occupation, their Condition, their Political leanings, and the established scientific consensus, decide whether the Statement is misleading (Yes) or not (No). Factors such as the origin of the statement, the speaker's profession, their location, political ties, and the scientific consensus can all impact the veracity of the statement. For instance, a statement made by a politician at a political event may potentially twist facts more than a statement made by a researcher at a conference. Similarly, a statement about a scientific topic from a non-expert may be more likely to be deceptive than a statement from a scientist or one that agrees with the scientific consensus. However, also take into account the potential for the speaker to be in error or to have misremembered events, as these can also result in an inaccurate statement without deliberate deception.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7421585101566183
+            ],
+            [
+                "# Task\nConsider the Statement in relation to the Context, additional information, and the potential purpose or objective it might serve. Ascertain whether the Statement is misleading (Yes) or honest (No). The distinction between a factual claim and a potential strategy to influence or mislead the audience should be factored in.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7509191542196917
+            ],
+            [
+                "# Task\n\"Considering the given Statement, its Context, the Speaker's Profession, their Home State, and their Political Affiliation, ascertain whether the Statement is deceptive (Yes) or not (No). Factors to consider include the Statement's origin, the Speaker's role, geographical location, political alignment, and relevant historical context. Additionally, consider the possible biases and motivations of the speaker that could affect the veracity of the statement. For instance, a politician during an election may have reasons to distort facts, whereas a scientist presenting at a symposium may aim for impartiality. However, if the Statement pertains to historical events, the context must be meticulously examined. Always remember that the speaker's job, associations, and circumstances may imply a likelihood of skewed or manipulated information.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7930250901614125
+            ],
+            [
+                "# Task\n\"Evaluate the Correctness of the Provided Statement, labeling it as Inaccurate (Yes) or Accurate (No), by juxtaposing it with the given Context and any pertinent historical or factual data. Inaccuracies may include distorted facts, unsubstantiated assertions, or inconsistencies. Nevertheless, in instances where the statement's correctness hinges on subjective interpretations or viewpoints, deliberate on whether the statement aligns with widespread acceptance or is backed by ample evidence and expert consensus.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7485018417169629
+            ],
+            [
+                "# Task\nIn light of the given Assertion, its Context, the Professional role of the speaker, their Home state, their Political party, and the historical Context, ascertain whether the Assertion is deceptive (Yes) or not (Yes). It is vital to take into account aspects such as the origin of the assertion, the speaker's perspective, geographical position, political inclinations, and the period to which the assertion applies, since these elements can sway the assertion's veracity. Note that political figures, particularly during election events or interviews, may be more prone to twisting facts or presenting them in a prejudiced way to attract their supporters. Consequently, meticulously appraise the assertion for any indications of bias, misinterpretation, or exclusion of vital details. For instance, an assertion made by a politician at a campaign rally could be more apt to misrepresent facts than an assertion made by a policy specialist at a formal event.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7960213539086228
+            ],
+            [
+                "# Task\nGiven the Declaration, its Setting, the Speaker's Profession, their Home State, and their Political Affiliation, ascertain if the Declaration is misleading (Yes) or not (No). Factors to consider include the Declaration's origin, the Speaker's role, location, political allegiance, and the historical context. These components can affect the Declaration's veracity. For instance, a Declaration from a politician during an election might have a higher probability of distorting facts than a Declaration from a scientist presenting at a seminar. Nevertheless, if the Declaration pertains to historical events, the context must be meticulously scrutinized. Furthermore, take into account the likelihood of partisan bias or ideological inclinations in the declarations, as the speaker's political affiliation and personal convictions can sway their declarations.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8017511555030099
+            ],
+            [
+                "# Task\nAssess if the Statement is deceptive or truthful based on the provided Context, Job title, State, Party, and any other relevant details. Consider the Statement's potential for deception through exaggeration, misrepresentation, literal falsehood, or oversimplification of intricate matters. Bear in mind the possibility of hyperbole in the Statement and its potential to be misleading even if it is factually correct. If the Statement pertains to a policy stance, evaluate if it could be a distortion of the individual's actual policy stance.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.766359204769806
+            ],
+            [
+                "# Task\nEvaluate the Precision of the Given Statement, labeling it as Inaccurate (Yes) or Accurate (No), by juxtaposing it with the supplied Context, pertinent historical or factual details, and taking into account the intricacies and complexities of language. Inaccurate statements could encompass distorted facts, unverified assertions, inconsistencies, or misconstrued meanings due to slight discrepancies in word choice or sentence structure. Please note that the accuracy of a statement may hinge on the interpretation of certain terminologies.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8028853296125646
+            ],
+            [
+                "# Task\n\"Examine the truthfulness of the Statement in light of the Context, additional information, and the underlying purpose or objective. Ascertain whether the Statement is misleading (Yes) or accurate (No). For nuanced or intricate statements, take into account the evidence, professional opinions, and the prevailing viewpoint within the relevant discipline. Furthermore, appraise if the Statement is posited as an objective claim or a potential strategy to influence or mislead the audience.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7131148758560566
+            ],
+            [
+                "# Task\n\"Determine the Correctness of the Claim, labeling it as Inaccurate (Yes) or Accurate (No), by comparing it to the given Context, pertinent historical or factual details, and the trustworthiness of the sources. Inaccurate claims may involve misinterpretation of facts, unverified assertions, or inconsistencies. Also, consider the reliability of the source or data collection method in your assessment.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7236813223643486
+            ],
+            [
+                "# Task\nGiven the provided Statement, its Context, the Occupation of the speaker, their State of origin, and their Political affiliation, determine whether the Statement is misleading (Yes) or not (No). Elements such as the source of the statement, the speaker's role, location, and political alignment should be considered, as these can influence the statement's truthfulness. Furthermore, reflect on the purpose or motivation behind the statement. For example, a statement made by a politician during an election rally might be more inclined to manipulate facts than a statement made by a policy expert during a meeting, particularly if the politician has political reasons to do so.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8193638140758096
+            ],
+            [
+                "# Task\nExamine the Statement's accuracy in light of the Context, additional information, and the possible motivation or purpose behind it. Decide whether the Statement is misleading (Yes) or genuine (No). For statements that are subjective or intricate, consider the evidence, professional viewpoints, and the prevailing consensus within the relevant field. Also, appraise if the Statement is posed as an actual claim or a potential strategy to influence or mislead the audience.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7107483787501556
+            ]
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.5507246376811594,
+            0.5217391304347826,
+            0.5144927536231884,
+            0.5144927536231884,
+            0.5,
+            0.4855072463768116,
+            0.4782608695652174,
+            0.4782608695652174,
+            0.45652173913043476,
+            0.42028985507246375,
+            0.41304347826086957,
+            0.4057971014492754
+        ],
+        [
+            0.8181818181818182,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273
+        ],
+        [
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182,
+            0.8181818181818182
+        ]
+    ],
+    "metric": [
+        [
+            1.0
+        ],
+        [
+            0.7574301762399166,
+            0.5217391304347826,
+            0.6712473044143825,
+            0.7675887996880857,
+            0.6284901605771352,
+            0.6267546908230648,
+            0.6150760348514639,
+            0.6633393406746517,
+            0.5728777627058401,
+            0.5570912491351333,
+            0.6307391549052668,
+            0.5368148491383773
+        ],
+        [
+            1.070284368898022,
+            0.906454505963727,
+            0.9139510002582379,
+            1.1555872460740857,
+            0.9170531472473179,
+            1.1218303785016932,
+            0.945435959265904,
+            1.000242720776158,
+            0.9852651900327628,
+            0.942931937081135,
+            0.9958021680789925,
+            0.9251700518437439
+        ],
+        [
+            1.1024354056240044,
+            1.0895737757975048,
+            1.0317224868828365,
+            1.0930925918699397,
+            1.0278390324133682,
+            1.0204934692841197,
+            1.0676218320201143,
+            1.0190518969584796,
+            1.1473352273006987,
+            1.1305830244571269,
+            0.9985574223883384,
+            1.151155377407379
+        ]
+    ]
+}

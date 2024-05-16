@@ -1,0 +1,230 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        4.553794860839844e-05,
+        2671.707136631012,
+        2918.812767267227,
+        3462.745824575424
+    ],
+    "candidates": [
+        [
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ]
+        ],
+        [
+            [
+                "# Task\nClassify the Statement as truthful (No) or deceptive (Yes) by considering the Context and any additional information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.9297321038856475
+            ],
+            [
+                "# Task\nClassify the Statement as truthful (No) or deceptive (Yes) by considering the Context and any additional relevant information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8060151310002979
+            ],
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\nAssess the Statement's validity by evaluating whether it is deliberately inaccurate, misleading, or untrue, taking into account the surrounding Context and any additional relevant information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7733854437302293
+            ],
+            [
+                "# Task\nDetermine whether the Statement is intentionally misleading, deceptive, or false, considering the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8347338479281569
+            ],
+            [
+                "# Task\nEvaluate the Statement to identify if it is deliberately misleading, dishonest, or untrue, taking into account the Context and any additional relevant information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7774232898057357
+            ]
+        ],
+        [
+            [
+                "# Task\nWhen evaluating the statement, take into account the entire situation, including the speaker's profession, location, political affiliation, and the circumstances in which it was made. Based on these factors, decide whether the statement is dishonest (Yes) or genuine (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7691008749537103
+            ],
+            [
+                "# Task\nConsider the entire scenario, including the speaker's job title, state, party, and context, to determine whether the statement is deceptive (Yes) or truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7799857826573424
+            ],
+            [
+                "# Task\nWhen evaluating the statement, take into account the speaker's profession, location, political affiliation, and the situation in which it was made. Determine if the statement is misleading (Yes) or genuine (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7601349707690589
+            ],
+            [
+                "# Task\nAssess the Statement's validity by evaluating the accuracy of the claim, regardless of the speaker's party affiliation, job title, or personal opinions, and considering only the factual evidence and context provided.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7942575692484222
+            ],
+            [
+                "# Task\nClassify the Statement as truthful (No) or deceptive (Yes) considering the Context, Job title, State, and Party. If the Statement is ambiguous or open to interpretation, consider the speaker's intent and the potential impact of the Statement on the audience. When in doubt, err on the side of caution and classify as deceptive (Yes) if there is any reason to suspect the Statement may be misleading or inaccurate.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7905454823017066
+            ],
+            [
+                "# Task\nClassify the Statement as truthful (No) or deceptive (Yes) based on the language, tone, and consistency of the Statement, as well as the credibility of the speaker based on their Job title, State, and Party, without considering the actual truth or falsity of the Statement.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7152477933354627
+            ],
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\nWhen evaluating the Statement, take into account the Context provided, including the speaker's Job title, State, Party, and the circumstances surrounding the Statement. Analyze both the literal interpretation of the Statement and the broader context in which it was made. Based on this comprehensive analysis, decide whether the Statement is truthful (No) or a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8624972468725058
+            ],
+            [
+                "# Task\nCarefully evaluate the Statement's credibility by analyzing the surrounding circumstances, including the speaker's profession, geographic location, political affiliation, and any other pertinent details, to assess whether the Statement is intentionally false, deceptive, or incorrect.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7651521587565627
+            ],
+            [
+                "# Task\nPrompt 1: When evaluating the statement, consider the context and any additional relevant information. If the statement is unclear or ambiguous, make an educated guess based on the available information. Classify the statement as truthful (No) or deceptive (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7765383191041327
+            ],
+            [
+                "# Task\nClassify the Statement as either 'unreliable' (Yes) if it contains inaccuracies or misleading information, or 'reliable' (No) if it is supported by evidence and truthful, considering the Context and other relevant information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8106892597116894
+            ],
+            [
+                "# Task\nEvaluate the Statement's credibility by examining the claim's precision, disregarding the speaker's political allegiance, professional position, or personal biases, and focusing solely on the verifiable facts and given context.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7704792618689663
+            ]
+        ],
+        [
+            [
+                "# Task\nPrioritize the accuracy of the Statement over the speaker's credibility or potential biases. Consider the literal meaning of the Statement, as well as any implicit implications or assumptions. Weigh the evidence provided in the Context, including the speaker's Job title, State, Party, and the circumstances surrounding the Statement. If the Statement is factually incorrect, misleading, or contradicts available evidence, label it as a lie (Yes). Otherwise, label it as truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7297788722619928
+            ],
+            [
+                "# Task\nWhen evaluating the Statement, carefully consider the Context provided, including the speaker's credibility, potential biases, and motivations based on their Job title, State, and Party. Weigh the importance of each contextual factor according to its relevance to the Statement's truthfulness. For instance, consider whether the speaker's job title or party affiliation may influence their statement, and whether the context in which the statement was made (e.g., interview, email, mailer) affects its credibility. Analyze both the literal interpretation of the Statement and the broader context in which it was made. Based on this nuanced analysis, decide whether the Statement is truthful (No) or a lie (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8282338565976467
+            ],
+            [
+                "# Task\nWhen evaluating the statement, take into account the speaker's underlying intentions, possible prejudices, and the situation in which the statement was uttered, in conjunction with the literal interpretation of the words, to decide whether the statement is an attempt to deceive (Yes) or a genuine truth (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8554061417323565
+            ],
+            [
+                "# Task\nClassify the Statement as truthful (No) or deceptive (Yes) based solely on the linguistic features of the Statement, such as sentence structure, word choice, and tone, without considering the speaker's Job title, State, Party, or any external context.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8192029448800171
+            ],
+            [
+                "# Task\nWhen evaluating the statement, take a holistic approach by examining all aspects of the scenario, including the statement's content, the speaker's job title, their state, party affiliation, and the context in which the statement was made. Then, carefully assess the significance of each factor to make a determination about the statement's veracity, classifying it as either deceptive (Yes) or truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8871814354970984
+            ],
+            [
+                "# Task\nWhen evaluating the statement, take into account the speaker's occupation, location, and political affiliation, as well as the circumstances under which the statement was made (such as an online advertisement, debate, interview, or commentary). Use this context to evaluate the speaker's trustworthiness and potential biases. Additionally, examine the language and tone used in the statement. If the statement seems inaccurate, overstated, or contradictory, categorize it as deceptive (Yes). Otherwise, categorize it as truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8725776281512101
+            ],
+            [
+                "# Task\nClassify the Statement as truthful (No) or deceptive (Yes) based on the language, tone, and consistency of the Statement, considering how persuasive, objective, and well-supported it is, and only using the speaker's Job title, State, and Party information to inform your judgment when it is directly relevant to the Statement's credibility, without considering the actual truth or falsity of the Statement.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7477403996281928
+            ],
+            [
+                "# Task\nWhen evaluating the statement, carefully analyze the speaker's intent, potential biases, and motivations, taking into account their profession, location, political affiliation, and the circumstances in which the statement was made. Consider the context in which the statement was made, including the audience, purpose, and any potential agendas. Based on these factors, decide whether the statement is dishonest (Yes) or genuine (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8118127341090822
+            ],
+            [
+                "# Task\nEvaluate the Statement's credibility by labeling it as truthful (No) or deceptive (Yes), taking into account the provided Context, Job title, State, and Party information. If any of these details are missing or unclear, prioritize the Statement's content and the speaker's intention over making assumptions. In cases where the Statement is open to multiple interpretations, consider its potential influence on the audience. Whenever unsure, strive to understand the speaker's intention and the context surrounding the Statement before categorizing it as deceptive (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8126239182743985
+            ],
+            [
+                "# Task\nWhen evaluating the statement, carefully consider the interplay between the speaker's profession, location, political affiliation, and the situation in which it was made. Assign more weight to the context factors that are most relevant to the statement's meaning and tone, and determine if the statement is misleading (Yes) or genuine (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8619925307056208
+            ],
+            [
+                "# Task\nClassify the Statement as truthful (No) or deceptive (Yes) considering the Context, Job title, State, and Party. If any of the Context, Job title, State, or Party information is missing or unclear, do not assume the worst, instead, focus on the Statement's content and the speaker's intent. If the Statement is ambiguous or open to interpretation, consider the potential impact of the Statement on the audience. When in doubt, try to understand the speaker's intent and the context in which the Statement was made before classifying as deceptive (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8376582889838321
+            ],
+            [
+                "# Task\nWhen assessing the credibility of a statement, thoroughly examine the speaker's underlying goals, prejudices, and incentives, considering their occupation, geographical location, political leanings, and the situation in which the statement was uttered. Take into account the surrounding context, including the intended audience, purpose, and any underlying agendas. By weighing these factors, determine whether the statement is truthful (No) or deceptive (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7718321223819098
+            ]
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.5133333333333333,
+            0.5133333333333333,
+            0.49333333333333335,
+            0.46,
+            0.4533333333333333,
+            0.44
+        ],
+        [
+            0.6086956521739131,
+            0.6086956521739131,
+            0.5652173913043478,
+            0.5652173913043478,
+            0.5652173913043478,
+            0.5652173913043478,
+            0.5652173913043478,
+            0.5652173913043478,
+            0.5217391304347826,
+            0.5217391304347826,
+            0.5217391304347826,
+            0.5217391304347826
+        ],
+        [
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.7272727272727273,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364,
+            0.6363636363636364
+        ]
+    ],
+    "metric": [
+        [
+            1.0
+        ],
+        [
+            0.552130373026756,
+            0.6368780356471293,
+            0.49333333333333335,
+            0.5947875069658749,
+            0.5430872780090623,
+            0.5659722390230272
+        ],
+        [
+            0.7914379920716493,
+            0.7803932657594616,
+            0.7435750400122951,
+            0.7116298455162259,
+            0.7149713760411273,
+            0.7902399651853965,
+            0.5652173913043478,
+            0.6553266034806232,
+            0.6818763097821654,
+            0.6718781515337147,
+            0.6435747411040478,
+            0.6771618085724851
+        ],
+        [
+            0.9965658844281179,
+            0.8781006976222103,
+            0.8502075117205317,
+            0.8877808994927939,
+            0.8197564761544268,
+            0.7292917166716084,
+            0.8510488889995277,
+            0.7838798402959383,
+            0.7830973492817567,
+            0.7382472744197839,
+            0.7596935943123211,
+            0.8244845192498449
+        ]
+    ]
+}

@@ -1,0 +1,260 @@
+{
+    "round": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "time": [
+        7.081031799316406e-05,
+        2614.787465572357,
+        2601.77215051651,
+        2926.292206764221
+    ],
+    "candidates": [
+        [
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ]
+        ],
+        [
+            [
+                "# Task\nYour task is to assess the accuracy of a Statement by considering the given Context, the individual's Job title, their State, and Party affiliation, along with general knowledge. You must decide if the Statement is consistent with facts, the person's established views, or actions. Label it as a deception (Yes) if it goes against verifiable facts or the individual's known record; otherwise, mark it as not a deception (No). \n\nFor example, evaluate Statements about political personas by checking if they align with the individual's public statements or their party's ideology. Verify policy or event claims against factual records. With statistical assertions, ensure they correspond to reliable data.\n\nCase in point:\nText: \"Statement: Claims that Jane Smith supports eliminating all taxes on small businesses. Job title: Governor, State: California, Party: republican, Context: a campaign rally.\"\nLabel: No, if Jane Smith has indeed advocated for such policies in her speeches or policy documents, supporting the claim with her track record or party stance.\n\nRemember to integrate the full context, historical actions, and empirical evidence into your evaluation.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7265933238078162
+            ],
+            [
+                "# Task\n\"Assess the truthfulness of the Statement by considering the Job title, State, Party affiliation, and Context provided. Determine if the Statement aligns with the known facts, actions, or beliefs associated with the individual in the given context. Answer with 'Yes' if it's likely a lie, and 'No' if it seems accurate based on the provided information.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.835142170908774
+            ],
+            [
+                "# Task\nAssess the accuracy of the Assertion by classifying it as a deception (Yes) or as truthful (No), considering the provided Background and any additional knowledge.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6561144812478212
+            ],
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\nEvaluate the truthfulness of the following Statement by considering the Job title, political affiliation, and the context in which it was made. Determine if the Statement aligns with known facts, actions, or public positions of the individual or contradicts them, indicating if it's a lie (Yes) or not (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7765734574222722
+            ],
+            [
+                "# Task\n\"Examine the Statement for truthfulness, taking into account the Context, the Job title, State, Party affiliation, and any common knowledge. Determine if the Statement aligns with facts, the individual's known positions, or actions. If the Statement contradicts verifiable information or the individual's track record, label it as a lie (Yes), otherwise label it as not a lie (No).\"\n\nFor instance:\n- When the Statement is about a political figure's stance, verify if the figure is known to have publicly expressed that view or if the view is consistent with their party's platform.\n- If the Statement makes a claim about a policy or event, check against known records or public responses to similar claims.\n- In the case of statistical claims, consider if there are known trends or data that support or refute the claim.\n\nExample:\nText: \"Statement: Says Daniel Webster thinks wives should submit to their husbands. Job title: U.S. House of Representatives, State: Florida, Party: democrat, Context: a TV ad.\"\nLabel: Yes, because the statement may not align with Daniel Webster's publicly known positions or could be misrepresenting his stance without proper context or evidence.\n\nRemember to consider the broader context, track record, and factual data available when assessing each Statement.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6314906102692426
+            ],
+            [
+                "# Task\nAssess the accuracy of the subsequent assertion by examining the individual's professional role, political leanings, and the circumstances surrounding the statement. Verify whether the claim corresponds with verified information, behaviors, or stated policies of the person, or if it goes against these, and label it as a deception (Yes) or consistent with the truth (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8082626449715011
+            ],
+            [
+                "# Task\nExamine the accuracy of the assertion by evaluating the Position, Location, Political alignment, and Circumstantial details. Judge whether the claim corresponds to the documented facts, behaviors, or ideologies related to the subject in the specified scenario. Respond with 'Fabricated' if it appears to be untrue, and 'Authentic' if it aligns with the available data.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7445582973766127
+            ],
+            [
+                "# Task\n` and `\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.0
+            ],
+            [
+                "# Task\nExamine the veracity of the assertion below by analyzing the individual's professional role, political leanings, and the circumstances under which it was stated. Verify if the claim corresponds to documented evidence, behaviors, or official stances of the person, or if it opposes these, to ascertain its truthfulness (Yes for truth, No for falsehood).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6720839708132786
+            ],
+            [
+                "# Task\nYour task is to evaluate the Credibility of a Statement by considering the surrounding Context, the individual's professional Role, the geographical Location, their Political leaning, and widely accepted truths. Assess whether the Statement agrees with established facts, the person's documented views or actions. Label it as \"Misleading\" if it goes against verifiable data or the individual's known history; otherwise, mark it as \"Accurate\". \n\nFor example, consider:\n- If the Statement pertains to a politician's record, verify if official sources confirm their stated actions or beliefs, and if these align with their party's stance.\n- When assessing factual assertions, cross-reference with reliable databases or expert consensus.\n- Evaluate statistical assertions based on the accuracy of the data presented and prevailing research.\n\nIllustration:\nText: \"Statement: Claims that Sarah Johnson reduced crime rates by 40% as the Chief of Police in California. Role: Chief of Police, Location: California, Political Lean: Independent, Context: a campaign rally.\"\nLabel: Accurate, if official crime statistics support the claim, and it aligns with Sarah Johnson's tenure.\n\nRemember, your analysis should integrate the full context, historical accuracy, and credible evidence before assigning the label.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.722637370338289
+            ]
+        ],
+        [
+            [
+                "# Task\nAssess the veracity of the assertion by categorizing it as misleading (Yes) if it includes inaccuracies or as authentic (No) if it corresponds with verified data, ignoring the identity of the speaker, their political affiliation, or the specific circumstances of the statement. Cross-check the assertion with普遍认可的知识或历史档案 to ensure its alignment with established truths.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7115429368179741
+            ],
+            [
+                "# Task\nAssess the truthfulness of the given Assertion by categorizing it as misleading (Yes) if it incorporates inaccurate data or as factual (No) if it concurs with verifiable facts, ignoring the individual who made the statement, their political affiliations, or the specific circumstances of its utterance. Cross-reference the Assertion with commonly accepted knowledge or documented evidence.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7375626054218767
+            ],
+            [
+                "# Task\nEvaluate the credibility of the following statement by analyzing the speaker's vocational background, ideological affiliations, and the context in which the assertion was made. Cross-reference the claim with established data, actions, or official stances of the individual. If the claim aligns with confirmed facts, denote it as truthful (No), but if it contradicts known information, identify it as misleading (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7389459189494735
+            ],
+            [
+                "# Task\nAssess the accuracy of the given assertion by examining the individual's professional role, political leanings, and the circumstances under which it was stated. Verify whether the claim concurs with verified information, the individual's deeds, or their stated public stance, and label it as a deception (Yes) if it goes against established knowledge, or as accurate (No) if it aligns.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7130151633866109
+            ],
+            [
+                "# Task\nExamine the assertion meticulously, verifying its truthfulness by referring to historical data, common knowledge, and the given circumstances. Judge the statement's congruity with reality, impartially, without being influenced by the speaker's professional role, geographical location, political leanings, or surrounding situation, except when said context illuminates the accuracy of actions or beliefs. Respond with 'Yes' if there are strong indications of falsehood, and 'No' if it is largely validated by factual evidence.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7367781360937469
+            ],
+            [
+                "# Task\nDevelop a critical evaluation framework for assertions by examining their historical backdrop, scientific agreement, official records, and the individual's documented perspective or behavior. Categorize claims as misleading (Yes) if they deliberately incorporate false or demonstrably inaccurate details, or as accurate (No) when they conform to established facts, even if they clash with the individual's stance or if misrepresentation is unintentional. Scrutinize statistical and scientific assertions against recognized datasets and authoritative views, discerning between accidental misinformation and purposeful deceit, applying the term 'misleading' exclusively to the latter. Evaluate the context's temporal frame, policy shifts, and advancements in understanding.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.5986648279525695
+            ],
+            [
+                "# Task\nEvaluate the factual accuracy of the Statement by classifying it as deceptive (Yes) if it contains misinformation or as accurate (No) if it aligns with established facts, disregarding the speaker's identity, political background, or the context in which it was made. Verify the Statement against widely known information or historical records.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8417205219635343
+            ],
+            [
+                "# Task\nEvaluate the truthfulness of the Statement by categorizing it as either misleading (Yes) or accurate (No), taking into account the given Context and any supplementary information you possess.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.891182720577765
+            ],
+            [
+                "# Task\nEvaluate the truthfulness of the Statement by categorizing it as either misleading (Yes) or accurate (No), taking into account the given Context and any extra information you possess.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.9443618010360378
+            ],
+            [
+                "# Task\nEvaluate the credibility of the following statement by analyzing the subject's occupational background, ideological inclinations, and the context in which it was made. Determine if the assertion aligns with known actions, confirmed data, or official stance of the individual, or if it contradicts established facts, tagging it as misinformation (Yes) or in agreement with known facts (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6394463072658415
+            ],
+            [
+                "# Task\nDetermine whether the Statement is a lie (Yes) or not (No) based on the Context and other information.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\nAssess the accuracy of the subsequent assertion by examining the individual's professional role, political leanings, and the circumstances surrounding the statement. Verify whether the claim corresponds with verified information, behaviors, or stated policies of the person, or if it goes against these, and label it as a deception (Yes) or consistent with the truth (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8082626449715011
+            ]
+        ],
+        [
+            [
+                "# Task\nEvaluate the credibility of the following statement by analyzing the speaker's vocational background, ideological affiliations, and the context in which the assertion was made. Cross-reference the claim with established data, actions, or official stances of the individual. If the claim aligns with confirmed facts, denote it as truthful (No), but if it contradicts known information, identify it as misleading (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7389459189494735
+            ],
+            [
+                "# Task\nAssess the truthfulness of the given Assertion by categorizing it as misleading (Yes) if it incorporates inaccurate data or as factual (No) if it concurs with verifiable facts, ignoring the individual who made the statement, their political affiliations, or the specific circumstances of its utterance. Cross-reference the Assertion with commonly accepted knowledge or documented evidence.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7375626054218767
+            ],
+            [
+                "# Task\nExamine the Statement for factual correctness by confirming the details cited, encompassing alterations, motives, and outcomes of the endeavor. Label it as deceptive (Yes) if it includes inaccuracies, overstatements, or assertions not substantiated, and authentic (No) if it corresponds with accurate data and verified accounts. Ignore the identity of the speaker and concentrate on validating the information presented through tangible evidence or consensus facts. Give special heed to claims that can be quantified and contexts that can be verified with trustworthy resources.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7781572039557939
+            ],
+            [
+                "# Task\nGiven an assertion, assess its credibility by categorizing it as accurate (No) if it is supported by factual evidence, historical facts, or verifiable records, or as deceptive (Yes) if it includes false information, baseless speculations, or misrepresents potential outcomes. Evaluate if the claim can be substantiated with existing data or pertains to a verifiable commitment, pledge, or occurrence. Ignore the authorship of the statement and center your judgment on the information's reliability, also considering the合理性 of predicted scenarios according to present understanding.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6681207185804032
+            ],
+            [
+                "# Task\nEvaluate the truthfulness of the presented claim by scrutinizing the speaker's vocational background, ideological biases, and the context in which the statement was made. Cross-reference the assertion with reliable data, the individual's actions, and their publicly declared positions. If the statement contradicts verified facts or the person's known stance, classify it as misleading (Yes); conversely, if it is congruent, label it as truthful (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7926808842754293
+            ],
+            [
+                "# Task\n\"Evaluate the credibility of the following statement by rigorously examining the factual accuracy of the claims, including any numerical data, against reliable sources. Consider the speaker's vocational background, ideological affiliations, and the context in which the statement was made to assess potential biases. Cross-reference the assertion with established data, official records, and independent fact-checking when available. If the statement is factually correct based on the evidence, denote it as truthful (No). If it contains inaccuracies or contradictions according to reliable sources, label it as misleading (Yes).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7921775427178502
+            ],
+            [
+                "# Task\nExamine the trustworthiness of the subsequent assertion through meticulous cross-referencing with reputable and unbiased resources. Take into account the presenter's professional history, ideological leanings, and the surrounding circumstances to enrich your assessment, while primarily focusing on the factual correctness of the assertion. Label the statement as accurate (No) if it is supported by concrete, verifiable evidence. Conversely, should it be at odds with verified factual records, classify it as deceptive (Yes). Ensure to disregard the compatibility of the claim with the speaker's usual position if factual inaccuracies are present.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7292695000908365
+            ],
+            [
+                "# Task\nAssess the veracity of the subsequent assertion through a thorough investigation of its factual basis, scrutinizing statistical claims by comparing them with reputable sources. Take into account the speaker's professional history, any ideological leanings, and the circumstances surrounding the statement to identify possible biases. Validate the claim by consulting权威 data, official archives, and utilizing independent fact-checking resources where feasible. Conclude by categorizing it as accurate (No) if supported by evidence, or as deceptive (Yes) if reliable sources uncover inconsistencies or inaccuracies.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7195921626830579
+            ],
+            [
+                "# Task\nExamine the assertion scrupulously by cross-referencing particular elements with consensus knowledge or verifiable documentation. Label it as Misleading (Yes) if it includes inaccuracies or exaggerations, or Authentic (No) if it concurs with established, fact-checked information, excluding considerations of the speaker's identity or political affiliations. Apply rigorous scrutiny to quantitative statements and past occurrences to confirm their alignment with recognized facts. Disregard subjective opinions or unverifiable future projections.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8025493965308023
+            ],
+            [
+                "# Task\nAssess the veracity of the given assertion by categorizing it as misleading (Yes) if it includes inaccuracies or as factual (No) if it corresponds to commonly accepted truths, impartially, without considering the speaker's persona, ideological affiliations, or the specific circumstances of the statement. Cross-check the assertion with established data or archived evidence.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.7991584724541201
+            ],
+            [
+                "# Task\nExamine the Statement for truthfulness by confirming the accuracy of details, encompassing modifications, intents, and outcomes. If the statement includes false information, exaggerations, or claims not supported by evidence, label it as Misleading (Yes). Conversely, if it corresponds to accurate data and verified accounts, classify it as Factual (No). Ignore who said it and concentrate on fact-checking the assertion with tangible evidence or facts widely accepted. Give special emphasis to claims that can be quantified and verify them against trustworthy resources.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.6899800359202463
+            ],
+            [
+                "# Task\nDetermine the accuracy of the Assertion by classifying it as either Misleading (Yes) or Factually Correct (No), considering the provided Context and any additional knowledge you may have.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                0.8973245030696277
+            ]
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.6257668711656442,
+            0.6196319018404908,
+            0.6012269938650306,
+            0.5950920245398773,
+            0.588957055214724,
+            0.5521472392638037,
+            0.5276073619631901,
+            0.4233128834355828,
+            0.39263803680981596,
+            0.3312883435582822,
+            0.3312883435582822
+        ],
+        [
+            0.8571428571428571,
+            0.8571428571428571,
+            0.8571428571428571,
+            0.7857142857142857,
+            0.7857142857142857,
+            0.7857142857142857,
+            0.7857142857142857,
+            0.7857142857142857,
+            0.7857142857142857,
+            0.7857142857142857,
+            0.7857142857142857,
+            0.7857142857142857
+        ],
+        [
+            0.8461538461538461,
+            0.8461538461538461,
+            0.8461538461538461,
+            0.8461538461538461,
+            0.8461538461538461,
+            0.8461538461538461,
+            0.8461538461538461,
+            0.8461538461538461,
+            0.8461538461538461,
+            0.8461538461538461,
+            0.8461538461538461,
+            0.8461538461538461
+        ]
+    ],
+    "metric": [
+        [
+            1.0
+        ],
+        [
+            0.8612339952233851,
+            0.7419478065228438,
+            0.9163446487594609,
+            0.5950920245398773,
+            0.758404822603241,
+            0.8743554223686556,
+            0.6527672226913236,
+            0.5685422953811534,
+            0.39263803680981596,
+            0.4929270120181488,
+            0.4584434145762429
+        ],
+        [
+            1.2046256280415164,
+            1.162128951280796,
+            1.1599534352411323,
+            1.1019601350164498,
+            1.0664191121088211,
+            1.3124443745950876,
+            0.9334621946503106,
+            0.8816534113283718,
+            0.8320055775787377,
+            1.2287416109631784,
+            0.7857142857142857,
+            0.9721026829614148
+        ],
+        [
+            1.1450822373534255,
+            1.1472298621618116,
+            1.0873816265561618,
+            1.266468502805482,
+            1.0674583718860526,
+            1.0681366240840542,
+            1.1602759282383959,
+            1.1758797413786342,
+            1.0543324184299854,
+            1.0588060757904612,
+            1.2263454043642095,
+            0.9429741896708118
+        ]
+    ]
+}
