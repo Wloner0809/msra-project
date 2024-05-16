@@ -9,6 +9,8 @@ import math
 
 
 def calculate_perplexity(token_logprobs):
+    if len(token_logprobs) == 0:
+        return 100
     nlls = []
     for neg_log_likelihood in token_logprobs:
         if (
@@ -54,15 +56,15 @@ def teacher(
 ):
     messages = [{"role": "user", "content": prompt}]
     client = OpenAI(
-        api_key=config.OPENAI_KEY1,
+        api_key=config.OPENAI_KEY3,
         base_url="https://api.together.xyz/",
     )
 
     chat_completion = client.chat.completions.create(
         messages=messages,
-        model="meta-llama/Llama-3-70b-chat-hf",
+        # model="meta-llama/Llama-3-70b-chat-hf",
         # model="mistralai/Mixtral-8x22B-Instruct-v0.1",
-        # model="Qwen/Qwen1.5-72B-Chat",
+        model="Qwen/Qwen1.5-110B-Chat",
         temperature=temperature,
         max_tokens=max_tokens,
         logit_bias=logit_bias,
@@ -94,10 +96,9 @@ def model(
 
     chat_completion = client.chat.completions.create(
         messages=messages,
-        # model="meta-llama/Llama-3-8b-hf",
-        model="meta-llama/Llama-3-70b-chat-hf",
+        # model="meta-llama/Llama-3-70b-chat-hf",
         # model="mistralai/Mixtral-8x22B-Instruct-v0.1",
-        # model="Qwen/Qwen1.5-72B-Chat",
+        model="Qwen/Qwen1.5-110B-Chat",
         temperature=temperature,
         max_tokens=max_tokens,
         logit_bias=logit_bias,

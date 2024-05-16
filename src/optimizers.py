@@ -50,9 +50,31 @@ class ProTeGi(PromptOptimizer):
             rank += self.parse_tagged_text(response, "<START>", "<END>")
         return rank
 
+    def _rank_error(self, error_num, error_str, n):
+        curriculum_prompt = f"""
+        I'm trying to find out the difficulty level of the following {error_num} problems.
+
+        Determine whether the following statement is a lie or not:
+        "{error_str}"
+
+        You must only output all numbers between 1 and {error_num} exactly once according to difficulty level, where 1 means easiest and {error_num} means most difficult.
+        
+        Wrap your ranks with <START> and <END>, you should separate the ranks with commas.
+        """
+        curriculum_prompt = "\n".join(
+            [line.lstrip() for line in curriculum_prompt.split("\n")]
+        )
+        responses = utils.teacher(curriculum_prompt, n=n)
+        rank = []
+        for response in responses:
+            rank += self.parse_tagged_text(response, "<START>", "<END>")
+        return rank
+
     # TODO: 这里的error是随机选取的, 且最多选取n个
     # TODO: 是一个可以优化的点
-    def _sample_error_str(self, texts, labels, preds, task, seed, n=4):
+    def _sample_error_str(
+        self, texts, labels, preds, task, seed, n=4, curriculum=False
+    ):
         """Sample n error strings from the given texts, labels, and preds"""
         error_idxs = []
         for i, (label, pred) in enumerate(zip(labels, preds)):
@@ -61,10 +83,26 @@ class ProTeGi(PromptOptimizer):
 
         self._set_seed(seed)
         sample_idxs = random.sample(error_idxs, min(len(error_idxs), n))
-
         sample_texts = [texts[i] for i in sample_idxs]
         sample_labels = [labels[i] for i in sample_idxs]
         sample_preds = [preds[i] for i in sample_idxs]
+
+        # NOTE: Curriculum learning is used here
+        sample_str = ""
+        for i in range(len(sample_texts)):
+            sample_str += f"{sample_texts[i]} \n"
+        if curriculum:
+            rank = self._rank_error(len(sample_texts), sample_str, 1)
+            # TODO: 这里应该加上对rank的判断
+            if rank != []:
+                index = np.argsort(rank[0].split(", "))
+                sample_texts = [sample_texts[i] for i in index]
+                sample_labels = [sample_labels[i] for i in index]
+                sample_preds = [sample_preds[i] for i in index]
+                # # NOTE: 打印error的顺序
+                # print("error order: ", index)
+                # print("rank: ", rank[0].split(", "))
+
         error_string = ""
         error_idx = 0
         for i, (text, label, pred) in enumerate(
@@ -90,20 +128,36 @@ class ProTeGi(PromptOptimizer):
             text = text[end_index + len(end_tag) :]
         return texts
 
-    def _get_gradients(self, prompt, error_string, num_feedbacks=5, n=1):
+    def _get_gradients(
+        self, prompt, error_string, num_feedbacks=5, n=1, curriculum=False
+    ):
         """Get "gradients" for a prompt based on the error string."""
-        gradient_prompt = f"""
-        I'm trying to write a zero-shot classifier prompt.
-    
-        My current prompt is:
-        "{prompt}"
+        if curriculum:
+            gradient_prompt = f"""
+            I'm trying to write a zero-shot classifier prompt.
+        
+            My current prompt is:
+            "{prompt}"
 
-        But this prompt gets the following examples wrong:
-        {error_string}
+            But this prompt gets the following examples wrong, these examples are ranked by difficulty level from easy to hard:
+            {error_string}
 
-        Give {num_feedbacks} reasons why the prompt could have gotten these examples wrong.
-        Wrap each reason with <START> and <END>
-        """
+            Give {num_feedbacks} different reasons why the prompt could have gotten these examples wrong.
+            Wrap each reason with <START> and <END>
+            """
+        else:
+            gradient_prompt = f"""
+            I'm trying to write a zero-shot classifier prompt.
+        
+            My current prompt is:
+            "{prompt}"
+
+            But this prompt gets the following examples wrong:
+            {error_string}
+
+            Give {num_feedbacks} different reasons why the prompt could have gotten these examples wrong.
+            Wrap each reason with <START> and <END>
+            """
         gradient_prompt = "\n".join(
             [line.lstrip() for line in gradient_prompt.split("\n")]
         )  # 去除开头的空格
@@ -111,8 +165,8 @@ class ProTeGi(PromptOptimizer):
         feedbacks = []
         for response in responses:
             feedbacks += self.parse_tagged_text(response, "<START>", "<END>")
-        for prob in log_prob:
-            print("Feedback perplexity: ", utils.calculate_perplexity(prob))
+        # for prob in log_prob:
+        #     print("Feedback perplexity: ", utils.calculate_perplexity(prob))
         return feedbacks
 
     # TODO: 这里的error_str为什么也要加上? 不如直接搞成(error_str, feedback_str)
@@ -139,33 +193,49 @@ class ProTeGi(PromptOptimizer):
         )
         responses, log_prob = utils.model(transformation_prompt, n=n)
         new_prompts = []
-        for response in responses:
-            new_prompts += self.parse_tagged_text(response, "<START>", "<END>")
+        perplexity = []
         for prob in log_prob:
-            print("Prompt perplexity: ", utils.calculate_perplexity(prob))
+            perplexity.append(utils.calculate_perplexity(prob))
+            # print("Prompt perplexity: ", utils.calculate_perplexity(prob))
+        for i, response in enumerate(responses):
+            new_prompts.append(
+                (
+                    self.parse_tagged_text(response, "<START>", "<END>"),
+                    perplexity[i],
+                )
+            )
         return new_prompts
 
     # 产生语义相似的句子, 用于增加prompt数目
     def generate_synonyms(self, prompt_section, n=3):
         """Generate synonyms for a prompt section."""
         rewrite_prompt = f"""
-        Generate a variation of the following instruction while keeping the semantic meaning.
+        I'm trying to write a variation of the following instruction while keeping the semantic meaning.
         
-        Input: {prompt_section}
+        The instruction is:
+        {prompt_section}
+        
         Wrap each prompt with <START> and <END>.
         
-        Output:
+        The variation of the instruction is:
         """
         new_instructions, log_prob = utils.model(rewrite_prompt, n=n)
         instruction = []
-        for new_instruction in new_instructions:
-            instruction += self.parse_tagged_text(new_instruction, "<START>", "<END>")
+        perplexity = []
         for prob in log_prob:
-            print("Semantic prompt perplexity: ", utils.calculate_perplexity(prob))
+            perplexity.append(utils.calculate_perplexity(prob))
+            # print("Semantic prompt perplexity: ", utils.calculate_perplexity(prob))
+        for i, new_instruction in enumerate(new_instructions):
+            instruction.append(
+                (
+                    self.parse_tagged_text(new_instruction, "<START>", "<END>"),
+                    perplexity[i],
+                )
+            )
         return instruction
 
     def get_gradients(
-        self, prompt, task_section, task, gpt4, texts, labels, preds, seed
+        self, prompt, task_section, task, gpt4, texts, labels, preds, seed, curriculum
     ):
         """Get "gradients" for a prompt based on sampled error strings."""
         prompt_feedbacks = []
@@ -175,10 +245,20 @@ class ProTeGi(PromptOptimizer):
             desc="gradients..",
         ):
             error_string = self._sample_error_str(
-                texts, labels, preds, task, seed, n=self.opt["errors_per_gradient"]
+                texts,
+                labels,
+                preds,
+                task,
+                seed,
+                n=self.opt["errors_per_gradient"],
+                curriculum=curriculum,
             )
             gradients = self._get_gradients(
-                task_section, error_string, self.opt["gradients_per_error"], n=1
+                task_section,
+                error_string,
+                self.opt["gradients_per_error"],
+                n=1,
+                curriculum=curriculum,
             )
             prompt_feedbacks += [(gradient, error_string) for gradient in gradients]
         return prompt_feedbacks
@@ -195,14 +275,16 @@ class ProTeGi(PromptOptimizer):
             rank = self._curriculum_learning(self.opt["minibatch_size"], minibatch, n=1)
             index = np.argsort(rank[0].split(","))
             minibatch = [minibatch[i] for i in index]
+            # # NOTE: 这里打印出来minibatch的顺序
+            # print("minibatch order: ", index)
 
         new_prompts = []
         for prompt in tqdm(prompts, desc=f"expanding {len(prompts)} prompts"):
-            sections = utils.parse_sectioned_prompt(prompt)
+            sections = utils.parse_sectioned_prompt(prompt[0])
             task_section = sections["task"].strip()
 
             # evaluate prompt on minibatch
-            _, _, texts, labels, preds = task.evaluate(gpt4, prompt, minibatch)
+            _, _, texts, labels, preds = task.evaluate(gpt4, prompt[0], minibatch)
 
             """
             new_task_sections是通过gradients得到的新的task_sections
@@ -213,7 +295,15 @@ class ProTeGi(PromptOptimizer):
             new_task_sections = []
             if self.opt["n_gradients"] > 0:
                 gradients = self.get_gradients(
-                    prompt, task_section, task, gpt4, texts, labels, preds, seed
+                    prompt[0],
+                    task_section,
+                    task,
+                    gpt4,
+                    texts,
+                    labels,
+                    preds,
+                    seed,
+                    curriculum,
                 )
                 new_task_sections = []
                 for feedback, error_string in tqdm(
@@ -238,54 +328,61 @@ class ProTeGi(PromptOptimizer):
 
             # combine
             new_sections = new_task_sections + mc_sampled_task_sections
-            new_sections = list(set(new_sections))
-            tmp_new_prompts = [
-                prompt.replace(task_section, tmp) for tmp in new_sections
-            ]
+            tmp_new_prompts = []
+            for tmp in new_sections:
+                if tmp[0] != []:
+                    tmp_new_prompts.append(
+                        (prompt[0].replace(task_section, tmp[0][0]), tmp[1])
+                    )
 
             # filter a little
+            # if len(new_sections) > self.opt["max_expansion_factor"]:
+            #     if self.opt["reject_on_errors"]:
+            #         error_exs = []
+            #         for i, (t, label, p) in enumerate(zip(texts, labels, preds)):
+            #             if label != p:
+            #                 error_exs.append({"text": t, "label": label})
+            #         self._set_seed(seed)
+            #         error_exs = random.sample(error_exs, min(len(error_exs), 16))
+
+            #         # speed up a little
+            #         self._set_seed(seed)
+            #         tmp_new_prompts = random.sample(
+            #             tmp_new_prompts,
+            #             min(len(tmp_new_prompts), self.opt["max_expansion_factor"] * 2),
+            #         )
+
+            #         error_scores = self.bf_eval(
+            #             tmp_new_prompts,
+            #             error_exs,
+            #             task,
+            #             gpt4,
+            #             self.scorer,
+            #             max_threads=self.max_threads,
+            #         )
+            #         tmp_new_prompts = [
+            #             tmp_new_prompts[i]
+            #             for i in np.argsort(error_scores)[
+            #                 -self.opt["max_expansion_factor"] :
+            #             ]
+            #         ]
+            #     else:
+            #         self._set_seed(seed)
+            #         # TODO: 修改这里, 可以根据某个metric来选取
+            #         tmp_new_prompts = random.sample(
+            #             tmp_new_prompts, k=self.opt["max_expansion_factor"]
+            #         )
+
             if len(new_sections) > self.opt["max_expansion_factor"]:
-                if self.opt["reject_on_errors"]:
-                    error_exs = []
-                    for i, (t, label, p) in enumerate(zip(texts, labels, preds)):
-                        if label != p:
-                            error_exs.append({"text": t, "label": label})
-                    self._set_seed(seed)
-                    error_exs = random.sample(error_exs, min(len(error_exs), 16))
-
-                    # speed up a little
-                    self._set_seed(seed)
-                    tmp_new_prompts = random.sample(
-                        tmp_new_prompts,
-                        min(len(tmp_new_prompts), self.opt["max_expansion_factor"] * 2),
-                    )
-
-                    error_scores = self.bf_eval(
-                        tmp_new_prompts,
-                        error_exs,
-                        task,
-                        gpt4,
-                        self.scorer,
-                        max_threads=self.max_threads,
-                    )
-                    tmp_new_prompts = [
-                        tmp_new_prompts[i]
-                        for i in np.argsort(error_scores)[
-                            -self.opt["max_expansion_factor"] :
-                        ]
-                    ]
-                else:
-                    self._set_seed(seed)
-                    # TODO: 修改这里, 可以根据某个metric来选取
-                    tmp_new_prompts = random.sample(
-                        tmp_new_prompts, k=self.opt["max_expansion_factor"]
-                    )
+                tmp_new_prompts = sorted(tmp_new_prompts, key=lambda x: x[1])
+                tmp_new_prompts = tmp_new_prompts[: self.opt["max_expansion_factor"]]
 
             new_prompts += tmp_new_prompts
 
         # TODO: 这里也可以修改, 原始的prompt和按照语义生成的prompt都按照某个metric进行选取
         new_prompts += prompts
-        new_prompts = list(set(new_prompts))
+        # NOTE: 按照perplexity进行排序
+        new_prompts = sorted(new_prompts, key=lambda x: x[1])
         return new_prompts
 
     def score_candidates(self, prompts, task, gpt4, train_exs):

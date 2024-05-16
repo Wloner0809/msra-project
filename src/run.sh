@@ -2,16 +2,16 @@ python main.py \
     --task liar \
     --data_dir data/liar \
     --prompts prompts/liar.md \
-    --args args/liar_llama.json \
-    --out results/liar_llama.json \
-    --tests tests/liar_llama.json \
+    --args args/liar_qwen_baseline.json \
+    --out results/liar_qwen_baseline.json \
+    --tests tests/liar_qwen.json \
     --max_threads 1 \
     --temperature 0.0 \
     --optimizer nl-gradient \
     --rounds 3 \
-    --beam_size 4 \
-    --n_test_exs 10 \
-    --minibatch_size 16 \
+    --beam_size 12 \
+    --n_test_exs 100 \
+    --minibatch_size 24 \
     --n_gradients 4 \
     --errors_per_gradient 4 \
     --gradients_per_error 1 \
@@ -22,11 +22,10 @@ python main.py \
     --evaluator bf \
     --scorer 01 \
     --eval_rounds 2 \
-    --eval_prompts_per_round 4 \
+    --eval_prompts_per_round 6 \
     --samples_per_eval 150 \
     --c 1.0 \
     --knn_k 2 \
     --knn_t 0.993 \
-    --train true \
-    # --n_test_exs 100 \
+    # --train true \
     # --curriculum true

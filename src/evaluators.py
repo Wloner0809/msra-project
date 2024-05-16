@@ -326,8 +326,10 @@ class BruteForceEvaluator:
         verbose=True,
     ):
         sample_size = min(len(exs), int(self.config["eval_budget"] / len(prompts)))
-        random.seed(42)
-        eval_exs = random.sample(exs, sample_size)
+        # random.seed(42)
+        # eval_exs = random.sample(exs, sample_size)
+        # NOTE: 固定下来valid
+        eval_exs = exs[len(exs) - sample_size :]
 
         while True:
             try:
