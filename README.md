@@ -15,7 +15,7 @@
 |   :city_sunrise:4.24    | test llama/mixtral/qwen model on liar dataset, record the results |
 | :night_with_stars:4.25  | test llama/qwen model on ethos dataset, record the results. Next: **Design a new metric to select prompts(instead of using acc)、Deal with error strings in a more reasonable way** |
 | :night_with_stars: 5.10 | Use perplexity to select prompts(add Influence Score later)  |
-|        5.13-5.27        | test model on liar/stt2 dataset and record all the results. write reports and presentation ppt. |
+|        5.13-5.27        | test models on liar/sst2 datasets and record all the results. write reports and presentation ppt. |
 
 ##  :book: Paper List
 
