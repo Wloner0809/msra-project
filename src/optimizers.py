@@ -70,8 +70,6 @@ class ProTeGi(PromptOptimizer):
             rank += self.parse_tagged_text(response, "<START>", "<END>")
         return rank
 
-    # TODO: 这里的error是随机选取的, 且最多选取n个
-    # TODO: 是一个可以优化的点
     def _sample_error_str(
         self, texts, labels, preds, task, seed, n=4, curriculum=False
     ):
@@ -93,9 +91,12 @@ class ProTeGi(PromptOptimizer):
             sample_str += f"{sample_texts[i]} \n"
         if curriculum:
             rank = self._rank_error(len(sample_texts), sample_str, 1)
-            # TODO: 这里应该加上对rank的判断
+            while rank == []:
+                rank = self._rank_error(len(sample_texts), sample_str, 1)
             if rank != []:
                 index = np.argsort(rank[0].split(", "))
+                if len(index) > len(sample_texts):
+                    index = [i for i in index if i < len(sample_texts)]
                 sample_texts = [sample_texts[i] for i in index]
                 sample_labels = [sample_labels[i] for i in index]
                 sample_preds = [sample_preds[i] for i in index]
@@ -169,7 +170,6 @@ class ProTeGi(PromptOptimizer):
         #     print("Feedback perplexity: ", utils.calculate_perplexity(prob))
         return feedbacks
 
-    # TODO: 这里的error_str为什么也要加上? 不如直接搞成(error_str, feedback_str)
     def apply_gradient(self, prompt, error_str, feedback_str, steps_per_gradient, n=1):
         """Incorporate feedback gradient into a prompt."""
         transformation_prompt = f"""
@@ -273,10 +273,17 @@ class ProTeGi(PromptOptimizer):
 
         if curriculum:
             rank = self._curriculum_learning(self.opt["minibatch_size"], minibatch, n=1)
-            index = np.argsort(rank[0].split(","))
-            minibatch = [minibatch[i] for i in index]
-            # # NOTE: 这里打印出来minibatch的顺序
-            # print("minibatch order: ", index)
+            while rank == []:
+                rank = self._curriculum_learning(
+                    self.opt["minibatch_size"], minibatch, n=1
+                )
+            if rank != []:
+                index = np.argsort(rank[0].split(","))
+                # NOTE: 打印出来minibatch的顺序
+                # print("minibatch order: ", index)
+                if len(index) > len(minibatch):
+                    minibatch = [minibatch[i] for i in index if i < len(minibatch)]
+                minibatch = [minibatch[i] for i in index]
 
         new_prompts = []
         for prompt in tqdm(prompts, desc=f"expanding {len(prompts)} prompts"):
@@ -330,48 +337,10 @@ class ProTeGi(PromptOptimizer):
             new_sections = new_task_sections + mc_sampled_task_sections
             tmp_new_prompts = []
             for tmp in new_sections:
-                if tmp[0] != []:
+                if tmp[0] != [] and tmp[1] > 1.01:
                     tmp_new_prompts.append(
                         (prompt[0].replace(task_section, tmp[0][0]), tmp[1])
                     )
-
-            # filter a little
-            # if len(new_sections) > self.opt["max_expansion_factor"]:
-            #     if self.opt["reject_on_errors"]:
-            #         error_exs = []
-            #         for i, (t, label, p) in enumerate(zip(texts, labels, preds)):
-            #             if label != p:
-            #                 error_exs.append({"text": t, "label": label})
-            #         self._set_seed(seed)
-            #         error_exs = random.sample(error_exs, min(len(error_exs), 16))
-
-            #         # speed up a little
-            #         self._set_seed(seed)
-            #         tmp_new_prompts = random.sample(
-            #             tmp_new_prompts,
-            #             min(len(tmp_new_prompts), self.opt["max_expansion_factor"] * 2),
-            #         )
-
-            #         error_scores = self.bf_eval(
-            #             tmp_new_prompts,
-            #             error_exs,
-            #             task,
-            #             gpt4,
-            #             self.scorer,
-            #             max_threads=self.max_threads,
-            #         )
-            #         tmp_new_prompts = [
-            #             tmp_new_prompts[i]
-            #             for i in np.argsort(error_scores)[
-            #                 -self.opt["max_expansion_factor"] :
-            #             ]
-            #         ]
-            #     else:
-            #         self._set_seed(seed)
-            #         # TODO: 修改这里, 可以根据某个metric来选取
-            #         tmp_new_prompts = random.sample(
-            #             tmp_new_prompts, k=self.opt["max_expansion_factor"]
-            #         )
 
             if len(new_sections) > self.opt["max_expansion_factor"]:
                 tmp_new_prompts = sorted(tmp_new_prompts, key=lambda x: x[1])
@@ -379,7 +348,6 @@ class ProTeGi(PromptOptimizer):
 
             new_prompts += tmp_new_prompts
 
-        # TODO: 这里也可以修改, 原始的prompt和按照语义生成的prompt都按照某个metric进行选取
         new_prompts += prompts
         # NOTE: 按照perplexity进行排序
         new_prompts = sorted(new_prompts, key=lambda x: x[1])

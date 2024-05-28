@@ -64,7 +64,6 @@ class SuccessiveHalvingEvaluator:
 
         n_top_rank = sum(1 for x in out_ranks if x == -1)
         if n_top_rank < self.config["beam_size"]:
-            # TODO: get the boundary of the beam
             target_prompts = [
                 idx2prompts[i] for i, rank in enumerate(out_ranks) if rank == r
             ]

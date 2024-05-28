@@ -115,32 +115,6 @@ class EthosBinaryTask(BinaryClassificationTask):
         return exs
 
 
-class JailbreakBinaryTask(BinaryClassificationTask):
-    categories = ["No", "Yes"]
-
-    def get_train_examples(self):
-        exs = []
-        for i, line in enumerate(open(self.data_dir + "/train.tsv")):
-            convo, label = line.strip().split("\t")
-            label = int(label)
-            text = " ".join(
-                [x["text"].strip() for x in json.loads(convo) if x["role"] == "user"]
-            )
-            exs.append({"id": i, "text": text, "label": label})
-        return exs
-
-    def get_test_examples(self):
-        exs = []
-        for i, line in enumerate(open(self.data_dir + "/test.tsv")):
-            convo, label = line.strip().split("\t")
-            label = int(label)
-            text = " ".join(
-                [x["text"].strip() for x in json.loads(convo) if x["role"] == "user"]
-            )
-            exs.append({"id": i, "text": text, "label": label})
-        return exs
-
-
 class DefaultHFBinaryTask(BinaryClassificationTask):
     categories = ["No", "Yes"]
 
@@ -156,4 +130,4 @@ class DefaultHFBinaryTask(BinaryClassificationTask):
         for i, row in enumerate(open(self.data_dir + "/test.jsonl")):
             row = json.loads(row.strip())
             exs.append({"id": f"test-{i}", "label": row["label"], "text": row["text"]})
-        return exs
+        return exs    
