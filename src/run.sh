@@ -1,14 +1,14 @@
 python main.py \
-    --task liar \
-    --data_dir data/liar \
-    --prompts prompts/liar.md \
-    --args args/liar_qwen_baseline.json \
-    --out results/liar_qwen_baseline.json \
-    --tests tests/liar_qwen.json \
+    --task sst2 \
+    --data_dir data/sst2 \
+    --prompts prompts/sst2.md \
+    --args args/sst2_qwen_curriculum.json \
+    --out results/sst2_qwen_curriculum.json \
+    --tests tests/sst2_qwen.json \
     --max_threads 1 \
     --temperature 0.0 \
     --optimizer nl-gradient \
-    --rounds 3 \
+    --rounds 2 \
     --beam_size 12 \
     --n_test_exs 100 \
     --minibatch_size 24 \

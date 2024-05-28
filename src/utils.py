@@ -10,7 +10,7 @@ import math
 
 def calculate_perplexity(token_logprobs):
     if len(token_logprobs) == 0:
-        return 100
+        return 100000
     nlls = []
     for neg_log_likelihood in token_logprobs:
         if (
@@ -19,7 +19,7 @@ def calculate_perplexity(token_logprobs):
             neg_log_likelihood = -100
         nlls.append(neg_log_likelihood)
 
-    perplexity = math.exp(sum(nlls) / len(token_logprobs))
+    perplexity = math.exp(-sum(nlls) / len(token_logprobs))
     return perplexity
 
 
@@ -56,15 +56,15 @@ def teacher(
 ):
     messages = [{"role": "user", "content": prompt}]
     client = OpenAI(
-        api_key=config.OPENAI_KEY3,
+        api_key=config.OPENAI_KEY4,
         base_url="https://api.together.xyz/",
     )
 
     chat_completion = client.chat.completions.create(
         messages=messages,
-        # model="meta-llama/Llama-3-70b-chat-hf",
+        model="meta-llama/Llama-3-70b-chat-hf",
         # model="mistralai/Mixtral-8x22B-Instruct-v0.1",
-        model="Qwen/Qwen1.5-110B-Chat",
+        # model="Qwen/Qwen1.5-110B-Chat",
         temperature=temperature,
         max_tokens=max_tokens,
         logit_bias=logit_bias,
@@ -90,7 +90,7 @@ def model(
 ):
     messages = [{"role": "user", "content": prompt}]
     client = OpenAI(
-        api_key=config.OPENAI_KEY2,
+        api_key=config.OPENAI_KEY1,
         base_url="https://api.together.xyz/",
     )
 
@@ -127,11 +127,9 @@ def model(
 def get_task_class(task_name):
     if task_name == "ethos":
         return tasks.EthosBinaryTask
-    elif task_name == "jailbreak":
-        return tasks.JailbreakBinaryTask
     elif task_name == "liar":
         return tasks.DefaultHFBinaryTask
-    elif task_name == "ar_sarcasm":
+    elif task_name == "sst2":
         return tasks.DefaultHFBinaryTask
     else:
         raise Exception(f"Unsupported task: {task_name}")
