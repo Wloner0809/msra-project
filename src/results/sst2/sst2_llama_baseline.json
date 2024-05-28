@@ -1,0 +1,156 @@
+{
+    "round": [
+        0,
+        1,
+        2
+    ],
+    "time": [
+        0.00012373924255371094,
+        2469.157380580902,
+        2558.8842780590057
+    ],
+    "candidates": [
+        [
+            [
+                "# Task\nIdentify whether the sentiment of the following opinion is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ]
+        ],
+        [
+            [
+                "# Task\nIdentify whether the sentiment of the following opinion is positive (Yes) or negative (No), considering the tone, context, and nuances of the language, rather than just relying on individual keywords.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.137976788402668
+            ],
+            [
+                "# Task\nIdentify whether the sentiment of the following opinion is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\nDetermine the sentiment of the given text as a whole, considering the tone, language, and context in which the words are used. Is the sentiment expressed in the text positive (Yes) or negative (No)?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.168875123232198
+            ],
+            [
+                "# Task\nDetermine the sentiment of the given text, considering the tone, language, and context in which the words are used. Is the overall sentiment positive (Yes) or negative (No)?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.144526186660164
+            ],
+            [
+                "# Task\nAnalyze the overall sentiment of the provided text, taking into account the tone, language, and context in which the words are used. Does the text convey a positive sentiment (Yes) or a negative one (No)?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.0634541107159057
+            ],
+            [
+                "# Task\nAnalyze the emotional tone and language used in the given text, taking into account the context in which the words are presented. Does the overall sentiment expressed in the text lean towards being positive or negative? Respond with 'Yes' for positive and 'No' for negative.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1805877083972707
+            ],
+            [
+                "# Task\nConsider the tone, context, and language used in the following opinion, including idioms, sarcasm, and figurative language, to identify whether the sentiment is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.328087009364082
+            ]
+        ],
+        [
+            [
+                "# Task\nConsider the subtleties of language, including idioms, figurative language, and nuanced expressions, when determining the sentiment of the text. Take into account the context and connotation of words like \"dissing\" that may have a negative implication despite being used in a sentence with a positive phrase. Is the overall sentiment positive (Yes) or negative (No)?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.458550676339178
+            ],
+            [
+                "# Task\nConsider the nuanced implications of the words and phrases used in the text, as well as their relationships with each other, to determine the overall emotional tone. Does the text convey a sense of approval, appreciation, or delight, or does it express disapproval, dissatisfaction, or discontent? Respond with 'Yes' for positive and 'No' for negative.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.3750504726785637
+            ],
+            [
+                "# Task\nIdentify the sentiment towards the main subject of the text, disregarding the tone of the expression. Is the sentiment towards the subject positive (Yes) or negative (No)?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.347013431381866
+            ],
+            [
+                "# Task\nConsider the text as a whole, taking into account the connotations and implied meanings of words, as well as the relationships between them. Look for subtleties in tone, language, and context that may affect the overall sentiment. Is the sentiment expressed in the text positive (Yes) or negative (No)?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.3399969964583525
+            ],
+            [
+                "# Task\nIdentify whether the sentiment expressed towards the subject of the opinion is positive (Yes) or negative (No), considering both the tone and the actual opinion being conveyed.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.3004119102789455
+            ],
+            [
+                "# Task\nWhen identifying the sentiment of the opinion, pay close attention to the connotations and nuances of words with multiple meanings, idioms, slang, and figurative language, as they can significantly impact the tone and context of the text. Consider whether the sentiment is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.3227468762445855
+            ],
+            [
+                "# Task\nDetermine the sentiment of the given opinion, taking into account the tone, context, and subtleties of the language. Classify it as positive (Yes) or negative (No), moving beyond a keyword-based analysis.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.3051793772446443
+            ],
+            [
+                "# Task\nWhen analyzing text, look beyond the literal meaning and uncover the emotional tone by recognizing how words and phrases interact, including the impact of context, idioms, sarcasm, and figurative language. Then, decide whether the overall sentiment is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.3177822595069284
+            ],
+            [
+                "# Task\nConsider the nuances of language and the context in which words are used to determine the overall sentiment of the given text. Look for phrases or sentences that may convey irony, sarcasm, or contrast to accurately identify whether the sentiment leans towards being positive or negative. Respond with 'Yes' for positive and 'No' for negative.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.272249788056453
+            ],
+            [
+                "# Task\nConsider the text as a whole, including the relationships between words and the implied meaning behind them. Does the text express a sentiment that is overall positive (Yes) or negative (No)?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2742564555239317
+            ],
+            [
+                "# Task\nLook beyond the literal interpretation of each word and instead, focus on the emotional resonance and implied attitude conveyed by the language to classify the sentiment of the opinion as either positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.282727163681549
+            ],
+            [
+                "# Task\nAnalyze the emotional tone and language used in the provided text, taking into account the surrounding context. Does the text convey a generally positive or negative emotional tone? Respond with Yes for positive or No for negative.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2897713004837612
+            ]
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.933852140077821,
+            0.9299610894941635,
+            0.9260700389105059,
+            0.9260700389105059,
+            0.9221789883268483,
+            0.9105058365758755,
+            0.8988326848249028
+        ],
+        [
+            0.9666666666666667,
+            0.9666666666666667,
+            0.9666666666666667,
+            0.9666666666666667,
+            0.9666666666666667,
+            0.9666666666666667,
+            0.9666666666666667,
+            0.9666666666666667,
+            0.9666666666666667,
+            0.9666666666666667,
+            0.9666666666666667,
+            0.9666666666666667
+        ]
+    ],
+    "metric": [
+        [
+            1.0
+        ],
+        [
+            0.8206249456007196,
+            0.9299610894941635,
+            0.7922745727958668,
+            0.8091296203653201,
+            0.8671544724257518,
+            0.7712309980017918,
+            0.676787498475182
+        ],
+        [
+            0.6627583685284814,
+            0.7030044975611872,
+            0.7176369916927914,
+            0.7213946517951848,
+            0.7433542087901297,
+            0.7308024566356436,
+            0.740638937084181,
+            0.7335556839476365,
+            0.7598088643766968,
+            0.758612336218619,
+            0.753602709942028,
+            0.7494868790335883
+        ]
+    ]
+}

@@ -1,0 +1,174 @@
+{
+    "round": [
+        0,
+        1,
+        2
+    ],
+    "time": [
+        6.0558319091796875e-05,
+        2419.10835647583,
+        2920.948317050934
+    ],
+    "candidates": [
+        [
+            [
+                "# Task\nIdentify whether the sentiment of the following opinion is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ]
+        ],
+        [
+            [
+                "# Task\nDetermine the overall sentiment of the text as positive (Yes) or negative (No), considering any contrasting or modifying words. \"Otherwise\" may indicate a shift in sentiment; please account for such nuances. </START>\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                100000
+            ],
+            [
+                "# Task\nDetermine the general sentiment of the entire opinion as positive (Yes) or negative (No), disregarding any contrasting words or phrases that might be misleading when taken out of context. Consider the overall feeling conveyed in the text. </START>\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                100000
+            ],
+            [
+                "# Task\nIdentify whether the sentiment of the following opinion is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\nConsider the overall context and nuanced meaning of the words to determine if the sentiment expressed in the opinion is positive (Yes) or negative (No). Pay attention to any contrasting words or phrases that might alter the sentiment.## Example 1\nText: \"otherwise comic narrative\"\nLabel: Yes\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2464859708000349
+            ],
+            [
+                "# Task\nClassify the sentiment of the passage as either favorable (Yes) or unfavorable (No), taking into account all sentiment-altering terms and phrases. Pay particular attention to words like \"however\" or \"nevertheless,\" which may signal a sentiment reversal within the text.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2168453303928286
+            ],
+            [
+                "# Task\nFor the given statement, assess whether the sentiment conveyed is more toward a positive outlook (Yes) or a negative one (No), taking into account the entire context. Be sure to consider any terms that might change the sentiment's apparent direction from its surface meaning.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.6047507645363295
+            ],
+            [
+                "# Task\n\"Given the following statement, determine if the overall sentiment expressed is positively inclined (Yes) or negatively inclined (No), considering the statement in its entirety. Please pay attention to contextual clues including any words that might alter the sentiment from its literal meaning.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.4685222315995687
+            ],
+            [
+                "# Task\nFor the statement provided, assess whether the sentiment conveyed is favorably disposed (Yes) or unfavorably inclined (No), taking into account the complete context. Be vigilant for linguistic cues that might shift the sentiment's tone from its surface meaning.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2963197853010595
+            ],
+            [
+                "# Task\nYour task is to analyze the sentiment within a given text by considering the full context and subtle implications of the words used. Decide if the opinion conveyed is positive (respond with 'Yes') or negative (respond with 'No'). Be meticulous about identifying any words or expressions that might introduce a contrasting sentiment. ## Example 1\\nText: \"an otherwise delightfully comic narrative\"\\nLabel: Yes\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1509962180657833
+            ],
+            [
+                "# Task\nDelve into the comprehensive context and subtle implications of the language used to assess whether the sentiment conveyed in the viewpoint is favorable (Yes) or unfavorable (No). Be meticulous in observing any contradictory terms or expressions that might transform the sentiment's direction.## Example 1\\nText: \"a narrative that is otherwise comedically charged\"\\nLabel: Yes\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.3399794533221268
+            ]
+        ],
+        [
+            [
+                "# Task\nIdentify whether the sentiment of the following opinion is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\nDetermine the general sentiment of the entire opinion as positive (Yes) or negative (No), disregarding any contrasting words or phrases that might be misleading when taken out of context. Consider the overall feeling conveyed in the text. </START>\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                100000
+            ],
+            [
+                "# Task\nDetermine the overall sentiment of the text as positive (Yes) or negative (No), considering any contrasting or modifying words. \"Otherwise\" may indicate a shift in sentiment; please account for such nuances. </START>\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                100000
+            ],
+            [
+                "# Task\nAnalyze the complete sense and subtle implications of the language used to assess if the emotion conveyed in the statement is favorable (Yes) or unfavorable (No). Be vigilant for any words or expressions that introduce contradiction, which might sway the sentiment. ## Example 1\nText: \"The otherwise delightful comic narrative\"\nLabel: Yes\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.199778789602106
+            ],
+            [
+                "# Task\nYour task is to analyze the sentiment within a given text by considering the full context and subtle implications of the words used. Decide if the opinion conveyed is positive (respond with 'Yes') or negative (respond with 'No'). Be meticulous about identifying any words or expressions that might introduce a contrasting sentiment. ## Example 1\\nText: \"an otherwise delightfully comic narrative\"\\nLabel: Yes\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1509962180657833
+            ],
+            [
+                "# Task\n\"Classify the sentiment of the passage as either favorable (Yes) or unfavorable (No), by carefully considering the holistic context, including idiomatic expressions, compound adjectives, and phrases that may carry a sentiment opposite to individual words. Pay special attention to the usage of words in conjunction with negative or positive indicators, as well as phrases that introduce contrast like 'however', 'nevertheless', 'but', or conditional clauses such as 'if'. Ensure that the sentiment derived takes into account the entire phrase or sentence, particularly idioms like 'dissing the film', compound descriptive terms like 'rowdy slapstick', and nuanced expressions where a negative aspect is followed by a qualifying positive sentiment, e.g., expressing disappointment over a short film length while wanting more.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.462046395329394
+            ],
+            [
+                "# Task\nConsider the overall context and nuanced meaning of the words to determine if the sentiment expressed in the opinion is positive (Yes) or negative (No). Pay attention to any contrasting words or phrases that might alter the sentiment.## Example 1\nText: \"otherwise comic narrative\"\nLabel: Yes\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2464859708000349
+            ],
+            [
+                "# Task\nConsider both the explicit sentiment indicators and the context in which they are used. Classify the net sentiment of the passage as favorable (Yes) or unfavorable (No). Pay attention to phrases that may contain negations or qualify the sentiment, such as \"didn't mind,\" which can indicate a positive outlook despite negative expressions. Evaluate the overall tone, taking into account any shifts caused by words like \"however\" or \"nevertheless\".\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.3671727383738592
+            ],
+            [
+                "# Task\nFor each statement, determine the dominant sentiment by carefully weighing the entire context, including any words or phrases that might contradict the literal meaning of positive or negative terms. Consider especially instances where a positive word is used in a negative context or vice versa, and prioritize the net emotional direction conveyed by the passage as a whole. Classify the sentiment as more toward a positive outlook (Yes) or a negative one (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.4264918733834173
+            ],
+            [
+                "# Task\nYour task is to analyze the sentiment of each provided text by considering its entire context, including any elements that contrast. Determine if the overall sentiment, taking into account the flow of the sentence and the interplay of positive and negative components, is positive (respond with 'Yes') or negative (respond with 'No'). Be cautious of instances where a seemingly positive statement is negated by subsequent information. ## Example 1\\nText: \"otherwise comic narrative\"\\nSentiment: Yes\\n\\n## Example 2\\nText: \"had so much fun dissing the film that they did n\\'t mind the ticket cost\"\\nSentiment: No\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2058001269762977
+            ],
+            [
+                "# Task\nClassify the sentiment of the passage as either favorable (Yes) or unfavorable (No), taking into account all sentiment-altering terms and phrases. Pay particular attention to words like \"however\" or \"nevertheless,\" which may signal a sentiment reversal within the text.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2168453303928286
+            ],
+            [
+                "# Task\nYour task is to carefully assess the overall sentiment of a text by examining the context and the interplay of words. Consider not just individual positive or negative terms, but the complete sense of the passage. Look for phrases or clauses that might change the sentiment from what appears at first glance. For instance, phrases like \"despite the\" or \"however\" can indicate a shift. Respond with 'Yes' for positive sentiment and 'No' for negative, ensuring your decision reflects the text's true emotional tone. ## Example 1\\nText: \"an otherwise delightfully comic narrative\"\\nLabel: Yes ## Example 2\\nText: \"had so much fun dissing the film that they did n't mind the ticket cost\"\\nLabel: No\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2299959353035763
+            ]
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.9222222222222223,
+            0.9166666666666666,
+            0.9166666666666666,
+            0.9111111111111111,
+            0.9111111111111111,
+            0.9,
+            0.8944444444444445,
+            0.8944444444444445,
+            0.8944444444444445,
+            0.8777777777777778
+        ],
+        [
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334
+        ]
+    ],
+    "metric": [
+        [
+            1.0
+        ],
+        [
+            9.222222222222222e-06,
+            9.166666666666666e-06,
+            0.9166666666666666,
+            0.7309437349915223,
+            0.7487484960943896,
+            0.5608347538379534,
+            0.6090779051197492,
+            0.6899874973648706,
+            0.777104590271837,
+            0.6550680875005647
+        ],
+        [
+            0.9583333333333334,
+            9.583333333333334e-06,
+            9.583333333333334e-06,
+            0.7987583558225384,
+            0.8326120610055396,
+            0.6554739551321995,
+            0.7688280139392537,
+            0.7009599492696095,
+            0.6718112813782215,
+            0.7947696404183339,
+            0.7875555827822086,
+            0.7791353660829833
+        ]
+    ]
+}

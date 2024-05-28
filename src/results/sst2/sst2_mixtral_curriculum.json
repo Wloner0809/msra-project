@@ -1,0 +1,186 @@
+{
+    "round": [
+        0,
+        1,
+        2
+    ],
+    "time": [
+        5.030632019042969e-05,
+        2540.105350255966,
+        3539.3642382621765
+    ],
+    "candidates": [
+        [
+            [
+                "# Task\nIdentify whether the sentiment of the following opinion is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ]
+        ],
+        [
+            [
+                "# Task\n\"Determine the emotional tone of the given statement as positive (Yes) or negative (No), taking into account the general implication and background of the phrase. Keep in mind the subtleties that could alter the sentiment.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2248432075008735
+            ],
+            [
+                "# Task\nDetermine if the expressed sentiment in the subsequent statement is favorable (Yes) or unfavorable (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1468849165498571
+            ],
+            [
+                "# Task\nIdentify whether the sentiment of the following opinion is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\nDetermine if the sentiment expressed in the subsequent statement is favorable (Yes) or unfavorable (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.0370835265967706
+            ],
+            [
+                "# Task\n\"Determine the emotional tone of the subsequent statement as positive (Yes) or negative (No), taking into account the overall implication and setting of the phrase. Be mindful of subtleties that could alter the emotional tone.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.159203751064288
+            ],
+            [
+                "# Task\nUsing the provided opinion, determine whether the sentiment is typically viewed as positive (Yes) or not (No). If the sentiment is ambiguous, answer with 'Cannot determine'.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.174618606413075
+            ],
+            [
+                "# Task\n\"Based on the provided context, ascertain whether the sentiment of the subsequent statement is predominantly positive (Yes) or negative (No). Be mindful of any potential double entendres or ambiguities.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1575467232399046
+            ],
+            [
+                "# Task\nYour task is to evaluate the sentiment of the subsequent statement as either positive (Yes) or negative (No). A positive sentiment signifies a favorable or optimistic viewpoint, whereas a negative sentiment denotes an unfavorable or pessimistic viewpoint. For example, 'The movie was amazing' exemplifies a positive sentiment, while 'The food was terrible' is an illustration of a negative sentiment. Bear in mind the context and the general mood of the statement.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1806730801654308
+            ],
+            [
+                "# Task\n\"Taking into account the provided context, ascertain if the sentiment conveyed in the subsequent statement is predominantly positive (Yes) or negative (No). Be mindful of any potential dual meanings or uncertainties.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2746808343957614
+            ],
+            [
+                "# Task\n\"Assess the emotional tone of the provided text, taking into account the possibility of sarcasm, irony, and other forms of figurative language (Yes for positive, No for negative).\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2104755984698654
+            ],
+            [
+                "# Task\n\"Determine whether the sentiment of the following statement is positive (Yes) or negative (No). A positive sentiment indicates a favorable or optimistic opinion, while a negative sentiment indicates an unfavorable or pessimistic opinion. For instance, 'The movie was amazing' is an example of a positive sentiment, while 'The food was terrible' is an example of a negative sentiment. Remember to consider the context and the overall tone of the statement.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2429422073525498
+            ],
+            [
+                "# Task\nYour task is to decide if the sentiment expressed in the given statement is positive (Yes) or negative (No). A positive sentiment reflects a favorable or optimistic view, whereas a negative sentiment reflects an unfavorable or pessimistic view. For example, 'The movie was fantastic' expresses a positive sentiment, while 'The food was awful' shows a negative sentiment. Remember to take into account the context and the overall tone of the statement.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2100592030909958
+            ]
+        ],
+        [
+            [
+                "# Task\n\"In light of the given context, assess if the sentiment expressed in the subsequent statement is chiefly positive (Yes) or negative (No), accounting for any possible sarcasm, irony, or double meanings. Be sure to consider the overall tone and intent of the statement.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.16303876996135
+            ],
+            [
+                "# Task\n\"Determine the emotional tone of the subsequent statement as positive (Yes) or negative (No), taking into account the overall implication and setting of the phrase. Be mindful of subtleties that could alter the emotional tone.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.159203751064288
+            ],
+            [
+                "# Task\n\"Evaluate the sentiment conveyed in the upcoming statement as either positive (Yes) or negative (No), bearing in mind that neutral or subjective expressions might suggest a positive sentiment depending on personal inclinations.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1584334547587714
+            ],
+            [
+                "# Task\n\"Evaluate the general sentiment conveyed in the provided statement as either positive (Yes) or negative (No), considering both the overt and implied connotations. Be mindful of any nuances that might shift the sentiment. Even if the statement brings up an issue or a negative point, concentrate on the overall mood to decide whether the sentiment is positive or negative.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2234875562462086
+            ],
+            [
+                "# Task\n\"Assess the sentiment of the subsequent statement, taking into account its subtleties and the possibility of subjective interpretation, and label it as either positive (Yes) or negative (No).\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1072273572241866
+            ],
+            [
+                "# Task\n\"Evaluate the sentiment conveyed in the subsequent statement, taking into account both overt and subtle hints like sarcasm or irony. Decide whether the sentiment is positive (Yes) or negative (No).\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1031452365466268
+            ],
+            [
+                "# Task\n\"Assess the sentiment communicated in the subsequent statement, taking into account the possibility of subjectivity, and label it as positive (Yes) or negative (No).\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.2121343991156563
+            ],
+            [
+                "# Task\n\"Evaluate the sentiment conveyed in the ensuing statement as positive (Yes) or negative (No), bearing in mind that neutral or subjective descriptions could suggest a positive sentiment based on individual inclinations.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.168128053773419
+            ],
+            [
+                "# Task\n\"Evaluate the sentiment conveyed in the provided statement. If the sentiment is positive, regardless of any nuanced or indirect expressions, respond with 'Yes'. If the sentiment is negative, respond with 'No'. Be sure to consider any implicit positive sentiments or subtleties.\"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1515739302444754
+            ],
+            [
+                "# Task\nDetermine if the expressed sentiment in the subsequent statement is favorable (Yes) or unfavorable (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1468849165498571
+            ],
+            [
+                "# Task\nYour mission is to determine the sentiment of the following statement as either positive (Yes) or negative (No). A positive sentiment indicates a favorable or optimistic perspective, while a negative sentiment suggests an unfavorable or pessimistic perspective. Remember that sentiment can also be affected by sarcasm, irony, or figurative language. For instance, 'The movie was fantastic' is an example of a positive sentiment, whereas 'The food was awful' is a case of a negative sentiment. However, a statement like 'This movie is a must-watch, said no one ever' is an example of sarcasm expressing a negative sentiment. Consider the context, the overall tone, and any potential use of sarcasm, irony, or figurative language in the statement.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1203565870580106
+            ],
+            [
+                "# Task\nAssess the emotional tone of the provided text, taking into account the context, cultural nuances, idiomatic expressions, and the possibility of sarcasm, irony, and other forms of figurative language (Yes for positive, No for negative).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.1119891451261468
+            ]
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.8985507246376812,
+            0.8840579710144928,
+            0.8840579710144928,
+            0.8768115942028986,
+            0.8768115942028986,
+            0.855072463768116,
+            0.855072463768116,
+            0.8478260869565217,
+            0.8405797101449275,
+            0.8405797101449275,
+            0.8333333333333334,
+            0.8333333333333334
+        ],
+        [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ]
+    ],
+    "metric": [
+        [
+            1.0
+        ],
+        [
+            0.7336046925312605,
+            0.7708340725885388,
+            0.8840579710144928,
+            0.8454589931441583,
+            0.7563912671934337,
+            0.7279575337047018,
+            0.7386936929637007,
+            0.7180870820208147,
+            0.6594432798100307,
+            0.6944210285671889,
+            0.6704521967343294,
+            0.688671538718645
+        ],
+        [
+            0.8598165648710334,
+            0.8626611146503624,
+            0.8632347381647718,
+            0.8173356524099906,
+            0.9031568751218313,
+            0.906498951244606,
+            0.8249910246995511,
+            0.8560705282008142,
+            0.8683767266142464,
+            0.8719270657149044,
+            0.8925729643148171,
+            0.8992893540220283
+        ]
+    ]
+}

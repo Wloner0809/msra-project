@@ -1,0 +1,144 @@
+{
+    "round": [
+        0,
+        1,
+        2
+    ],
+    "time": [
+        5.435943603515625e-05,
+        2440.5606269836426,
+        2409.896851539612
+    ],
+    "candidates": [
+        [
+            [
+                "# Task\nIdentify whether the sentiment of the following opinion is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ]
+        ],
+        [
+            [
+                "# Task\nIdentify whether the sentiment of the following opinion is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\nYour task is to analyze the sentiment of the provided text comprehensively, categorizing it as positive (Yes) or negative (No). This assessment should encompass the entire emotional spectrum within the text, including nuanced feelings and contrasting situations indicated by terms like \"however\" or \"despite\". Consider statements that balance opposing views or indicate a sentiment change, ensuring a holistic understanding before concluding.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.3936535015337357
+            ],
+            [
+                "# Task\nDetermine the overall sentiment of the text as positive (Yes) or negative (No), considering any mixed feelings or contextual contrasts. Take into account balanced expressions of emotions and phrases that might imply a shift in sentiment, such as \"otherwise\" or \"but\".\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.6066255647088818
+            ],
+            [
+                "# Task\nYour task is to assess the sentiment of the provided text, categorizing it as positive (Yes) if it predominantly conveys乐观or satisfaction, or negative (No) if it reflects悲观or dissatisfaction. Consider the text in its entirety, taking into account emotional equilibrium and any indications of sentiment change, like phrases including \"但是\" or \"然而\". Weigh the context and subtle language cues to determine the net emotional tone.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.5241648500682894
+            ],
+            [
+                "# Task\n\" and \"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                2.912141120403417
+            ]
+        ],
+        [
+            [
+                "# Task\nAssess the dominant sentiment of the given discourse as favorable (Yes) or unfavorable (No), while acknowledging potential emotional equivocations or situational contradictions. Consider statements that introduce contrasting perspectives, such as \"however\" or \"on the other hand\", to discern the net emotional tone.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.7932652370092241
+            ],
+            [
+                "# Task\nYour task is to assess the sentiment of the provided text, categorizing it as positive (Yes) if it predominantly conveys乐观or satisfaction, or negative (No) if it reflects悲观or dissatisfaction. Consider the text in its entirety, taking into account emotional equilibrium and any indications of sentiment change, like phrases including \"但是\" or \"然而\". Weigh the context and subtle language cues to determine the net emotional tone.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.5241648500682894
+            ],
+            [
+                "# Task\nDetermine the overall sentiment of the text as positive (Yes) or negative (No), considering any mixed feelings or contextual contrasts. Take into account balanced expressions of emotions and phrases that might imply a shift in sentiment, such as \"otherwise\" or \"but\".\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.6066255647088818
+            ],
+            [
+                "# Task\nYour mission is to carefully decode the prevailing emotional hue of the written content, examining it in its entirety. This includes a细腻的 analysis of opposing terms, conditional expressions, and the nuanced power dynamics between phrases. Give special emphasis to the prevailing tone, acknowledging that certain parts, rich in emotional charge, may carry more sway. Consider, for instance, sentences with a blend of sentiments; your judgment should pivot on which feeling predominates, as illustrated by expressions like \"didn't mind,\" potentially concealing subtle discontent. Be aware that genre-specific language, such as \"comical\" in certain settings, can signal approval and joy. Furthermore, delve into the conditional statements; understand that premises like \"if faced with difficulty\" necessitate gauging the sentiment of what follows, which could signal an unexpected乐观 viewpoint. Ultimately, your goal is to pinpoint the text's fundamental emotional signature, determining whether it imparts a sense of bliss (Yes) or woe (No), even in scenarios layered with complexity or refinement.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.6613020816462083
+            ],
+            [
+                "# Task\nYour task is to meticulously determine the prevailing sentiment of the text, considering every aspect, including the use of contrasting terms and conditional phrases. Pay particular attention to the overall tone, giving weight to statements that may outweigh others due to their emotional intensity. For instance, if a sentence contains both positive and negative elements, decide based on which sentiment is more dominant, as seen in phrases like \"didn't mind\" which might mask underlying dissatisfaction. Recognize that genre-specific terms, such as \"slapstick,\" can carry positive connotations in certain contexts, indicating amusement. Additionally, consider the implications of conditional clauses; a statement like \"if there's a problem\" demands evaluation of the subsequent sentiment which may reveal a positive outlook despite initial negativity. Aim to capture the text's core sentiment, whether it leaves a positive (Yes) or negative (No) impression, even in complex or nuanced scenarios.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.6546421396754796
+            ],
+            [
+                "# Task\nIdentify whether the sentiment of the following opinion is positive (Yes) or negative (No).\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1
+            ],
+            [
+                "# Task\nYour mission is to conduct a thorough sentiment evaluation of the given text, classifying it as favorable (Yes) or unfavorable (No). This evaluation must account for the full range of emotional nuances, taking into account words that signal shifts or contrasts, such as \"nevertheless\" or \"in spite of\". You are to carefully consider passages that present balanced viewpoints or undergo sentiment transitions, only rendering your judgment after a complete and contextual analysis.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.4147190101855733
+            ],
+            [
+                "# Task\nAssess the prevailing emotional tone of the passage as favorable (Yes) or unfavorable (No), being mindful of any coexisting positive and negative sentiments or situational contradictions. Consider phrases that signal sentiment reversals, such as \"on the other hand\" or \"despite that\", to render an accurate evaluation that incorporates the text's nuanced emotional balance.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.329433054487027
+            ],
+            [
+                "# Task\nYour mission is to conduct a thorough sentiment evaluation of the given text, discerning not just overt but also subtle emotions. Determine if the overall tone is positively inclined (Yes), connoting optimism or pleasure, or negatively disposed (No), signifying pessimism or dissatisfaction. Scrutinize the text's subtleties and the word usage context; for example, finding joy in critique (\"enjoyed criticizing\") indicates a negative sentiment towards the subject. Similarly, assess combinations of critique and longing, such as in \"while the briefness is a letdown if the movie has flaws, wishing for more indicates engagement,\" by concentrating on the critique even amidst the wish for extension. Take genre-specific language into account positively, e.g., \"lively farce,\" if it implies appreciation. Balance all emotional indicators to establish the text's fundamental emotional direction.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.3836094945871347
+            ],
+            [
+                "# Task\nYour mission is to conduct a thorough sentiment analysis of the given text, examining it in its entirety. This includes deciphering the influence of contrasting terms, phrases with conditions, and the emotional gravity that certain expressions carry. Be vigilant for instances where the surface sentiment may be deceptive, such as in \"didn't mind,\" which could veil a less contented sentiment. Bear in mind that genre-specific language, like \"slapstick,\" may convey positivity in specific contexts. Evaluate conditional sentences thoroughly; for example, the sentiment following \"if there's a problem\" holds key insights. Your goal is to distill the text's essence into a simple binary: Did it impart a favorable (Yes) or unfavorable (No) sentiment? This requires navigating complexity and subtlety with precision.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.487921311401911
+            ],
+            [
+                "# Task\nYour task is to deeply analyze the sentiment of the provided text, considering both explicit and implied emotions. Assess whether the text expresses a net positive (Yes) sentiment, indicating乐观or enjoyment, or a net negative (No) sentiment, reflecting悲观or displeasure. Pay particular attention to the nuances of phrases and the context in which words are used. For instance, expressions of enjoyment in criticizing something (e.g., \"had so much fun dissing\") should be interpreted as negative towards the subject. Similarly, evaluate the balance of criticism and desire, like in \"if the film has a problem, its shortness disappoints: you want the story to go on,\" by focusing on the issue mentioned despite the longing for more. Remember to consider genre-specific terms, like \"rowdy slapstick,\" in a positive light if they suggest the author appreciates that style. Weigh all cues to decide the core sentiment.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.4916365718568958
+            ],
+            [
+                "# Task\nYour assignment involves a detailed sentiment evaluation of the given text, classifying it as favorable (Yes) or unfavorable (No). This analysis must take into account the full range of emotional nuances, carefully examining elements like subtle sentiments and shifts indicated by phrases such as \"nevertheless\" or \"in spite of\". It necessitates an intricate understanding that accommodates statements with balanced contradictions or sentiment transitions, accounting for every sentiment nuance before making a definitive assessment.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",
+                1.381542479748703
+            ]
+        ]
+    ],
+    "estimated_scores": [
+        [
+            1.0
+        ],
+        [
+            0.9111111111111111,
+            0.8916666666666667,
+            0.8888888888888888,
+            0.8777777777777778,
+            0.6805555555555556
+        ],
+        [
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9375,
+            0.9375
+        ]
+    ],
+    "metric": [
+        [
+            1.0
+        ],
+        [
+            0.9111111111111111,
+            0.639805134981812,
+            0.5532644994665912,
+            0.5759073749394296,
+            0.2336959396601215
+        ],
+        [
+            0.5344069095610333,
+            0.6287596340319722,
+            0.5964882884874186,
+            0.5768567582746342,
+            0.5791786092920906,
+            0.9583333333333334,
+            0.6774018914240968,
+            0.7208586623439376,
+            0.6926328108346044,
+            0.6440752787056979,
+            0.6285043003691797,
+            0.6785893403513206
+        ]
+    ]
+}
